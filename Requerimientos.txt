@@ -1,0 +1,10 @@
+Obligatorio
+- Botón de añadir, eliminar y mover.
+- Botón de ordenar por nombre, tipo, extensión y fecha de creación.
+- Debe de poder guardar cualquier tipo de archivo.
+- Papelera de reciclaje.
+- 
+
+
+OPCIONAL
+- Checkear el espacio del dispositivo
