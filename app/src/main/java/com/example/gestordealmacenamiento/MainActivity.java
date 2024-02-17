@@ -18,7 +18,7 @@ import java.io.OutputStream;
 /**
  * Clase principal de la aplicación.
  *
- * @author <a jose="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
+ * @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
  * @version 1.0
  * @serial 2024/02/17
  */
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         // Si el código de solicitud es seleccionar un archivo y el resultado es correcto
-        // y los datos no son nulos, entonces obtener la URI del archivo seleccionado.
+        // y los datos no son nulos, entonces obtener la URI (Identificador de Recursos Uniforme) del archivo seleccionado.
         if (requestCode == FILE_SELECT_CODE && resultCode == RESULT_OK && data != null &&
                 data.getData() != null) {
             Uri selectedFileUri = data.getData();
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Método para abrir la aplicación de configuración.
      *
-     * @author <a jose="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
+     * @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
      * @param view Parámetro de vista.
      */
     public void openSettings(android.view.View view) {
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Método para subir un archivo a la carpeta de la aplicación.
      *
-     * @author <a jose="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
+     * @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
      * @param view Parámetro de vista.
      */
     public void uploadFile(android.view.View view) {
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Método para obtener el nombre del archivo.
      *
-     * @author <a jose="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
+     * @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
      * @param uri Parámetro de uri.
      * @return Devuelve el nombre del archivo.
      */
