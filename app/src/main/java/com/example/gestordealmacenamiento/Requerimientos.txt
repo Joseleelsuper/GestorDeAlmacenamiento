@@ -1,11 +1,21 @@
 Obligatorio
-- Botón de añadir, eliminar y mover.
-- Botón de ordenar por nombre, tipo, extensión y fecha de creación.
-- Debe de poder guardar cualquier tipo de archivo.
+- Botón de añadir
+- Botón de eliminar
+- Botón de renombrar
+- Botón de mover
+- Botón de ordenar por nombre
+- Botón de ordenar por fecha
+- Botón de ordenar por tamaño
+- Botón de ordenar por tipo
+- Botón de buscar
 - Papelera de reciclaje.
-- En vez de guardar en la nube, guardar en el dispositivo, en la carpeta `Documents/GestorDeAlmacenamiento`.
-La carpeta `GestorDeAlmacenamiento` será como la carpeta raíz de la aplicación.
-
 
 OPCIONAL
 - Checkear el espacio del dispositivo
+- Botón de compartir archivo por WhatsApp.
+- Preguntar a la hora de sobrescribir un archivo con el mismo nombre.
+
+Funcionalidades implementadas:
+- Debe de poder guardar cualquier tipo de archivo. (HECHO)
+- En vez de guardar en la nube, guardar en el dispositivo, en la carpeta `Documents/GestorDeAlmacenamiento`. (HECHO)
+- La carpeta `GestorDeAlmacenamiento` será como la carpeta raíz de la aplicación. (HECHO)
