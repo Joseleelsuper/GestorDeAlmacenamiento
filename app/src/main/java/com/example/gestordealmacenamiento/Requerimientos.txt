@@ -3,7 +3,8 @@ Obligatorio
 - Botón de ordenar por nombre, tipo, extensión y fecha de creación.
 - Debe de poder guardar cualquier tipo de archivo.
 - Papelera de reciclaje.
-- 
+- En vez de guardar en la nube, guardar en el dispositivo, en la carpeta `Documents/GestorDeAlmacenamiento`.
+La carpeta `GestorDeAlmacenamiento` será como la carpeta raíz de la aplicación.
 
 
 OPCIONAL
