@@ -1,5 +1,4 @@
 Obligatorio
-- Botón de añadir
 - Botón de eliminar
 - Botón de renombrar
 - Botón de mover
@@ -17,6 +16,7 @@ OPCIONAL
 - Botón de vaciar papelera de reciclaje.
 
 Funcionalidades implementadas:
+- Botón de subir (HECHO)
 - Debe de poder guardar cualquier tipo de archivo. (HECHO)
 - En vez de guardar en la nube, guardar en el dispositivo, en la carpeta `Documents/GestorDeAlmacenamiento`. (HECHO)
 - La carpeta `GestorDeAlmacenamiento` será como la carpeta raíz de la aplicación. (HECHO)

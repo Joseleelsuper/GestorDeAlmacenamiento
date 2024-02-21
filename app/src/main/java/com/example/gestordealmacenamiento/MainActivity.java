@@ -8,12 +8,16 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.OpenableColumns;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Clase principal de la aplicación.
@@ -33,19 +37,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Llamar al método onCreate de la superclase.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Obtener el nombre de la aplicación desde los recursos de cadena.
-        String appName = getString(R.string.app_name);
-
-        // Crear una carpeta en Documents con el nombre de la aplicación.
-        File directory = new File(Environment.getExternalStoragePublicDirectory
-                (Environment.DIRECTORY_DOCUMENTS), appName);
-        if (!directory.exists()) {
-            directory.mkdirs(); // Crea el directorio si no existe.
-        }
+        // Crear el directorio de la aplicación
+        createDirectory();
+        // Actualizar la lista de archivos
+        updateFileList();
     }
 
     @Override
@@ -59,16 +57,9 @@ public class MainActivity extends AppCompatActivity {
                 data.getData() != null) {
             Uri selectedFileUri = data.getData();
 
-            // Obtener el nombre de la aplicación desde los recursos de cadena.
-            String appName = getString(R.string.app_name);
-            File directory = new File(Environment.getExternalStoragePublicDirectory
-                    (Environment.DIRECTORY_DOCUMENTS), appName);
-            if (!directory.exists()) {
-                // Crear el directorio si no existe
-                directory.mkdirs();
-            }
-
             // Crear un nuevo archivo en la carpeta de la aplicación
+            File directory = new File(Environment.getExternalStoragePublicDirectory
+                    (Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
             // con el nombre del archivo seleccionado.
             File newFile = new File(directory, getFileName(selectedFileUri));
 
@@ -90,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
                 // Cerrar los flujos de entrada y salida.
                 in.close();
                 out.close();
+                // Actualizar la lista de archivos.
+                updateFileList();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -114,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
      * @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
      * @param view Parámetro de vista.
      */
+    @SuppressWarnings("deprecation")
     public void uploadFile(android.view.View view) {
         android.content.Intent intent = new android.content.Intent
                 (android.content.Intent.ACTION_GET_CONTENT);
@@ -157,5 +151,43 @@ public class MainActivity extends AppCompatActivity {
         }
         // Devolver el nombre del archivo
         return result;
+    }
+
+    /**
+     * Método para crear un directorio.
+     *
+     * @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
+     * @since 1.0
+     */
+    @SuppressWarnings("ResultOfMethodCallIgnored")
+    private void createDirectory() {
+        String appName = getString(R.string.app_name);
+        File directory = new File(Environment.getExternalStoragePublicDirectory
+                (Environment.DIRECTORY_DOCUMENTS), appName);
+        if (!directory.exists()) {
+            directory.mkdirs();
+        }
+    }
+
+    /**
+     * Método para actualizar la lista de archivos.
+     *
+     * @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
+     * @since 1.0
+     */
+    private void updateFileList() {
+        String appName = getString(R.string.app_name);
+        File directory = new File(Environment.getExternalStoragePublicDirectory
+                (Environment.DIRECTORY_DOCUMENTS), appName);
+        File[] files = directory.listFiles();
+        List<String> fileNames = new ArrayList<>();
+        assert files != null;
+        for (File file : files) {
+            fileNames.add(file.getName());
+        }
+        ListView listView = findViewById(R.id.file_list);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>
+                (this, android.R.layout.simple_list_item_1, fileNames);
+        listView.setAdapter(adapter);
     }
 }
