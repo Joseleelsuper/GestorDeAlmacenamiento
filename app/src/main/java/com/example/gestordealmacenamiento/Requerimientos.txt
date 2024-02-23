@@ -8,6 +8,8 @@ Obligatorio
 - Botón de ordenar por tipo
 - Botón de buscar
 - Papelera de reciclaje.
+- Al darle click ,que pueda abrir el archivo.
+- Segunda autentificación con huella dactilar para plan bussines.
 
 OPCIONAL
 - Checkear el espacio del dispositivo
