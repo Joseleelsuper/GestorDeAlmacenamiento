@@ -84,7 +84,8 @@ public class MainActivity extends AppCompatActivity {
                 // Actualizar la lista de archivos.
                 updateFileList();
             } catch (IOException e) {
-                e.printStackTrace();
+                // Cerrar la aplicación si se produce una excepción.
+                finish();
             }
         }
     }
@@ -92,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Método para abrir la aplicación de configuración.
      *
-     * @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
      * @param view Parámetro de vista.
      */
     public void openSettings(android.view.View view) {
@@ -104,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Método para subir un archivo a la carpeta de la aplicación.
      *
-     * @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
      * @param view Parámetro de vista.
      */
     @SuppressWarnings("deprecation")
@@ -118,7 +117,6 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Método para obtener el nombre del archivo.
      *
-     * @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
      * @param uri Parámetro de uri.
      * @return Devuelve el nombre del archivo.
      */
@@ -156,7 +154,6 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Método para crear un directorio.
      *
-     * @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
      * @since 1.0
      */
     @SuppressWarnings("ResultOfMethodCallIgnored")
@@ -172,7 +169,6 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Método para actualizar la lista de archivos.
      *
-     * @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
      * @since 1.0
      */
     private void updateFileList() {
