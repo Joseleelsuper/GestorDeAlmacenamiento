@@ -16,13 +16,18 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Clase principal de la aplicación.
  *
  * @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
+ * @author <a href="mailto:jma1037@alu.ubu.es">José María Martínez Alcalde</a>
+ * @author <a href="mailto:jvw1001@alu.ubu.es">José Javier Velasco Whu</a>
+ * @author <a href="mailto:mrp1024@alu.ubu.es">Mario Ruiz Puente</a>
  * @version 1.0
  * @serial 2024/02/17
  */
@@ -52,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         // Si el código de solicitud es seleccionar un archivo y el resultado es correcto
-        // y los datos no son nulos, entonces obtener la URI (Identificador de Recursos Uniforme) del archivo seleccionado.
+        // y los datos no son nulos, entonces obtener la URI (Identificador de Recursos Uniforme)
+        // del archivo seleccionado.
         if (requestCode == FILE_SELECT_CODE && resultCode == RESULT_OK && data != null &&
                 data.getData() != null) {
             Uri selectedFileUri = data.getData();
@@ -63,9 +69,18 @@ public class MainActivity extends AppCompatActivity {
             // con el nombre del archivo seleccionado.
             File newFile = new File(directory, getFileName(selectedFileUri));
 
+            // Copiar el archivo seleccionado en el nuevo archivo.
             try {
                 InputStream in = getContentResolver().openInputStream(selectedFileUri);
-                OutputStream out = new FileOutputStream(newFile);
+                OutputStream out;
+                // Si la versión de Android es mayor o igual a Oreo (API 26).
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                    // Crear un flujo de salida para el nuevo archivo.
+                    out = Files.newOutputStream(newFile.toPath());
+                } else {
+                    // Crear un flujo de salida para el nuevo archivo.
+                    out = new FileOutputStream(newFile);
+                }
 
                 // Copiar el archivo seleccionado en el nuevo archivo.
                 byte[] buf = new byte[1024];
@@ -84,7 +99,9 @@ public class MainActivity extends AppCompatActivity {
                 // Actualizar la lista de archivos.
                 updateFileList();
             } catch (IOException e) {
-                // Cerrar la aplicación si se produce una excepción.
+                // Mostrar un mensaje de error y después cerrar la aplicación.
+                android.widget.Toast.makeText(this, e.getMessage(),
+                        android.widget.Toast.LENGTH_LONG).show();
                 finish();
             }
         }
@@ -124,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
         String result = null;
         // Si el esquema de la URI es "content", que significa que el
         // archivo está en la memoria interna.
-        if (uri.getScheme().equals("content")) {
+        if (Objects.equals(uri.getScheme(), "content")) {
             try (Cursor cursor = getContentResolver().query
                     (uri, null, null, null, null)) {
                 // Si el cursor no es nulo y se mueve a la primera fila.
