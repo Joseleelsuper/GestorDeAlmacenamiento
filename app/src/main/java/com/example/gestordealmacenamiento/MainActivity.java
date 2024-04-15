@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.OpenableColumns;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -73,13 +75,12 @@ public class MainActivity extends AppCompatActivity {
             try {
                 InputStream in = getContentResolver().openInputStream(selectedFileUri);
                 OutputStream out;
-                // Si la versión de Android es mayor o igual a Oreo (API 26).
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                    // Crear un flujo de salida para el nuevo archivo.
+                // Crear un flujo de salida para el nuevo archivo.
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     out = Files.newOutputStream(newFile.toPath());
                 } else {
-                    // Crear un flujo de salida para el nuevo archivo.
-                    out = new FileOutputStream(newFile);
+                    throw new IOException("Error al crear el flujo de salida. Versión antigua de " +
+                            "android encontrada");
                 }
 
                 // Copiar el archivo seleccionado en el nuevo archivo.
@@ -100,8 +101,8 @@ public class MainActivity extends AppCompatActivity {
                 updateFileList();
             } catch (IOException e) {
                 // Mostrar un mensaje de error y después cerrar la aplicación.
-                android.widget.Toast.makeText(this, e.getMessage(),
-                        android.widget.Toast.LENGTH_LONG).show();
+                Toast.makeText(this, e.getMessage(),
+                        Toast.LENGTH_LONG).show();
                 finish();
             }
         }
