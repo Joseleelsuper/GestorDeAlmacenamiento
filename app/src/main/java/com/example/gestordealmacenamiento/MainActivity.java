@@ -12,9 +12,9 @@ import android.provider.OpenableColumns;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+import android.view.View;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param view Parámetro de vista.
      */
-    public void openSettings(android.view.View view) {
+    public void openAppSettings(View view) {
         android.content.Intent intent = new android.content.Intent
                 (android.provider.Settings.ACTION_INTERNAL_STORAGE_SETTINGS);
         startActivity(intent);
@@ -121,11 +121,9 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Método para subir un archivo a la carpeta de la aplicación.
-     *
-     * @param view Parámetro de vista.
      */
     @SuppressWarnings("deprecation")
-    public void uploadFile(android.view.View view) {
+    public void uploadFile(View view) {
         android.content.Intent intent = new android.content.Intent
                 (android.content.Intent.ACTION_GET_CONTENT);
         intent.setType("*/*");
