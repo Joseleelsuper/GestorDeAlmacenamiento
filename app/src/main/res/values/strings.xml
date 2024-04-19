@@ -1,6 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">GestorDeAlmacenamiento</string>
+    <string name="app_name_Acronym">GAEN</string>
+    <string name="author1">José Gallardo Caballero</string>
+    <string name="author2">José María Martínez Alcalde</string>
+    <string name="author3">José Javier Velasco Whu</string>
+    <string name="author4">Mario Ruiz Puente</string>
     <string name="todo">TODO</string>
-    <string name="upload">Upload</string>
+    <string name="upload">Upload file</string>
     <string name="configuration">Configuration</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="nopswd">Recover password</string>
+    <string name="noaccount">Don\'t have an account? Sign in</string>
 </resources>

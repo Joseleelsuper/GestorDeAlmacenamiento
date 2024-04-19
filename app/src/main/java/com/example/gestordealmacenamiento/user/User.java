@@ -1,6 +1,13 @@
 package com.example.gestordealmacenamiento.user;
 
-import com.example.gestordealmacenamiento.files.File;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.gestordealmacenamiento.R;
+
+import java.io.File;
 import java.util.List;
 
 /**
@@ -11,7 +18,7 @@ import java.util.List;
  * @since 1.0
  * @serial 2024/04/15
  */
-public class User {
+public class User extends AppCompatActivity {
 
     /**
      * Nombre de usuario.
@@ -29,6 +36,15 @@ public class User {
      * Lista de archivos del usuario.
      */
     private List<File> files;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.login);
+    }
+
+    public User() {
+    }
 
     /**
      * Constructor de la clase.
