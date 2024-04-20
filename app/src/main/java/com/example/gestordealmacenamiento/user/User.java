@@ -43,8 +43,7 @@ public class User extends AppCompatActivity {
         setContentView(R.layout.login);
     }
 
-    public User() {
-    }
+    public User() {}
 
     /**
      * Constructor de la clase.

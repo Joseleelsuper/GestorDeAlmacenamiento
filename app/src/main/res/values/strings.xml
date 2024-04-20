@@ -16,4 +16,5 @@
     <string name="logout">Logout</string>
     <string name="nopswd">Recover password</string>
     <string name="noaccount">Don\'t have an account? Sign in</string>
+    <string name="icono_de_carga">Icono de carga</string>
 </resources>

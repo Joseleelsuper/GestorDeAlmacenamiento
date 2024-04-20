@@ -4,11 +4,13 @@ plugins {
 
 android {
     namespace = "com.example.gestordealmacenamiento"
+    //noinspection GradleDependency
     compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.gestordealmacenamiento"
         minSdk = 24
+        //noinspection OldTargetApi
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
