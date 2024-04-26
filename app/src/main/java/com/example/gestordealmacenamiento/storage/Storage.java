@@ -8,6 +8,7 @@ import com.example.gestordealmacenamiento.R;
 import com.example.gestordealmacenamiento.exception.insufficientSpaceException;
 import com.example.gestordealmacenamiento.exception.noDirectoryException;
 import com.example.gestordealmacenamiento.exception.noFileException;
+import com.example.gestordealmacenamiento.presentation.Presentation;
 import com.example.gestordealmacenamiento.user.User;
 
 import java.io.File;
@@ -86,7 +87,6 @@ public class Storage {
      * Método que crea una carpeta llamada como el nombre de la aplicación dentro del directorio
      * documentos. Si la carpeta ya existe, no hace nada.
      *
-     * TODO: Arreglar cuando se pueda el comprobamiento de si la carpeta ya existe.
      */
     public void createAppFolder(Context context) throws noDirectoryException {
         String appName = context.getString(R.string.app_name);
@@ -100,6 +100,23 @@ public class Storage {
                 throw new noDirectoryException("No se pudo crear la carpeta de la aplicación.");
             }
         }
+    }
+
+    /**
+     * Método que crea una carpeta llamada "users" dentro de la carpeta de la aplicación.
+     * Si la carpeta ya existe, no hace nada.
+     *
+     * @param presentation
+     */
+    public void createUsersFolder(Presentation presentation) {
+        File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), presentation.getString(R.string.app_name));
+        File usersDirectory = new File(appDirectory, "Users");
+
+        // Crear la carpeta de los usuarios si no existe
+        if (!usersDirectory.exists()) {
+            usersDirectory.mkdirs();
+        }
+
     }
 
     /**

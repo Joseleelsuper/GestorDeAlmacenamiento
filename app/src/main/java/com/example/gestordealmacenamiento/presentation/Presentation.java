@@ -40,6 +40,7 @@ public class Presentation extends AppCompatActivity {
         Storage storage = new Storage();
         try {
             storage.createAppFolder(this);
+            storage.createUsersFolder(this);
         } catch (noDirectoryException e) {
             throw new RuntimeException(e);
         }

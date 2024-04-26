@@ -25,15 +25,15 @@ public class User extends AppCompatActivity {
     /**
      * Nombre de usuario.
      */
-    private String userName;
+    protected String userName;
     /**
      * Correo electrónico.
      */
-    private String email;
+    protected String email;
     /**
      * Contraseña.
      */
-    private String password;
+    protected String password;
     /**
      * Lista de archivos del usuario.
      */
