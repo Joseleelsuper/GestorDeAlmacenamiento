@@ -17,4 +17,7 @@
     <string name="nopswd">Recover password</string>
     <string name="noaccount">Don\'t have an account? Sign in</string>
     <string name="icono_de_carga">Icono de carga</string>
+    <string name="yesaccount">Have an account? Log in</string>
+    <string name="userTerms">I accept the terms of use</string>
+    <string name="mailreports">I agree to receive reports by mail</string>
 </resources>

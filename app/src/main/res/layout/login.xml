@@ -15,7 +15,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_title"
+        app:layout_constraintTop_toBottomOf="@+id/GAEN_title"
         app:layout_constraintVertical_bias="0.001"
         android:autofillHints="jgc1031@alu.ubu.es" />
 
@@ -34,7 +34,7 @@
         android:autofillHints="**************" />
 
     <TextView
-        android:id="@+id/login_title"
+        android:id="@+id/GAEN_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleX="5"
@@ -54,15 +54,14 @@
         android:text="@string/login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_title"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintTop_toBottomOf="@+id/GAEN_title" />
 
     <TextView
         android:id="@+id/login_recoverPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="recoverPWD"
         android:text="@string/nopswd"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,10 +73,11 @@
         android:id="@+id/login_Register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="registerText"
         android:text="@string/noaccount"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_recoverPassword"
+        app:layout_constraintTop_toBottomOf="@+id/login_buttonLogin"
         app:layout_constraintVertical_bias="0.938" />
 </androidx.constraintlayout.widget.ConstraintLayout>

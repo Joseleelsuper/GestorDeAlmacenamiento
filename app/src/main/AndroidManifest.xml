@@ -20,6 +20,7 @@
 
         <activity android:name=".user.User" />
         <activity android:name=".MainActivity"/>
+        <activity android:name=".user.Register" />
     </application>
 
 </manifest>

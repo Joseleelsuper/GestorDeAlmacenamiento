@@ -61,18 +61,26 @@ public class User extends AppCompatActivity {
     }
 
     /**
-     * Método que registra al usuario.
+     * Método que lleva al usuario a la pantalla de registro.
      */
-    public void register(View view) {
-        // TODO implement here
+    public void registerText(View view) {
+        Intent intent = new Intent(this, Register.class);
+        startActivity(intent);
     }
 
     /**
      * Método que inicia sesión.
      */
     public void login(View view) {
-        // de momento, solo se redirige a la pantalla principal si le das al botón de login login_buttonLogin
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Método que recupera la contraseña.
+     */
+    public void recoverPWD(View view) {
+        Intent intent = new Intent(this, RecoverPWD.class);
         startActivity(intent);
     }
 
@@ -80,7 +88,6 @@ public class User extends AppCompatActivity {
      * Método que cierra sesión.
      */
     public void logout(View view) {
-        // TODO implement here
     }
 
     /**
