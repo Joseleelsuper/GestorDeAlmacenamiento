@@ -20,4 +20,6 @@
     <string name="yesaccount">Have an account? Log in</string>
     <string name="userTerms">I accept the terms of use</string>
     <string name="mailreports">I agree to receive reports by mail</string>
+    <string name="recovery">password recovery</string>
+    <string name="please_enter_the_ne_mail_address_with_nwhich_you_registered">Please enter the\ne-mail address with\nwhich you registered.</string>
 </resources>

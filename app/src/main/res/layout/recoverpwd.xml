@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -19,16 +18,53 @@
         app:layout_constraintVertical_bias="0.067" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/recoverpwd_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="105dp"
         android:scaleX="2"
         android:scaleY="2"
-        android:text="Please enter the e-mail\naddress with\nwhich you registered."
+        android:text="@string/please_enter_the_ne_mail_address_with_nwhich_you_registered"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/GAEN_title"
         app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/recoverpwd_Email"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="105dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GAEN_title"
+        app:layout_constraintVertical_bias="0.22000003" />
+
+    <CheckBox
+        android:id="@+id/recoverpwd_mailReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mailreports"
+        app:layout_constraintBottom_toTopOf="@+id/recoverpwd_ButtonRecover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recoverpwd_Email"
+        app:layout_constraintVertical_bias="0.557" />
+
+    <Button
+        android:id="@+id/recoverpwd_ButtonRecover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="recover"
+        android:text="@string/recovery"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GAEN_title"
+        app:layout_constraintVertical_bias="0.75" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,6 +21,7 @@
         <activity android:name=".user.User" />
         <activity android:name=".MainActivity"/>
         <activity android:name=".user.Register" />
+        <activity android:name=".user.RecoverPWD" />
     </application>
 
 </manifest>

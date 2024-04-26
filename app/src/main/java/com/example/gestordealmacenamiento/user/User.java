@@ -85,12 +85,6 @@ public class User extends AppCompatActivity {
     }
 
     /**
-     * Método que cierra sesión.
-     */
-    public void logout(View view) {
-    }
-
-    /**
      * Método que sube un archivo.
      *
      * @param file Archivo a subir.
