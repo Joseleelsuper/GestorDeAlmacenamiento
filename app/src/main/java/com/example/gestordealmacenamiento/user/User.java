@@ -2,9 +2,11 @@ package com.example.gestordealmacenamiento.user;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.gestordealmacenamiento.MainActivity;
 import com.example.gestordealmacenamiento.R;
 
 import java.io.File;
@@ -61,21 +63,23 @@ public class User extends AppCompatActivity {
     /**
      * Método que registra al usuario.
      */
-    public void register() {
+    public void register(View view) {
         // TODO implement here
     }
 
     /**
      * Método que inicia sesión.
      */
-    public void login() {
-        // TODO implement here
+    public void login(View view) {
+        // de momento, solo se redirige a la pantalla principal si le das al botón de login login_buttonLogin
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     /**
      * Método que cierra sesión.
      */
-    public void logout() {
+    public void logout(View view) {
         // TODO implement here
     }
 

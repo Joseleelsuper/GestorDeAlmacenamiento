@@ -14,14 +14,13 @@
         android:layout_height="50dp"
         android:background="@drawable/baseline_settings_black_24dp"
         android:backgroundTint="@color/settings_icon_color"
-        android:onClick="openAppSettings"
+        android:contentDescription="@string/configuration"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
-        android:contentDescription="@string/configuration" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <!-- Botón de subida de archivos -->
     <!-- @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a> -->
@@ -29,7 +28,6 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="uploadFile"
         android:text="@string/upload"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

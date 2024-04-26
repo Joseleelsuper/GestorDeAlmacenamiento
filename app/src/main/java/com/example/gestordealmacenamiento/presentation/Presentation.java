@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gestordealmacenamiento.R;
+import com.example.gestordealmacenamiento.exception.noDirectoryException;
 import com.example.gestordealmacenamiento.user.User;
 import com.example.gestordealmacenamiento.storage.Storage;
 
@@ -37,6 +38,10 @@ public class Presentation extends AppCompatActivity {
         }, SPLASH_DISPLAY_LENGTH);
 
         Storage storage = new Storage();
-        storage.createAppFolder(this);
+        try {
+            storage.createAppFolder(this);
+        } catch (noDirectoryException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
