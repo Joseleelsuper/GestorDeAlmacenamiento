@@ -9,9 +9,9 @@ android {
 
     defaultConfig {
         applicationId = "com.example.gestordealmacenamiento"
-        minSdk = 24
+        minSdk = 33
         //noinspection OldTargetApi
-        targetSdk = 34
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 

@@ -18,10 +18,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".user.User" />
+        <activity android:name=".session.Login" />
         <activity android:name=".MainActivity"/>
-        <activity android:name=".user.Register" />
-        <activity android:name=".user.RecoverPWD" />
+        <activity android:name=".session.Register" />
+        <activity android:name=".session.RecoverPWD" />
     </application>
 
 </manifest>

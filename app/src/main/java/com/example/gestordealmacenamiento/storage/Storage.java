@@ -2,14 +2,13 @@ package com.example.gestordealmacenamiento.storage;
 
 import android.content.Context;
 import android.os.Environment;
-import android.util.Log;
 
 import com.example.gestordealmacenamiento.R;
 import com.example.gestordealmacenamiento.exception.insufficientSpaceException;
 import com.example.gestordealmacenamiento.exception.noDirectoryException;
 import com.example.gestordealmacenamiento.exception.noFileException;
 import com.example.gestordealmacenamiento.presentation.Presentation;
-import com.example.gestordealmacenamiento.user.User;
+import com.example.gestordealmacenamiento.session.Login;
 
 import java.io.File;
 import java.util.List;
@@ -35,7 +34,7 @@ public class Storage {
     /**
      * Lista de usuarios que tienen acceso al almacenamiento (MB).
      */
-    private List<User> users;
+    private List<Login> users;
 
     public Storage() {
         this.totalSpace = 10000;
@@ -49,7 +48,7 @@ public class Storage {
      * @param totalSpace Espacio total del almacenamiento.
      * @param users Lista de usuarios que tienen acceso al almacenamiento.
      */
-    public Storage(double totalSpace, List<User> users) {
+    public Storage(double totalSpace, List<Login> users) {
         this.totalSpace = totalSpace;
         this.availableSpace = totalSpace;
         this.users = users;
@@ -78,7 +77,7 @@ public class Storage {
      *
      * @return Lista de usuarios que tienen acceso al almacenamiento.
      */
-    public List<User> getUsersList() {
+    public List<Login> getUsersList() {
         // TODO implement here
         return null;
     }
