@@ -1,14 +1,12 @@
 package com.example.gestordealmacenamiento.session;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gestordealmacenamiento.MainActivity;
@@ -41,7 +39,6 @@ public class Login extends AppCompatActivity {
     /**
      * Método que inicia sesión.
      */
-    @RequiresApi(api = Build.VERSION_CODES.O)
     public void login(View view) {
 
         EditText emailEditText = findViewById(R.id.login_email);
