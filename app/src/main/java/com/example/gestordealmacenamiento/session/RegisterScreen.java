@@ -10,7 +10,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.gestordealmacenamiento.MainActivity;
 import com.example.gestordealmacenamiento.R;
 import com.example.gestordealmacenamiento.util.validateEmail;
 
@@ -20,8 +19,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Clase que permite a un usuario registrarse.
@@ -31,19 +28,19 @@ import java.util.regex.Pattern;
  * @since 1.0
  * @serial 15/04/2024
  */
-public class Register extends AppCompatActivity {
+public class RegisterScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.register);
+        setContentView(R.layout.register_screen);
     }
 
     /**
      * Método que lleva al usuario a la pantalla de inicio de sesión.
      */
     public void loginText(View view) {
-        Intent intent = new Intent(this, Login.class);
+        Intent intent = new Intent(this, LoginScreen.class);
         startActivity(intent);
     }
 
@@ -98,7 +95,7 @@ public class Register extends AppCompatActivity {
             return;
         }
 
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, LoginScreen.class);
         startActivity(intent);
         Toast.makeText(this, "Usuario registrado correctamente.", Toast.LENGTH_SHORT).show();
     }

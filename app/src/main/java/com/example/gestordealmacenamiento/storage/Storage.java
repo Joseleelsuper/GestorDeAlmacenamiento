@@ -7,8 +7,8 @@ import com.example.gestordealmacenamiento.R;
 import com.example.gestordealmacenamiento.exception.insufficientSpaceException;
 import com.example.gestordealmacenamiento.exception.noDirectoryException;
 import com.example.gestordealmacenamiento.exception.noFileException;
-import com.example.gestordealmacenamiento.presentation.Presentation;
-import com.example.gestordealmacenamiento.session.Login;
+import com.example.gestordealmacenamiento.presentation.PresentationScreen;
+import com.example.gestordealmacenamiento.session.LoginScreen;
 
 import java.io.File;
 import java.util.List;
@@ -26,7 +26,7 @@ public class Storage {
     /**
      * Espacio total del almacenamiento (MB).
      */
-    private double totalSpace;
+    private final double totalSpace;
     /**
      * Espacio disponible del almacenamiento (MB).
      */
@@ -34,24 +34,12 @@ public class Storage {
     /**
      * Lista de usuarios que tienen acceso al almacenamiento (MB).
      */
-    private List<Login> users;
+    private List<LoginScreen> users;
 
     public Storage() {
         this.totalSpace = 10000;
         this.availableSpace = totalSpace;
         this.users = null;
-    }
-
-    /**
-     * Constructor de la clase.
-     *
-     * @param totalSpace Espacio total del almacenamiento.
-     * @param users Lista de usuarios que tienen acceso al almacenamiento.
-     */
-    public Storage(double totalSpace, List<Login> users) {
-        this.totalSpace = totalSpace;
-        this.availableSpace = totalSpace;
-        this.users = users;
     }
 
     /**
@@ -77,7 +65,7 @@ public class Storage {
      *
      * @return Lista de usuarios que tienen acceso al almacenamiento.
      */
-    public List<Login> getUsersList() {
+    public List<LoginScreen> getUsersList() {
         // TODO implement here
         return null;
     }
@@ -107,7 +95,7 @@ public class Storage {
      *
      * @param presentation
      */
-    public void createUsersFolder(Presentation presentation) {
+    public void createUsersFolder(PresentationScreen presentation) {
         File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), presentation.getString(R.string.app_name));
         File usersDirectory = new File(appDirectory, "Users");
 
@@ -127,7 +115,6 @@ public class Storage {
      * @throws insufficientSpaceException si no hay suficiente espacio en la carpeta.
      * @throws noFileException si el archivo no existe.
      * @throws noDirectoryException si la carpeta de la aplicación no existe.
-     * @return true si el archivo se agregó con éxito, false en caso contrario.
      */
     public void addFileToAppFolder(Context context, File file) throws insufficientSpaceException, noFileException, noDirectoryException {
         String appName = context.getString(R.string.app_name);
@@ -152,5 +139,13 @@ public class Storage {
 
         File newFile = new File(appDirectory, file.getName());
         availableSpace -= file.length();
+    }
+
+    public List<LoginScreen> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<LoginScreen> users) {
+        this.users = users;
     }
 }

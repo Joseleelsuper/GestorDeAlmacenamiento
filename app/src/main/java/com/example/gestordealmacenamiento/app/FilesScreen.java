@@ -1,4 +1,4 @@
-package com.example.gestordealmacenamiento;
+package com.example.gestordealmacenamiento.app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,11 +16,11 @@ import com.example.gestordealmacenamiento.R;
  * @version 1.0
  * @serial 17/03/2024
  */
-public class MainActivity extends AppCompatActivity {
+public class FilesScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.file_screen);
     }
 }

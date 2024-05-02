@@ -9,8 +9,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.gestordealmacenamiento.MainActivity;
+import com.example.gestordealmacenamiento.app.FilesScreen;
 import com.example.gestordealmacenamiento.R;
+import com.example.gestordealmacenamiento.app.HomeScreen;
 import com.example.gestordealmacenamiento.util.validateEmail;
 
 import java.io.BufferedReader;
@@ -28,12 +29,12 @@ import java.nio.file.Files;
  * @since 1.0
  * @serial 15/04/2024
  */
-public class Login extends AppCompatActivity {
+public class LoginScreen extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.login_screen);
     }
 
     /**
@@ -96,7 +97,7 @@ public class Login extends AppCompatActivity {
             return;
         }
 
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, FilesScreen.class);
         startActivity(intent);
         Toast.makeText(this, "Inicio de sesión correcto.", Toast.LENGTH_SHORT).show();
     }
@@ -105,7 +106,7 @@ public class Login extends AppCompatActivity {
      * Método que lleva al usuario a la pantalla de registro.
      */
     public void registerText(View view) {
-        Intent intent = new Intent(this, Register.class);
+        Intent intent = new Intent(this, HomeScreen.class);
         startActivity(intent);
     }
 
@@ -113,7 +114,7 @@ public class Login extends AppCompatActivity {
      * Método que recupera la contraseña.
      */
     public void recoverPWD(View view) {
-        Intent intent = new Intent(this, RecoverPWD.class);
+        Intent intent = new Intent(this, RecoverPWDScreen.class);
         startActivity(intent);
     }
 }

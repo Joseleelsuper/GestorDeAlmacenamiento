@@ -1,7 +1,5 @@
 package com.example.gestordealmacenamiento.session;
 
-import static android.view.View.VISIBLE;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
@@ -17,12 +15,12 @@ import com.example.gestordealmacenamiento.util.validateEmail;
 
 import java.io.File;
 
-public class RecoverPWD extends AppCompatActivity {
+public class RecoverPWDScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.recoverpwd);
+        setContentView(R.layout.recoverpwd_screen);
     }
 
     public void recover(View view) {
@@ -55,7 +53,7 @@ public class RecoverPWD extends AppCompatActivity {
         }
 
         // Enviar un correo con la contraseña.
-        Intent intent = new Intent(this, Login.class);
+        Intent intent = new Intent(this, LoginScreen.class);
         startActivity(intent);
         Toast.makeText(this, "Operación realizada. Mira tu correo.", Toast.LENGTH_LONG).show();
     }

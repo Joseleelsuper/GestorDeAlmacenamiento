@@ -1,6 +1,6 @@
 package com.example.gestordealmacenamiento.files;
 
-import com.example.gestordealmacenamiento.session.Login;
+import com.example.gestordealmacenamiento.session.LoginScreen;
 import java.util.List;
 
 /**
@@ -32,11 +32,11 @@ public class File {
     /**
      * Propietario del archivo.
      */
-    private Login owner;
+    private LoginScreen owner;
     /**
      * Usuarios con los que se ha compartido el archivo.
      */
-    private List<Login> sharedWith;
+    private List<LoginScreen> sharedWith;
 
     /**
      * Constructor de la clase.
@@ -48,7 +48,7 @@ public class File {
      * @param owner Propietario del archivo.
      * @param sharedWith Usuarios con los que se ha compartido el archivo.
      */
-    public File(String name, Enum format, double size, String path, Login owner, List<Login> sharedWith) {
+    public File(String name, Enum format, double size, String path, LoginScreen owner, List<LoginScreen> sharedWith) {
         this.name = name;
         this.format = format;
         this.size = size;
@@ -80,7 +80,7 @@ public class File {
      *
      * @param user Usuario con el que se comparte el archivo.
      */
-    public void shareWith(Login user) {
+    public void shareWith(LoginScreen user) {
         // TODO implement here
     }
 
@@ -89,7 +89,7 @@ public class File {
      *
      * @param user Usuario con el que se deja de compartir el archivo.
      */
-    public void unhareWith(Login user) {
+    public void unhareWith(LoginScreen user) {
         // TODO implement here
     }
 }

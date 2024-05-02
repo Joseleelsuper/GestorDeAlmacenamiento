@@ -2,14 +2,13 @@
     package="com.example.gestordealmacenamiento">
 
     <application
-        android:allowBackup="true"
         android:icon="@drawable/program_icon"
         android:label="@string/app_name"
         android:roundIcon="@drawable/program_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.GestorDeAlmacenamiento">
 
-        <activity android:name=".presentation.Presentation"
+        <activity android:name=".presentation.PresentationScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,10 +17,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".session.Login" />
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".session.Register" />
-        <activity android:name=".session.RecoverPWD" />
+        <activity android:name=".session.LoginScreen" />
+        <activity android:name=".session.RegisterScreen" />
+        <activity android:name=".session.RecoverPWDScreen" />
+
+        <activity android:name=".app.FilesScreen"/>
+        <activity android:name=".app.MeScreen"/>
+        <activity android:name=".app.HomeScreen"/>
     </application>
 
 </manifest>
