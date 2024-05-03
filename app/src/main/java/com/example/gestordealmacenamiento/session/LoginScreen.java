@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.gestordealmacenamiento.app.FilesScreen;
 import com.example.gestordealmacenamiento.R;
 import com.example.gestordealmacenamiento.app.HomeScreen;
+import com.example.gestordealmacenamiento.app.MeScreen;
 import com.example.gestordealmacenamiento.util.validateEmail;
 
 import java.io.BufferedReader;
@@ -97,7 +98,7 @@ public class LoginScreen extends AppCompatActivity {
             return;
         }
 
-        Intent intent = new Intent(this, FilesScreen.class);
+        Intent intent = new Intent(this, MeScreen.class);
         startActivity(intent);
         Toast.makeText(this, "Inicio de sesión correcto.", Toast.LENGTH_SHORT).show();
     }
@@ -106,7 +107,7 @@ public class LoginScreen extends AppCompatActivity {
      * Método que lleva al usuario a la pantalla de registro.
      */
     public void registerText(View view) {
-        Intent intent = new Intent(this, HomeScreen.class);
+        Intent intent = new Intent(this, RegisterScreen.class);
         startActivity(intent);
     }
 
