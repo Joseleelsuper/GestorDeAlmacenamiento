@@ -25,5 +25,4 @@
         <activity android:name=".app.MeScreen"/>
         <activity android:name=".app.HomeScreen"/>
     </application>
-
 </manifest>
