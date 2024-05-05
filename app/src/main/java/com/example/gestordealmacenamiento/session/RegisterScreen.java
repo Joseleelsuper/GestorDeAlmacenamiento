@@ -37,14 +37,6 @@ public class RegisterScreen extends AppCompatActivity {
     }
 
     /**
-     * Método que lleva al usuario a la pantalla de inicio de sesión.
-     */
-    public void loginText(View view) {
-        Intent intent = new Intent(this, LoginScreen.class);
-        startActivity(intent);
-    }
-
-    /**
      * Método que registra al usuario.
      *
      * @param view Vista actual.
@@ -95,8 +87,17 @@ public class RegisterScreen extends AppCompatActivity {
             return;
         }
 
+        loginText(view);
+        Toast.makeText(this, "Usuario registrado correctamente.", Toast.LENGTH_SHORT).show();
+    }
+
+    /**
+     * Método que cambia a la pantalla de inicio de sesión.
+     *
+     * @param view Vista actual.
+     */
+    public void loginText(View view) {
         Intent intent = new Intent(this, LoginScreen.class);
         startActivity(intent);
-        Toast.makeText(this, "Usuario registrado correctamente.", Toast.LENGTH_SHORT).show();
     }
 }

@@ -41,6 +41,7 @@ public class PresentationScreen extends AppCompatActivity {
         try {
             storage.createAppFolder(this);
             storage.createUsersFolder(this);
+            storage.createFilesFolder(this);
         } catch (noDirectoryException e) {
             throw new RuntimeException(e);
         }

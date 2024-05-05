@@ -69,13 +69,16 @@ public class LoginScreen extends AppCompatActivity {
         // Leer el archivo del usuario y comprobar si la contraseña es correcta.
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(Files.newInputStream(file.toPath()), StandardCharsets.UTF_8));
+            String storedUsername = null;
             String storedEmail = null;
             String storedPassword = null;
             int lineNumber = 1;
 
             String line;
             while ((line = reader.readLine()) != null) {
-                if (lineNumber == 2) {
+                if (lineNumber == 1) {
+                    storedUsername = line;
+                } else if (lineNumber == 2) {
                     storedEmail = line;
                 } else if (lineNumber == 3) {
                     storedPassword = line;
@@ -83,6 +86,8 @@ public class LoginScreen extends AppCompatActivity {
                 lineNumber++;
             }
             reader.close();
+
+            HomeScreen.username = storedUsername;
 
             if (storedEmail == null || storedPassword == null) {
                 Toast.makeText(this, "Error al leer el archivo.", Toast.LENGTH_SHORT).show();
@@ -98,7 +103,7 @@ public class LoginScreen extends AppCompatActivity {
             return;
         }
 
-        Intent intent = new Intent(this, MeScreen.class);
+        Intent intent = new Intent(this, HomeScreen.class);
         startActivity(intent);
         Toast.makeText(this, "Inicio de sesión correcto.", Toast.LENGTH_SHORT).show();
     }

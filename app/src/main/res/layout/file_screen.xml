@@ -20,38 +20,41 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_files"
         android:layout_width="137dp"
         android:layout_height="62dp"
         android:background="@drawable/rectangle_black"
         android:backgroundTint="#2196F3"
+        android:onClick="goFiles"
         android:text="Files"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/button_home"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_me"
         android:layout_width="137dp"
         android:layout_height="62dp"
         android:background="@drawable/rectangle_black"
+        android:onClick="goMe"
         android:text="Me"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/button_files"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="NotSibling" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button_home"
         android:layout_width="137dp"
         android:layout_height="62dp"
         android:background="@drawable/rectangle_black"
         android:backgroundTint="#9C27B0"
+        android:onClick="goHome"
         android:text="Home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,18 +68,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
+        android:onClick="addFile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.757"
+        app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.041"
-        app:srcCompat="@drawable/add_circle" />
+        app:srcCompat="@drawable/add_circle"
+        android:contentDescription="TODO" />
 
     <ListView
+        android:id="@+id/files_listView"
         android:layout_width="407dp"
         android:layout_height="547dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/button_files"
         app:layout_constraintTop_toBottomOf="@+id/floatingActionButton"
         app:layout_constraintVertical_bias="1.0"
         tools:layout_editor_absoluteX="0dp" />

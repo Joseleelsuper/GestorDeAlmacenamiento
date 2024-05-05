@@ -23,4 +23,11 @@
     <string name="recovery">password recovery</string>
     <string name="please_enter_the_ne_mail_address_with_nwhich_you_registered">Please enter the\ne-mail address with\nwhich you registered.</string>
     <string name="recoverPWD">Your Password has been recovered.\nPlease open your email.</string>
+    <string name="ltimas_carpetas_utilizadas">Últimas carpetas utilizadas:</string>
+    <string name="bienvenido">Bienvenido,</string>
+    <string name="home">Home</string>
+    <string name="me">Me</string>
+    <string name="files">Files</string>
+    <string name="home_version">- Primera versión del programa, se añaden las opciones Inicio, Archivos e Yo.</string>
+    <string name="updates">Ultimas Updates:(V1.0):</string>
 </resources>

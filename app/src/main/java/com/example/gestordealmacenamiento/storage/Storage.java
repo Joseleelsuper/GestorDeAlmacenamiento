@@ -106,6 +106,16 @@ public class Storage {
 
     }
 
+    public void createFilesFolder(PresentationScreen presentation) {
+        File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), presentation.getString(R.string.app_name));
+        File filesDirectory = new File(appDirectory, "Files");
+
+        // Crear la carpeta de los archivos si no existe
+        if (!filesDirectory.exists()) {
+            filesDirectory.mkdirs();
+        }
+    }
+
     /**
      * Método que agrega un archivo a la carpeta de la aplicación.
      * Si la adición del archivo excede el límite de tamaño de la carpeta, no se agrega el archivo.
