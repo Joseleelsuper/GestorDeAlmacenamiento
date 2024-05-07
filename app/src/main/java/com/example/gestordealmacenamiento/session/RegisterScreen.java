@@ -11,7 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gestordealmacenamiento.R;
-import com.example.gestordealmacenamiento.util.validateEmail;
+import com.example.gestordealmacenamiento.util.ValidateEmail;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,6 +19,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
+import java.text.DateFormat;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.HashSet;
+import java.util.Locale;
+import java.util.Set;
 
 /**
  * Clase que permite a un usuario registrarse.
@@ -53,13 +59,34 @@ public class RegisterScreen extends AppCompatActivity {
         String email = emailEditText.getText().toString();
 
         // Comprobar que el email es válido.
-        if (!validateEmail.isValidEmail(email)) {
+        if (!ValidateEmail.isValidEmail(email)) {
             Toast.makeText(this, "Por favor, introduce un correo electrónico válido.", Toast.LENGTH_SHORT).show();
             return;
         }
 
         String userName = ((EditText) findViewById(R.id.register_username)).getText().toString();
         String password = ((EditText) findViewById(R.id.register_password)).getText().toString();
+
+        // Dependiendo del mail con el que se registre, se le asignará un tipo de cuenta.
+        Set<String> personalEmailDomains = new HashSet<>(Arrays.asList("gmail.com", "hotmail.com", "yahoo.com"));
+
+        String emailDomain = email.split("@")[1];
+        String accountType;
+
+        if (personalEmailDomains.contains(emailDomain)) {
+            accountType = "Personal";
+        } else {
+            accountType = "Business";
+        }
+
+        // Obtener la fecha y hora actual
+        Calendar calendar = Calendar.getInstance();
+        // Agregar 5 años a la fecha actual
+        calendar.add(Calendar.YEAR, 5);
+        // Obtener el formateador de fecha predeterminado para el idioma del dispositivo
+        DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.SHORT, Locale.getDefault());
+        // Formatear la fecha
+        String expirationDate = dateFormat.format(calendar.getTime());
 
         // Obtener la carpeta "Users".
         File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
@@ -78,7 +105,9 @@ public class RegisterScreen extends AppCompatActivity {
              OutputStreamWriter osw = new OutputStreamWriter(fos, StandardCharsets.UTF_8)) {
             osw.write(userName + "\n");
             osw.write(email + "\n");
-            osw.write(password);
+            osw.write(password + "\n");
+            osw.write(accountType + "\n");
+            osw.write(expirationDate);
         } catch (FileNotFoundException e) {
             Toast.makeText(this, "Error al encontrar el archivo. No pudo ser creado.", Toast.LENGTH_SHORT).show();
             return;

@@ -30,4 +30,15 @@
     <string name="files">Files</string>
     <string name="home_version">- Primera versión del programa, se añaden las opciones Inicio, Archivos e Yo.</string>
     <string name="updates">Ultimas Updates:(V1.0):</string>
+    <string name="here_is_your_personal_information">Here is your personal information:</string>
+    <string name="account_type">Account type:</string>
+    <string name="textview">TextView</string>
+    <string name="expire_date">Expire date:</string>
+    <string name="delete_account">Delete account</string>
+    <string-array name="sort_options">
+        <item>Ordenar A-Z</item>
+        <item>Ordenar Z-A</item>
+        <item>Ordenar de mayor a menor tamaño</item>
+        <item>Ordenar de menor a mayor tamaño</item>
+    </string-array>
 </resources>

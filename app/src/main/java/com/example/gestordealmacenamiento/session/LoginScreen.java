@@ -9,11 +9,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.gestordealmacenamiento.app.FilesScreen;
 import com.example.gestordealmacenamiento.R;
 import com.example.gestordealmacenamiento.app.HomeScreen;
-import com.example.gestordealmacenamiento.app.MeScreen;
-import com.example.gestordealmacenamiento.util.validateEmail;
+import com.example.gestordealmacenamiento.util.ValidateEmail;
+import com.example.gestordealmacenamiento.util.UserData;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -47,7 +46,7 @@ public class LoginScreen extends AppCompatActivity {
         String email = emailEditText.getText().toString();
 
         // Comprobar que el email es válido.
-        if (!validateEmail.isValidEmail(email)) {
+        if (!ValidateEmail.isValidEmail(email)) {
             Toast.makeText(this, "Por favor, introduce un correo electrónico válido.", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -72,22 +71,34 @@ public class LoginScreen extends AppCompatActivity {
             String storedUsername = null;
             String storedEmail = null;
             String storedPassword = null;
-            int lineNumber = 1;
+            String storedAccountType = null;
+            String storedExpirationDate = null;
 
             String line;
+            int lineNumber = 1;
             while ((line = reader.readLine()) != null) {
-                if (lineNumber == 1) {
-                    storedUsername = line;
-                } else if (lineNumber == 2) {
-                    storedEmail = line;
-                } else if (lineNumber == 3) {
-                    storedPassword = line;
+                switch (lineNumber) {
+                    case 1:
+                        storedUsername = line;
+                        break;
+                    case 2:
+                        storedEmail = line;
+                        break;
+                    case 3:
+                        storedPassword = line;
+                        break;
+                    case 4:
+                        storedAccountType = line;
+                        break;
+                    case 5:
+                        storedExpirationDate = line;
+                        break;
+                    default:
+                        break;
                 }
                 lineNumber++;
             }
             reader.close();
-
-            HomeScreen.username = storedUsername;
 
             if (storedEmail == null || storedPassword == null) {
                 Toast.makeText(this, "Error al leer el archivo.", Toast.LENGTH_SHORT).show();
@@ -98,6 +109,11 @@ public class LoginScreen extends AppCompatActivity {
                 Toast.makeText(this, "Correo electrónico o contraseña incorrectos.", Toast.LENGTH_SHORT).show();
                 return;
             }
+
+            // Create a new instance of UserData and set its data
+            // Store the instance in the static variable
+            UserData.currentInstance = new UserData(storedUsername, storedEmail, storedPassword, storedAccountType, storedExpirationDate);
+
         } catch (IOException e) {
             Toast.makeText(this, "Error al intentar leer el archivo.", Toast.LENGTH_SHORT).show();
             return;

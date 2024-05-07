@@ -13,9 +13,10 @@ import android.os.Environment;
 import android.provider.OpenableColumns;
 import android.text.InputType;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.gestordealmacenamiento.R;
@@ -28,74 +29,19 @@ import java.io.OutputStream;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
+import java.util.Stack;
 
 /**
  * Clase principal de la aplicación.
  *
  * @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
- * @author <a href="mailto:jma1037@alu.ubu.es">José María Martínez Alcalde</a>
- * @author <a href="mailto:jvw1001@alu.ubu.es">José Javier Velasco Whu</a>
- * @author <a href="mailto:mrp1024@alu.ubu.es">Mario Ruiz Puente</a>
  * @version 1.0
  * @serial 17/03/2024
  */
 public class FilesScreen extends AppCompatActivity {
-
-    private File currentDirectory;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.file_screen);
-
-        // Inicializa el directorio actual al directorio "Files" de la aplicación
-        File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
-        currentDirectory = new File(appDirectory, "Files");
-
-        // Llama al método para mostrar la lista de archivos
-        displayFiles();
-    }
-
-    public void displayFiles() {
-        // Comprueba si el directorio actual existe
-        if (currentDirectory.exists()) {
-            // Obtiene la lista de archivos en el directorio actual
-            File[] files = currentDirectory.listFiles();
-
-            // Crea una lista de archivos
-            List<File> fileList = new ArrayList<>();
-            if (files != null) {
-                fileList.addAll(Arrays.asList(files));
-            }
-
-            // Crea un adaptador para la lista
-            FileAdapter adapter = new FileAdapter(this, this, fileList);
-
-            // Asigna el adaptador a la lista
-            ListView filesListView = findViewById(R.id.files_listView);
-            filesListView.setAdapter(adapter);
-        } else {
-            Toast.makeText(this, "No se encontró el directorio de archivos.", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    @NonNull
-    private ArrayAdapter<String> getStringArrayAdapter(File filesDirectory) {
-        File[] files = filesDirectory.listFiles();
-
-        // Crea una lista de nombres de archivos
-        List<String> fileNames = new ArrayList<>();
-        if (files != null) {
-            for (File file : files) {
-                fileNames.add(file.getName());
-            }
-        }
-
-        // Crea un adaptador para la lista
-        return new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, fileNames);
-    }
 
     /**
      * Método que cambia a la pantalla de inicio.
@@ -117,9 +63,130 @@ public class FilesScreen extends AppCompatActivity {
         startActivity(intent);
     }
 
-    // Si le da click al boton de archivos, mandar un toast diciendo que ya esta en la pantalla de archivos
+    /**
+     * Método que cambia a la pantalla de archivos.
+     *
+     * @param view Vista actual.
+     */
     public void goFiles(View view) {
         Toast.makeText(this, "Ya estás en la pantalla de archivos", Toast.LENGTH_SHORT).show();
+    }
+
+    /**
+     * Directorio actual.
+     */
+    private File currentDirectory;
+    /**
+     * Pila de historial de directorios.
+     */
+    private final Stack<File> directoryHistory = new Stack<>();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.file_screen);
+
+        // Inicializa el directorio actual al directorio "Files" de la aplicación
+        File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
+        currentDirectory = new File(appDirectory, "Files");
+
+        // Llama al método para mostrar la lista de archivos
+        configureSpinnerSort();
+    }
+
+    /**
+     * Método que configura el Spinner de ordenación. Permitirá ordenar los archivos por nombre y tamaño.
+     */
+    private void configureSpinnerSort() {
+        Spinner spinnerSort = findViewById(R.id.spinner_sort);
+        spinnerSort.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                // Ordena y muestra los archivos según la opción seleccionada
+                displayFiles(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // No hacer nada
+            }
+        });
+    }
+
+    /**
+     * Método que muestra la lista de archivos.
+     *
+     * @param sortOption Opción de ordenación.
+     */
+    public void displayFiles(int sortOption) {
+        // Comprueba si el directorio actual existe
+        if (currentDirectory.exists()) {
+            // Obtiene la lista de archivos en el directorio actual
+            File[] files = currentDirectory.listFiles();
+
+            // Ordena los archivos
+            sortFiles(files, sortOption);
+
+            // Crea una lista de archivos
+            List<File> fileList = new ArrayList<>();
+            if (files != null) {
+                fileList.addAll(Arrays.asList(files));
+            }
+
+            // Crea un adaptador para la lista
+            FileAdapter adapter = new FileAdapter(this, this, fileList);
+
+            // Asigna el adaptador a la lista
+            ListView filesListView = findViewById(R.id.files_listView);
+            filesListView.setAdapter(adapter);
+        } else {
+            Toast.makeText(this, "No se encontró el directorio de archivos.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    /**
+     * Método que ordena los archivos.
+     *
+     * @param files      Lista de archivos.
+     * @param sortOption Opción de ordenación.
+     */
+    private void sortFiles(File[] files, int sortOption) {
+        if (files != null) {
+            Comparator<File> comparator;
+            switch (sortOption) {
+                case 0: // Ordenar A-Z
+                    comparator = (f1, f2) -> {
+                        if (f1.isDirectory() && !f2.isDirectory()) {
+                            return -1;
+                        } else if (!f1.isDirectory() && f2.isDirectory()) {
+                            return 1;
+                        } else {
+                            return f1.getName().compareToIgnoreCase(f2.getName());
+                        }
+                    };
+                    break;
+                case 1: // Ordenar Z-A
+                    comparator = (f1, f2) -> {
+                        if (f1.isDirectory() && !f2.isDirectory()) {
+                            return 1;
+                        } else if (!f1.isDirectory() && f2.isDirectory()) {
+                            return -1;
+                        } else {
+                            return f2.getName().compareToIgnoreCase(f1.getName());
+                        }
+                    };
+                    break;
+                case 2: // Ordenar de mayor a menor tamaño
+                    comparator = (f1, f2) -> Long.compare(f2.length(), f1.length());
+                    break;
+                case 3: // Ordenar de menor a mayor tamaño
+                    comparator = Comparator.comparingLong(File::length);
+                    break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + sortOption);
+            }
+            Arrays.sort(files, comparator);
+        }
     }
 
     /**
@@ -191,7 +258,7 @@ public class FilesScreen extends AppCompatActivity {
                 Toast.makeText(this, "Error al añadir el archivo.", Toast.LENGTH_SHORT).show();
             } finally {
                 // Actualiza la lista de archivos
-                displayFiles();
+                displayFiles(0);
             }
         }
     }
@@ -248,7 +315,7 @@ public class FilesScreen extends AppCompatActivity {
             if (folderCreated) {
                 Toast.makeText(this, "Carpeta creada con éxito.", Toast.LENGTH_SHORT).show();
                 // Actualiza la lista de archivos
-                displayFiles();
+                displayFiles(0);
             } else {
                 Toast.makeText(this, "Error al crear la carpeta.", Toast.LENGTH_SHORT).show();
             }
@@ -258,7 +325,33 @@ public class FilesScreen extends AppCompatActivity {
         builder.show();
     }
 
+    /**
+     * Método que cambia al directorio seleccionado.
+     *
+     * @param newDirectory Directorio seleccionado.
+     */
     public void setCurrentDirectory(File newDirectory) {
+        if (currentDirectory != null) {
+            directoryHistory.push(currentDirectory);
+        }
         currentDirectory = newDirectory;
+    }
+
+    @Override
+    public void onBackPressed() {
+        // Obtén el directorio "Files" de la aplicación
+        File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
+        File rootDirectory = new File(appDirectory, "Files");
+
+        // Comprueba si el directorio actual es el directorio raíz
+        if (currentDirectory.equals(rootDirectory)) {
+            super.onBackPressed();
+        } else if (!directoryHistory.isEmpty()) {
+            File previousDirectory = directoryHistory.pop();
+            setCurrentDirectory(previousDirectory);
+            displayFiles(0);
+        } else {
+            super.onBackPressed();
+        }
     }
 }

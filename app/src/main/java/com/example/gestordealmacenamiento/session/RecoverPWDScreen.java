@@ -11,10 +11,17 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gestordealmacenamiento.R;
-import com.example.gestordealmacenamiento.util.validateEmail;
+import com.example.gestordealmacenamiento.util.ValidateEmail;
 
 import java.io.File;
 
+/**
+ * Clase que permite recuperar la contraseña de un usuario.
+ *
+ * @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
+ * @version 1.0
+ * @serial 17/03/2024
+ */
 public class RecoverPWDScreen extends AppCompatActivity {
 
     @Override
@@ -23,6 +30,11 @@ public class RecoverPWDScreen extends AppCompatActivity {
         setContentView(R.layout.recoverpwd_screen);
     }
 
+    /**
+     * Método que permite recuperar la contraseña de un usuario.
+     *
+     * @param view Vista actual.
+     */
     public void recover(View view) {
 
         EditText emailEditText = findViewById(R.id.recoverpwd_Email);
@@ -35,7 +47,7 @@ public class RecoverPWDScreen extends AppCompatActivity {
         }
 
         // Comprobar que el email es válido.
-        if (!validateEmail.isValidEmail(email)) {
+        if (!ValidateEmail.isValidEmail(email)) {
             Toast.makeText(this, "Por favor, introduce un Email válido.", Toast.LENGTH_SHORT).show();
             return;
         }

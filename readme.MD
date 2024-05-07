@@ -1,35 +1,23 @@
-# Instalación del proyecto de Android Studio desde GitHub
+# Gestor de Almacenamiento en la Nube
 
-## Clonar el repositorio
-- Abre Android Studio.
-- Haz clic en "Obtener de Control de Versiones" o ve a "File" > "New" > "Poyect from Version Control".
-- Ingresa la URL del repositorio de GitHub ó inicia sesión con GitHub.
-- Elige un directorio para guardar el proyecto (A ser posible, guárdalo en una carpeta vacía llamada `GestorDeAlmacenamiento`).
-- Haz clic en "Clone" o "Aceptar".
+## Información de la aplicación
 
-## Importar el proyecto
-- Una vez que se complete el proceso de clonación, Android Studio te pedirá que abras el proyecto.
-- Haz clic en "Abrir" o ve a "File" > "Open".
-- Navega hasta el directorio donde clonaste el repositorio y selecciona la carpeta del proyecto.
-- Haz clic en "Aceptar" para importar el proyecto.
+- **Nombre**: GAEN (Gestor de Almacenamiento en la Nube)
+- **Descripción**: Aplicación desarrollada en Android Studio como parte de las prácticas de la asignatura Interacción Hombre-Máquina (IHM) en la [Universidad de Burgos](https://www.ubu.es/) (UBU).
 
-## Configurar dependencias y SDK
-- Android Studio sincronizará automáticamente el proyecto y descargará las dependencias necesarias.
-- Asegúrate de tener instaladas las versiones requeridas del SDK. Si no, Android Studio te pedirá que las descargues.
+## Cosas a tener en cuenta
 
-## Construir y ejecutar el proyecto
-- Después de que se importe y sincronice el proyecto, puedes construirlo y ejecutarlo haciendo clic en el botón "Run 'app'" o presionando Ctrl+F5.
+- Todas las clases que acaban en `Screen` tienen asociadas una pantalla de la aplicación.
+- Para poder entrar a la aplicación, es necesario registrarse con una cuenta. (No hace falta utilizar información real).
+- **IMPORTANTE**: La aplicación guarda todos los datos dentro de `/Documents/GestorDeAlmacenamiento/*`.
+- La carpeta `Files`, que es la carpeta Raíz de los ficheros a subir, es compartida por todos los usuarios que registres en la aplicación.
+- Actualmente, no puedes registrar 2 correos electrónicos con nombre igual, pero con distinto distribuidor de correo (a@gmail.com | a@hotmail.com) debido a cómo se guardan los datos de la aplicación.
+- Es posible que veas que los Toast aparecen antes del cambio de pantalla o de que se ejecute la acción. Eso es debido a la carga que el conlleva al emulador de Android Studio hacer el cambio. Tenemos comprobado que no ocurre en un móvil real.
 
-## Realizar un commit y push a GitHub (Sincronizar los cambios en Github)
-- Haz cambios en tu proyecto de Android Studio.
-- Una vez que estés listo para guardar tus cambios, ve a "Git" > "Commit".
-- En la ventana de commit, selecciona los archivos que deseas incluir en el commit.
-- Escribe un mensaje de commit que describa los cambios que has realizado.
-- Haz clic en "Commit" o "Commit and Push" si deseas subir los cambios a GitHub inmediatamente.
-- Si solo hiciste un commit, puedes hacer push de tus cambios a GitHub yendo a "Git" > "Push".
-- En la ventana de push, selecciona las ramas que deseas empujar y haz clic en "Push".
+## Miembros del proyecto
 
-## Otros datos importantes
-- A la hora de descargar los [iconos](https://fonts.google.com/icons?icon.platform=web) que utilizaremos para terminar nuestra aplicación,
-deben ser guardados en el directorio `.\app\src\main\res\drawable`. Para descargar un icono, debes dar click sobre él, ir al apartado **Web**
-y por último descargar como **PNG**. **NO** utilizaremos el apartado **Android** porque no nos merece la pena.
+<table>
+    <tr>
+    <td align="center"><a href="https://github.com/Joseleelsuper"><img src="https://github.com/Joseleelsuper.png" width="100px;" alt=""/><br /><sub><b>Joseleelsuper</b></sub></a></td>
+    </tr>
+</table>

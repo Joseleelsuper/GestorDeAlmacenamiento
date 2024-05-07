@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  * @since 1.0
  * @serial 01/05/2024
  */
-public class validateEmail {
+public class ValidateEmail {
 
     /**
      * Función que comprueba si un email es válido.
@@ -19,7 +19,6 @@ public class validateEmail {
      * @param email Email a comprobar.
      * @return true si el email es válido, false en caso contrario.
      */
-    @SuppressWarnings("")
     public static boolean isValidEmail(String email) {
         String emailRegex = "^[A-Za-z0-9+_.-]+@(.+)$";
         Pattern pattern = Pattern.compile(emailRegex);

@@ -11,10 +11,16 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gestordealmacenamiento.R;
-import com.example.gestordealmacenamiento.exception.noDirectoryException;
 import com.example.gestordealmacenamiento.session.LoginScreen;
 import com.example.gestordealmacenamiento.storage.Storage;
 
+/**
+ * Clase que representa la pantalla de presentación de la aplicación.
+ *
+ * @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
+ * @version 1.0
+ * @serial 17/03/2024
+ */
 public class PresentationScreen extends AppCompatActivity {
 
     /**
@@ -42,8 +48,8 @@ public class PresentationScreen extends AppCompatActivity {
             storage.createAppFolder(this);
             storage.createUsersFolder(this);
             storage.createFilesFolder(this);
-        } catch (noDirectoryException e) {
-            throw new RuntimeException(e);
+        } catch (RuntimeException e) {
+            throw new RuntimeException("Error al crear los directorios necesarios", e);
         }
     }
 }

@@ -24,11 +24,34 @@ import com.example.gestordealmacenamiento.app.FilesScreen;
 import java.io.File;
 import java.util.List;
 
+/**
+ * Adaptador personalizado para la lista de archivos y carpetas.
+ *
+ * @author <a href="mailto:jgc1031@alu.ubu.es">José Gallardo Caballero</a>
+ * @version 1.0
+ * @serial 17/03/2024
+ */
 public class FileAdapter extends ArrayAdapter<File> {
+    /**
+     * Contexto de la aplicación.
+     */
     private final Context context;
+    /**
+     * Lista de archivos y carpetas.
+     */
     private final List<File> files;
+    /**
+     * Pantalla de archivos.
+     */
     private final FilesScreen filesScreen;
 
+    /**
+     * Constructor de la clase.
+     *
+     * @param context     Contexto de la aplicación.
+     * @param filesScreen Pantalla de archivos.
+     * @param files       Lista de archivos y carpetas.
+     */
     public FileAdapter(@NonNull Context context, FilesScreen filesScreen, List<File> files) {
         super(context, R.layout.list_item, files);
         this.context = context;
@@ -61,7 +84,6 @@ public class FileAdapter extends ArrayAdapter<File> {
         convertView.setOnClickListener(v -> {
             if (file.isDirectory()) {
                 // Abre la carpeta
-                // Aquí necesitarás implementar la lógica para abrir la carpeta y mostrar su contenido
                 openFolder(file);
             } else {
                 // Abre el archivo
@@ -81,6 +103,12 @@ public class FileAdapter extends ArrayAdapter<File> {
         return convertView;
     }
 
+    /**
+     * Muestra un diálogo de opciones para un archivo o carpeta.
+     *
+     * @param file     Archivo o carpeta.
+     * @param position Posición del archivo o carpeta en la lista.
+     */
     private void showOptionsDialog(File file, int position) {
         // Muestra un diálogo de opciones
         new AlertDialog.Builder(context)
@@ -114,11 +142,21 @@ public class FileAdapter extends ArrayAdapter<File> {
                 .show();
     }
 
+    /**
+     * Abre una carpeta.
+     *
+     * @param folder Carpeta a abrir.
+     */
     private void openFolder(File folder) {
         filesScreen.setCurrentDirectory(folder);
-        filesScreen.displayFiles();
+        filesScreen.displayFiles(0);
     }
 
+    /**
+     * Abre un archivo.
+     *
+     * @param file Archivo a abrir.
+     */
     private void openFile(File file) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         Uri fileUri = FileProvider.getUriForFile(context, context.getApplicationContext().getPackageName() + ".provider", file);
@@ -128,7 +166,12 @@ public class FileAdapter extends ArrayAdapter<File> {
         context.startActivity(intent);
     }
 
-    private void renameFile(File file) {
+    /**
+     * Renombra un archivo.
+     *
+     * @param file Archivo a renombrar.
+     */
+    private void renameFile(@NonNull File file) {
         // Muestra un diálogo de entrada
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("Nuevo nombre del archivo");
