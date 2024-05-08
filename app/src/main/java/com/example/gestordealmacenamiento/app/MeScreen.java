@@ -1,9 +1,13 @@
 package com.example.gestordealmacenamiento.app;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
+import android.text.InputType;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -66,25 +70,57 @@ public class MeScreen extends AppCompatActivity {
     }
 
     public void deleteAccount(View view) {
-        File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
-        File usersDirectory = new File(appDirectory, "Users");
-        // Conseguir lo que hay antes del @ del email
-        String email = UserData.currentInstance.getEmail();
-        File fileName = new File(usersDirectory, email.split("@")[0] + ".txt");
-        // Borrar el archivo
-        if (fileName.exists()) {
-            boolean deleted = fileName.delete();
-            if (!deleted) {
-                Toast.makeText(this, "Error al eliminar la cuenta", Toast.LENGTH_LONG).show();
-                return;
-            }
-        } else {
-            Toast.makeText(this, "El archivo no existe", Toast.LENGTH_LONG).show();
-            return;
-        }
+        // Crea un diálogo de entrada
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Confirmar eliminación de la cuenta");
 
-        Intent intent = new Intent(this, LoginScreen.class);
-        startActivity(intent);
-        Toast.makeText(this, "Cuenta eliminada correctamente", Toast.LENGTH_SHORT).show();
+        // Configura los campos de entrada
+        final EditText emailInput = new EditText(this);
+        emailInput.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+        emailInput.setHint("Correo electrónico");
+
+        final EditText passwordInput = new EditText(this);
+        passwordInput.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        passwordInput.setHint("Contraseña");
+
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        layout.addView(emailInput);
+        layout.addView(passwordInput);
+        builder.setView(layout);
+
+        // Configura los botones
+        builder.setPositiveButton("Eliminar", (dialog, which) -> {
+            String email = emailInput.getText().toString();
+            String password = passwordInput.getText().toString();
+
+            // Verifica los datos introducidos
+            if (email.equals(UserData.currentInstance.getEmail()) && password.equals(UserData.currentInstance.getPassword())) {
+                // Los datos son correctos, procede a eliminar la cuenta
+                File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
+                File usersDirectory = new File(appDirectory, "Users");
+                File fileName = new File(usersDirectory, email.split("@")[0] + ".txt");
+                if (fileName.exists()) {
+                    boolean deleted = fileName.delete();
+                    if (!deleted) {
+                        Toast.makeText(this, "Error al eliminar la cuenta", Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                } else {
+                    Toast.makeText(this, "Correo electrónico o contraseña incorrectos", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                Intent intent = new Intent(this, LoginScreen.class);
+                startActivity(intent);
+                Toast.makeText(this, "Cuenta eliminada correctamente", Toast.LENGTH_SHORT).show();
+            } else {
+                // Los datos son incorrectos, muestra un mensaje de error
+                Toast.makeText(this, "Correo electrónico o contraseña incorrectos", Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.setNegativeButton("Cancelar", (dialog, which) -> dialog.cancel());
+
+        builder.show();
     }
 }

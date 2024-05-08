@@ -2,8 +2,8 @@ package com.example.gestordealmacenamiento.app;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gestordealmacenamiento.R;
 import com.example.gestordealmacenamiento.session.LoginScreen;
+import com.example.gestordealmacenamiento.util.FileAdapter;
 import com.example.gestordealmacenamiento.util.UserData;
 
 import java.io.File;
@@ -28,7 +29,7 @@ public class HomeScreen extends AppCompatActivity {
     /**
      * Lista de directorios recientes.
      */
-    private final LinkedList<File> recentDirectories = new LinkedList<>();
+    private static final LinkedList<File> recentDirectories = new LinkedList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,19 +40,7 @@ public class HomeScreen extends AppCompatActivity {
         TextView usernameTextView = findViewById(R.id.usernameTextView);
         usernameTextView.setText(UserData.currentInstance.getUsername());
 
-        File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
-        File filesDirectory = new File(appDirectory, "Files");
-        File[] files = filesDirectory.listFiles();
-        if (files != null) {
-            for (File file : files) {
-                if (file.isDirectory()) {
-                    recentDirectories.add(file);
-                    if (recentDirectories.size() == 2) {
-                        break;
-                    }
-                }
-            }
-        }
+        displayRecentDirectories();
     }
 
     /**
@@ -87,5 +76,30 @@ public class HomeScreen extends AppCompatActivity {
         Intent intent = new Intent(this, LoginScreen.class);
         startActivity(intent);
         Toast.makeText(this, "Sesión cerrada correctamente.", Toast.LENGTH_SHORT).show();
+    }
+
+    public static void setRecentDirectory(File directory) {
+        // Añade el directorio a la lista
+        recentDirectories.addFirst(directory);
+
+        // Si la lista tiene más de 2 elementos, elimina el más antiguo
+        if (recentDirectories.size() > 2) {
+            recentDirectories.removeLast();
+        }
+    }
+
+    private void displayRecentDirectories() {
+        // Crea un adaptador para la lista
+        FileAdapter adapter = new FileAdapter(this, recentDirectories);
+
+        // Asigna el adaptador a la lista
+        ListView recentDirectoriesListView = findViewById(R.id.home_listView);
+        recentDirectoriesListView.setAdapter(adapter);
+    }
+
+    public void openFolder(File folder) {
+        Intent intent = new Intent(this, FilesScreen.class);
+        intent.putExtra("directoryPath", folder.getPath());
+        startActivity(intent);
     }
 }

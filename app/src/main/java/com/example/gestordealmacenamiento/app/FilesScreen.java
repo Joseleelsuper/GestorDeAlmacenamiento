@@ -15,6 +15,7 @@ import android.text.InputType;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -42,6 +43,19 @@ import java.util.Stack;
  * @serial 17/03/2024
  */
 public class FilesScreen extends AppCompatActivity {
+
+    /**
+     * Flecha para volver atrás.
+     */
+    private ImageView fileArrowBack;
+    /**
+     * Directorio actual.
+     */
+    private File currentDirectory;
+    /**
+     * Pila de historial de directorios.
+     */
+    private Stack<File> directoryHistory;
 
     /**
      * Método que cambia a la pantalla de inicio.
@@ -72,15 +86,6 @@ public class FilesScreen extends AppCompatActivity {
         Toast.makeText(this, "Ya estás en la pantalla de archivos", Toast.LENGTH_SHORT).show();
     }
 
-    /**
-     * Directorio actual.
-     */
-    private File currentDirectory;
-    /**
-     * Pila de historial de directorios.
-     */
-    private final Stack<File> directoryHistory = new Stack<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,6 +97,19 @@ public class FilesScreen extends AppCompatActivity {
 
         // Llama al método para mostrar la lista de archivos
         configureSpinnerSort();
+
+        directoryHistory = new Stack<>();
+
+        fileArrowBack = findViewById(R.id.file_arrow_back);
+        fileArrowBack.setVisibility(View.INVISIBLE);
+        fileArrowBack.setOnClickListener(v -> goBackToParentDirectory());
+
+        String directoryPath = getIntent().getStringExtra("directoryPath");
+        if (directoryPath != null) {
+            File directory = new File(directoryPath);
+            setCurrentDirectory(directory);
+            displayFiles(0);
+        }
     }
 
     /**
@@ -306,10 +324,7 @@ public class FilesScreen extends AppCompatActivity {
         builder.setPositiveButton("OK", (dialog, which) -> {
             String folderName = input.getText().toString();
 
-            // Crea un nuevo directorio en el directorio "Files" de la aplicación con el nombre de la carpeta
-            File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
-            File filesDirectory = new File(appDirectory, "Files");
-            File newFolder = new File(filesDirectory, folderName);
+            File newFolder = new File(currentDirectory, folderName);
             boolean folderCreated = newFolder.mkdir();
 
             if (folderCreated) {
@@ -335,6 +350,32 @@ public class FilesScreen extends AppCompatActivity {
             directoryHistory.push(currentDirectory);
         }
         currentDirectory = newDirectory;
+
+        File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
+        File rootDirectory = new File(appDirectory, "Files");
+
+        if (currentDirectory.equals(rootDirectory)) {
+            fileArrowBack.setVisibility(View.INVISIBLE);
+        } else {
+            fileArrowBack.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private void goBackToParentDirectory() {
+        if (!directoryHistory.isEmpty()) {
+            currentDirectory = directoryHistory.pop();
+
+            File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
+            File rootDirectory = new File(appDirectory, "Files");
+
+            if (currentDirectory.equals(rootDirectory)) {
+                fileArrowBack.setVisibility(View.INVISIBLE);
+            } else {
+                fileArrowBack.setVisibility(View.VISIBLE);
+            }
+
+            displayFiles(0);
+        }
     }
 
     @Override

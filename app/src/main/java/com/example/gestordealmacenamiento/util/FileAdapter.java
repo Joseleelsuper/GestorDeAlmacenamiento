@@ -20,9 +20,11 @@ import androidx.core.content.FileProvider;
 
 import com.example.gestordealmacenamiento.R;
 import com.example.gestordealmacenamiento.app.FilesScreen;
+import com.example.gestordealmacenamiento.app.HomeScreen;
 
 import java.io.File;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Adaptador personalizado para la lista de archivos y carpetas.
@@ -57,6 +59,13 @@ public class FileAdapter extends ArrayAdapter<File> {
         this.context = context;
         this.files = files;
         this.filesScreen = filesScreen;
+    }
+
+    public FileAdapter(@NonNull Context context, List<File> files) {
+        super(context, R.layout.list_item, files);
+        this.context = context;
+        this.files = files;
+        this.filesScreen = null;
     }
 
     @NonNull
@@ -129,13 +138,7 @@ public class FileAdapter extends ArrayAdapter<File> {
                             renameFile(file);
                             break;
                         case 2: // Eliminar
-                            if (file.delete()) {
-                                Toast.makeText(context, "Archivo eliminado con éxito.", Toast.LENGTH_SHORT).show();
-                                files.remove(position);
-                                notifyDataSetChanged();
-                            } else {
-                                Toast.makeText(context, "Error al eliminar el archivo.", Toast.LENGTH_SHORT).show();
-                            }
+                            showDeleteConfirmationDialog(file, position);
                             break;
                     }
                 })
@@ -148,8 +151,13 @@ public class FileAdapter extends ArrayAdapter<File> {
      * @param folder Carpeta a abrir.
      */
     private void openFolder(File folder) {
-        filesScreen.setCurrentDirectory(folder);
-        filesScreen.displayFiles(0);
+        if (filesScreen != null) {
+            filesScreen.setCurrentDirectory(folder);
+            filesScreen.displayFiles(0);
+            HomeScreen.setRecentDirectory(folder);
+        } else {
+            ((HomeScreen) context).openFolder(folder);
+        }
     }
 
     /**
@@ -174,7 +182,7 @@ public class FileAdapter extends ArrayAdapter<File> {
     private void renameFile(@NonNull File file) {
         // Muestra un diálogo de entrada
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle("Nuevo nombre del archivo");
+        builder.setTitle("Nuevo nombre del archivo:");
 
         // Configura el campo de entrada
         final EditText input = new EditText(context);
@@ -205,5 +213,45 @@ public class FileAdapter extends ArrayAdapter<File> {
         builder.setNegativeButton("Cancelar", (dialog, which) -> dialog.cancel());
 
         builder.show();
+    }
+
+    /**
+     * Elimina un archivo o carpeta y sus subcarpetas y archivos.
+     *
+     * @param fileOrDirectory Fichero a eliminar.
+     */
+    private void deleteFileOrDirectory(File fileOrDirectory) {
+        if (fileOrDirectory.isDirectory())
+            for (File child : Objects.requireNonNull(fileOrDirectory.listFiles()))
+                deleteFileOrDirectory(child);
+
+        fileOrDirectory.delete();
+    }
+
+    /**
+     * Muestra un diálogo de confirmación para eliminar un archivo o carpeta.
+     *
+     * @param file     Archivo o carpeta a eliminar.
+     * @param position Posición del archivo o carpeta en la lista.
+     */
+    private void showDeleteConfirmationDialog(File file, int position) {
+        String message;
+        if (file.isDirectory() && Objects.requireNonNull(file.listFiles()).length > 0) {
+            message = "Estás a punto de eliminar una carpeta con ficheros. ¿Deseas continuar?";
+        } else {
+            message = "Estás a punto de eliminar " + (file.isDirectory() ? "una carpeta" : "un archivo") + ". ¿Deseas continuar?";
+        }
+
+        new AlertDialog.Builder(context)
+                .setTitle("Confirmar eliminación")
+                .setMessage(message)
+                .setPositiveButton("Sí", (dialog, which) -> {
+                    deleteFileOrDirectory(file);
+                    files.remove(position);
+                    notifyDataSetChanged();
+                    Toast.makeText(context, file.isDirectory() ? "Carpeta eliminada" : "Arhivo eliminado" + " con éxito.", Toast.LENGTH_SHORT).show();
+                })
+                .setNegativeButton("No", null)
+                .show();
     }
 }
