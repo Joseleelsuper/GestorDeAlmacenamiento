@@ -239,7 +239,7 @@ public class FileAdapter extends ArrayAdapter<File> {
         if (file.isDirectory() && Objects.requireNonNull(file.listFiles()).length > 0) {
             message = getContext().getString(R.string.question_deleteFile);
         } else {
-            message = getContext().getString(R.string.question_part1) + (file.isDirectory() ? getContext().getString(R.string.aFolder) : getContext().getString(R.string.aFile)) + getContext().getString(R.string.question_continue);
+            message = file.isDirectory() ? getContext().getString(R.string.question_folder) : getContext().getString(R.string.question_file) + getContext().getString(R.string.question_continue);
         }
 
         new AlertDialog.Builder(context)
@@ -249,7 +249,7 @@ public class FileAdapter extends ArrayAdapter<File> {
                     if (deleteFileOrDirectory(file)) {
                         files.remove(position);
                         notifyDataSetChanged();
-                        Toast.makeText(context, file.isDirectory() ? getContext().getString(R.string.folder_deleted) :getContext().getString(R.string.file_deleted) + getContext().getString(R.string.good_exit), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, file.isDirectory() ? getContext().getString(R.string.good_deletedFolder) :getContext().getString(R.string.good_deletedFile), Toast.LENGTH_SHORT).show();
                     }
                 })
                 .setNegativeButton(getContext().getString(R.string.no), null)

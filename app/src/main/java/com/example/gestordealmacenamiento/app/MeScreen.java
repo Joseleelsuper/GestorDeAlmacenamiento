@@ -70,6 +70,11 @@ public class MeScreen extends AppCompatActivity {
         Toast.makeText(this, getString(R.string.alreadyinme), Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * Método que elimina la cuenta.
+     *
+     * @param view Vista actual.
+     */
     public void deleteAccount(View view) {
         // Crea un diálogo de entrada
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

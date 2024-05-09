@@ -105,7 +105,7 @@ public class FilesScreen extends AppCompatActivity {
         fileArrowBack.setVisibility(View.INVISIBLE);
         fileArrowBack.setOnClickListener(v -> goBackToParentDirectory());
 
-        String directoryPath = getIntent().getStringExtra(FinalVariables.getFileDirectory());
+        String directoryPath = getIntent().getStringExtra(FinalVariables.getDirectoryPath());
         if (directoryPath != null) {
             File directory = new File(directoryPath);
             setCurrentDirectory(directory);

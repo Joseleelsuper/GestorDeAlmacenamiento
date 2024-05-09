@@ -42,13 +42,9 @@
     <string name="error_writeFile">Error al escribir el archivo.</string>
     <string name="question_deleteFile">Estás a punto de eliminar una carpeta con ficheros. ¿Deseas continuar?</string>
     <string name="question_continue">. ¿Deseas continuar?</string>
-    <string name="question_part1">Estás a punto de eliminar </string>
-    <string name="aFolder">una carpeta</string>
-    <string name="aFile">un archivo</string>
+    <string name="question_folder">Estás a punto de eliminar una carpeta</string>
+    <string name="question_file">Estás a punto de eliminar un archivo</string>
     <string name="confirm_deleteFile">Confirmar eliminación</string>
-    <string name="folder_deleted">Carpeta eliminada</string>
-    <string name="file_deleted">Archivo eliminado</string>
-    <string name="good_exit">con éxito.</string>
 
     <!-- Account Management -->
     <string name="username">Nombre de usuario</string>
@@ -84,7 +80,7 @@
 
     <!-- App Updates -->
     <string name="home_version">- Primera versión del programa, se añaden las opciones Inicio, Archivos y Yo.</string>
-    <string name="updates">Ultimas Updates:(V1.0):</string>
+    <string name="updates">Ultimas Updates: (V1.0)</string>
 
     <!-- User Information -->
     <string name="here_is_your_personal_information">Aquí puedes ver tu información personal:</string>

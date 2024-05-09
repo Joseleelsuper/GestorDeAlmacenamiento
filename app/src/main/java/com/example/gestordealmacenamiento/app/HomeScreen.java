@@ -73,14 +73,32 @@ public class HomeScreen extends AppCompatActivity {
         Toast.makeText(this, getString(R.string.alreadyinhome), Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * Método que cierra sesión.
+     *
+     * @param view Vista actual.
+     */
     public void logout(View view) {
         Intent intent = new Intent(this, LoginScreen.class);
         startActivity(intent);
         Toast.makeText(this, getString(R.string.good_logout), Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * Método que añade un directorio a la lista de directorios recientes.
+     *
+     * @param directory Directorio a añadir.
+     */
+    /**
+     * Método que añade un directorio a la lista de directorios recientes.
+     *
+     * @param directory Directorio a añadir.
+     */
     public static void setRecentDirectory(File directory) {
-        // Añade el directorio a la lista
+        // Si el directorio ya está en la lista, lo elimina
+        recentDirectories.remove(directory);
+
+        // Añade el directorio al principio de la lista
         recentDirectories.addFirst(directory);
 
         // Si la lista tiene más de 2 elementos, elimina el más antiguo
@@ -89,6 +107,9 @@ public class HomeScreen extends AppCompatActivity {
         }
     }
 
+    /**
+     * Método que muestra los directorios recientes.
+     */
     private void displayRecentDirectories() {
         // Crea un adaptador para la lista
         FileAdapter adapter = new FileAdapter(this, recentDirectories);
@@ -98,6 +119,11 @@ public class HomeScreen extends AppCompatActivity {
         recentDirectoriesListView.setAdapter(adapter);
     }
 
+    /**
+     * Método que abre la carpeta seleccionada.
+     *
+     * @param folder Carpeta a abrir.
+     */
     public void openFolder(File folder) {
         Intent intent = new Intent(this, FilesScreen.class);
         intent.putExtra(FinalVariables.getDirectoryPath(), folder.getPath());
