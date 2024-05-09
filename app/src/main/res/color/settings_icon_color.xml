@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Se utiliza para cambiar el color del icono, dependiendo si el usuario tiene tema claro o oscuro -->
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:color="?attr/colorOnSurface" android:state_enabled="true" />
-    <item android:alpha="0.38" android:color="?attr/colorOnSurface" android:state_enabled="false" />
-</selector>

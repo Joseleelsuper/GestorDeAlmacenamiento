@@ -19,10 +19,10 @@ public class ValidateEmail {
      * @param email Email a comprobar.
      * @return true si el email es válido, false en caso contrario.
      */
-    public static boolean isValidEmail(String email) {
+    public static boolean isNotValidEmail(String email) {
         String emailRegex = "^[A-Za-z0-9+_.-]+@(.+)$";
         Pattern pattern = Pattern.compile(emailRegex);
         Matcher matcher = pattern.matcher(email);
-        return matcher.matches();
+        return !matcher.matches();
     }
 }

@@ -48,8 +48,8 @@ public class PresentationScreen extends AppCompatActivity {
             storage.createAppFolder(this);
             storage.createUsersFolder(this);
             storage.createFilesFolder(this);
-        } catch (RuntimeException e) {
-            throw new RuntimeException("Error al crear los directorios necesarios", e);
+        } catch (Exception e) {
+            throw new RuntimeException(getString(R.string.uploadFile), e);
         }
     }
 }

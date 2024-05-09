@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gestordealmacenamiento.R;
 import com.example.gestordealmacenamiento.app.HomeScreen;
+import com.example.gestordealmacenamiento.util.FinalVariables;
 import com.example.gestordealmacenamiento.util.ValidateEmail;
 import com.example.gestordealmacenamiento.util.UserData;
 
@@ -46,8 +47,8 @@ public class LoginScreen extends AppCompatActivity {
         String email = emailEditText.getText().toString();
 
         // Comprobar que el email es válido.
-        if (!ValidateEmail.isValidEmail(email)) {
-            Toast.makeText(this, "Por favor, introduce un correo electrónico válido.", Toast.LENGTH_SHORT).show();
+        if (ValidateEmail.isNotValidEmail(email)) {
+            Toast.makeText(this, getString(R.string.invalid_email), Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -55,13 +56,13 @@ public class LoginScreen extends AppCompatActivity {
 
         // Obtener la carpeta "Users".
         File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
-        File usersDirectory = new File(appDirectory, "Users");
+        File usersDirectory = new File(appDirectory, FinalVariables.getUserDirectory());
         // Crear el archivo del usuario dentro de la carpeta "Users".
         File file = new File(usersDirectory, email.split("@")[0] + ".txt");
 
         // Comprobar si el usuario existe (Es decir, si ya hay un archivo con el mismo nombre de usuario).
         if (!file.exists()) {
-            Toast.makeText(this, "El usuario no existe. Por favor, regístrese.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.invalid_user), Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -101,12 +102,12 @@ public class LoginScreen extends AppCompatActivity {
             reader.close();
 
             if (storedEmail == null || storedPassword == null) {
-                Toast.makeText(this, "Error al leer el archivo.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.error_readFile), Toast.LENGTH_SHORT).show();
                 return;
             }
 
             if (!email.equals(storedEmail) || !password.equals(storedPassword)) {
-                Toast.makeText(this, "Correo electrónico o contraseña incorrectos.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.error_emailOrPasswordIncorrect), Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -115,13 +116,13 @@ public class LoginScreen extends AppCompatActivity {
             UserData.currentInstance = new UserData(storedUsername, storedEmail, storedPassword, storedAccountType, storedExpirationDate);
 
         } catch (IOException e) {
-            Toast.makeText(this, "Error al intentar leer el archivo.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.error_readFile), Toast.LENGTH_SHORT).show();
             return;
         }
 
         Intent intent = new Intent(this, HomeScreen.class);
         startActivity(intent);
-        Toast.makeText(this, "Inicio de sesión correcto.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.good_login), Toast.LENGTH_SHORT).show();
     }
 
     /**

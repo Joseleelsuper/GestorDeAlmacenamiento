@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gestordealmacenamiento.R;
 import com.example.gestordealmacenamiento.util.ValidateEmail;
+import com.example.gestordealmacenamiento.util.FinalVariables;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -51,7 +52,7 @@ public class RegisterScreen extends AppCompatActivity {
 
         // Comprobat que se ha marcado la casilla de aceptar términos y condiciones.
         if (!((CheckBox) findViewById(R.id.register_termsOfUse)).isChecked()) {
-            Toast.makeText(this, "Por favor, acepta los términos de uso.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.accept_term_of_use), Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -59,8 +60,8 @@ public class RegisterScreen extends AppCompatActivity {
         String email = emailEditText.getText().toString();
 
         // Comprobar que el email es válido.
-        if (!ValidateEmail.isValidEmail(email)) {
-            Toast.makeText(this, "Por favor, introduce un correo electrónico válido.", Toast.LENGTH_SHORT).show();
+        if (ValidateEmail.isNotValidEmail(email)) {
+            Toast.makeText(this, getString(R.string.invalid_email), Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -74,9 +75,9 @@ public class RegisterScreen extends AppCompatActivity {
         String accountType;
 
         if (personalEmailDomains.contains(emailDomain)) {
-            accountType = "Personal";
+            accountType = FinalVariables.getAccountTypePersonal();
         } else {
-            accountType = "Business";
+            accountType = FinalVariables.getAccountTypeBusiness();
         }
 
         // Obtener la fecha y hora actual
@@ -90,13 +91,13 @@ public class RegisterScreen extends AppCompatActivity {
 
         // Obtener la carpeta "Users".
         File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
-        File usersDirectory = new File(appDirectory, "Users");
+        File usersDirectory = new File(appDirectory, FinalVariables.getUserDirectory());
         // Crear el archivo del usuario dentro de la carpeta "Users".
         File file = new File(usersDirectory, email.split("@")[0] + ".txt");
 
         // Comprobar si el usuario ya existe (Es decir, si ya hay un archivo con el mismo nombre de usuario).
         if (file.exists()) {
-            Toast.makeText(this, "El usuario ya existe", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.error_userAlreadyExists), Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -109,15 +110,15 @@ public class RegisterScreen extends AppCompatActivity {
             osw.write(accountType + "\n");
             osw.write(expirationDate);
         } catch (FileNotFoundException e) {
-            Toast.makeText(this, "Error al encontrar el archivo. No pudo ser creado.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.error_register), Toast.LENGTH_SHORT).show();
             return;
         } catch (IOException e) {
-            Toast.makeText(this, "Error al intentar escribir en el archivo.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.error_writeFile), Toast.LENGTH_SHORT).show();
             return;
         }
 
         loginText(view);
-        Toast.makeText(this, "Usuario registrado correctamente.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.good_register), Toast.LENGTH_SHORT).show();
     }
 
     /**

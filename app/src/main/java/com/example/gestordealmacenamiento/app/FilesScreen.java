@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.example.gestordealmacenamiento.R;
 import com.example.gestordealmacenamiento.util.FileAdapter;
+import com.example.gestordealmacenamiento.util.FinalVariables;
 
 import java.io.File;
 import java.io.IOException;
@@ -83,7 +84,7 @@ public class FilesScreen extends AppCompatActivity {
      * @param view Vista actual.
      */
     public void goFiles(View view) {
-        Toast.makeText(this, "Ya estás en la pantalla de archivos", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.alreadyinfilescreen), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -93,7 +94,7 @@ public class FilesScreen extends AppCompatActivity {
 
         // Inicializa el directorio actual al directorio "Files" de la aplicación
         File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
-        currentDirectory = new File(appDirectory, "Files");
+        currentDirectory = new File(appDirectory, FinalVariables.getFileDirectory());
 
         // Llama al método para mostrar la lista de archivos
         configureSpinnerSort();
@@ -104,7 +105,7 @@ public class FilesScreen extends AppCompatActivity {
         fileArrowBack.setVisibility(View.INVISIBLE);
         fileArrowBack.setOnClickListener(v -> goBackToParentDirectory());
 
-        String directoryPath = getIntent().getStringExtra("directoryPath");
+        String directoryPath = getIntent().getStringExtra(FinalVariables.getFileDirectory());
         if (directoryPath != null) {
             File directory = new File(directoryPath);
             setCurrentDirectory(directory);
@@ -158,7 +159,7 @@ public class FilesScreen extends AppCompatActivity {
             ListView filesListView = findViewById(R.id.files_listView);
             filesListView.setAdapter(adapter);
         } else {
-            Toast.makeText(this, "No se encontró el directorio de archivos.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.error_noFileDirectory), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -201,7 +202,7 @@ public class FilesScreen extends AppCompatActivity {
                     comparator = Comparator.comparingLong(File::length);
                     break;
                 default:
-                    throw new IllegalStateException("Unexpected value: " + sortOption);
+                    throw new IllegalStateException(getString(R.string.unexpectedValue) + sortOption);
             }
             Arrays.sort(files, comparator);
         }
@@ -215,8 +216,8 @@ public class FilesScreen extends AppCompatActivity {
     public void addFile(View view) {
         // Crea un diálogo de opciones
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Elige una opción")
-                .setItems(new String[]{"Subir archivo", "Crear carpeta"}, (dialog, which) -> {
+        builder.setTitle(getString(R.string.chooseOption))
+                .setItems(new String[]{getString(R.string.uploadFile), getString(R.string.createFolder)}, (dialog, which) -> {
                     switch (which) {
                         case 0: // Subir archivo
                             Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
@@ -247,7 +248,7 @@ public class FilesScreen extends AppCompatActivity {
 
             // Comprueba si el archivo ya existe
             if (newFile.exists()) {
-                Toast.makeText(this, "El archivo ya existe.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.error_fileExits), Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -271,9 +272,9 @@ public class FilesScreen extends AppCompatActivity {
                 in.close();
                 out.close();
 
-                Toast.makeText(this, "Archivo añadido con éxito.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.good_addedFile), Toast.LENGTH_SHORT).show();
             } catch (IOException e) {
-                Toast.makeText(this, "Error al añadir el archivo.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.error_addedFile), Toast.LENGTH_SHORT).show();
             } finally {
                 // Actualiza la lista de archivos
                 displayFiles(0);
@@ -285,7 +286,7 @@ public class FilesScreen extends AppCompatActivity {
     @SuppressLint("Range")
     private String getFileName(@NonNull Uri uri) {
         String result = null;
-        if (Objects.equals(uri.getScheme(), "content")) {
+        if (Objects.equals(uri.getScheme(), FinalVariables.getContent())) {
             Cursor cursor = getContentResolver().query(uri, null, null, null, null);
             try {
                 if (cursor != null && cursor.moveToFirst()) {
@@ -313,7 +314,7 @@ public class FilesScreen extends AppCompatActivity {
     private void createFolder() {
         // Crea un diálogo de entrada
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Nombre de la carpeta");
+        builder.setTitle(getString(R.string.nameFolder));
 
         // Configura el campo de entrada
         final EditText input = new EditText(this);
@@ -321,21 +322,21 @@ public class FilesScreen extends AppCompatActivity {
         builder.setView(input);
 
         // Configura los botones
-        builder.setPositiveButton("OK", (dialog, which) -> {
+        builder.setPositiveButton(getString(R.string.ok), (dialog, which) -> {
             String folderName = input.getText().toString();
 
             File newFolder = new File(currentDirectory, folderName);
             boolean folderCreated = newFolder.mkdir();
 
             if (folderCreated) {
-                Toast.makeText(this, "Carpeta creada con éxito.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.good_folderCreated), Toast.LENGTH_SHORT).show();
                 // Actualiza la lista de archivos
                 displayFiles(0);
             } else {
-                Toast.makeText(this, "Error al crear la carpeta.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.error_folderCreated), Toast.LENGTH_SHORT).show();
             }
         });
-        builder.setNegativeButton("Cancelar", (dialog, which) -> dialog.cancel());
+        builder.setNegativeButton(getString(R.string.cancel), (dialog, which) -> dialog.cancel());
 
         builder.show();
     }
@@ -352,7 +353,7 @@ public class FilesScreen extends AppCompatActivity {
         currentDirectory = newDirectory;
 
         File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
-        File rootDirectory = new File(appDirectory, "Files");
+        File rootDirectory = new File(appDirectory, FinalVariables.getFileDirectory());
 
         if (currentDirectory.equals(rootDirectory)) {
             fileArrowBack.setVisibility(View.INVISIBLE);
@@ -366,7 +367,7 @@ public class FilesScreen extends AppCompatActivity {
             currentDirectory = directoryHistory.pop();
 
             File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
-            File rootDirectory = new File(appDirectory, "Files");
+            File rootDirectory = new File(appDirectory, FinalVariables.getFileDirectory());
 
             if (currentDirectory.equals(rootDirectory)) {
                 fileArrowBack.setVisibility(View.INVISIBLE);
@@ -382,7 +383,7 @@ public class FilesScreen extends AppCompatActivity {
     public void onBackPressed() {
         // Obtén el directorio "Files" de la aplicación
         File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
-        File rootDirectory = new File(appDirectory, "Files");
+        File rootDirectory = new File(appDirectory, FinalVariables.getFileDirectory());
 
         // Comprueba si el directorio actual es el directorio raíz
         if (currentDirectory.equals(rootDirectory)) {

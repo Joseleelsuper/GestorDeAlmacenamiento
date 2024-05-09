@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gestordealmacenamiento.R;
+import com.example.gestordealmacenamiento.util.FinalVariables;
 import com.example.gestordealmacenamiento.util.ValidateEmail;
 
 import java.io.File;
@@ -42,31 +43,31 @@ public class RecoverPWDScreen extends AppCompatActivity {
 
         // Comprobar que se han aceptado los envíos al correo
         if (!((CheckBox) findViewById(R.id.recoverpwd_mailReport)).isChecked()) {
-            Toast.makeText(this, "Por favor, acepta los envíos de mensajes al correo.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.accept_email_messages), Toast.LENGTH_SHORT).show();
             return;
         }
 
         // Comprobar que el email es válido.
-        if (!ValidateEmail.isValidEmail(email)) {
-            Toast.makeText(this, "Por favor, introduce un Email válido.", Toast.LENGTH_SHORT).show();
+        if (ValidateEmail.isNotValidEmail(email)) {
+            Toast.makeText(this, getString(R.string.invalid_email), Toast.LENGTH_SHORT).show();
             return;
         }
 
         // Obtener la carpeta "Users".
         File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));
-        File usersDirectory = new File(appDirectory, "Users");
+        File usersDirectory = new File(appDirectory, FinalVariables.getUserDirectory());
         // Crear el archivo del usuario dentro de la carpeta "Users".
         File file = new File(usersDirectory, email.split("@")[0] + ".txt");
 
         // Comprobar si el usuario existe (Es decir, si ya hay un archivo con el mismo nombre de usuario).
         if (!file.exists()) {
-            Toast.makeText(this, "Este correo electrónico no está en la base de datos.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.no_email_in_db), Toast.LENGTH_SHORT).show();
             return;
         }
 
         // Enviar un correo con la contraseña.
         Intent intent = new Intent(this, LoginScreen.class);
         startActivity(intent);
-        Toast.makeText(this, "Operación realizada. Mira tu correo.", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, getString(R.string.good_recoverPWD), Toast.LENGTH_LONG).show();
     }
 }

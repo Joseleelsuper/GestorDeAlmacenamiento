@@ -121,8 +121,8 @@ public class FileAdapter extends ArrayAdapter<File> {
     private void showOptionsDialog(File file, int position) {
         // Muestra un diálogo de opciones
         new AlertDialog.Builder(context)
-                .setTitle("Elige una opción")
-                .setItems(new String[]{"Abrir", "Renombrar", "Eliminar"}, (dialog, which) -> {
+                .setTitle(getContext().getString(R.string.chooseOption))
+                .setItems(new String[]{getContext().getString(R.string.open), getContext().getString(R.string.rename), getContext().getString(R.string.delete)}, (dialog, which) -> {
                     switch (which) {
                         case 0: // Abrir
                             if (file.isDirectory()) {
@@ -182,7 +182,7 @@ public class FileAdapter extends ArrayAdapter<File> {
     private void renameFile(@NonNull File file) {
         // Muestra un diálogo de entrada
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle("Nuevo nombre del archivo:");
+        builder.setTitle(getContext().getString(R.string.newNameFile));
 
         // Configura el campo de entrada
         final EditText input = new EditText(context);
@@ -191,7 +191,7 @@ public class FileAdapter extends ArrayAdapter<File> {
         builder.setView(input);
 
         // Configura los botones
-        builder.setPositiveButton("OK", (dialog, which) -> {
+        builder.setPositiveButton(getContext().getString(R.string.ok), (dialog, which) -> {
             String newName = input.getText().toString();
 
             // Comprueba que el nuevo nombre no esté vacío y que no exista otro archivo con el mismo nombre y extensión
@@ -199,18 +199,18 @@ public class FileAdapter extends ArrayAdapter<File> {
             if (!newName.isEmpty() && !newFile.exists()) {
                 // Renombra el archivo
                 if (file.renameTo(newFile)) {
-                    Toast.makeText(context, "Archivo renombrado con éxito.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, getContext().getString(R.string.good_renamedFile), Toast.LENGTH_SHORT).show();
                     files.remove(file);
                     files.add(newFile);
                     notifyDataSetChanged();
                 } else {
-                    Toast.makeText(context, "Error al renombrar el archivo.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, getContext().getString(R.string.error_renamedFile), Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(context, "El nombre del archivo no es válido.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, getContext().getString(R.string.error_fileName), Toast.LENGTH_SHORT).show();
             }
         });
-        builder.setNegativeButton("Cancelar", (dialog, which) -> dialog.cancel());
+        builder.setNegativeButton(getContext().getString(R.string.cancel), (dialog, which) -> dialog.cancel());
 
         builder.show();
     }
@@ -220,12 +220,12 @@ public class FileAdapter extends ArrayAdapter<File> {
      *
      * @param fileOrDirectory Fichero a eliminar.
      */
-    private void deleteFileOrDirectory(File fileOrDirectory) {
+    private boolean deleteFileOrDirectory(File fileOrDirectory) {
         if (fileOrDirectory.isDirectory())
             for (File child : Objects.requireNonNull(fileOrDirectory.listFiles()))
                 deleteFileOrDirectory(child);
 
-        fileOrDirectory.delete();
+        return fileOrDirectory.delete();
     }
 
     /**
@@ -237,21 +237,22 @@ public class FileAdapter extends ArrayAdapter<File> {
     private void showDeleteConfirmationDialog(File file, int position) {
         String message;
         if (file.isDirectory() && Objects.requireNonNull(file.listFiles()).length > 0) {
-            message = "Estás a punto de eliminar una carpeta con ficheros. ¿Deseas continuar?";
+            message = getContext().getString(R.string.question_deleteFile);
         } else {
-            message = "Estás a punto de eliminar " + (file.isDirectory() ? "una carpeta" : "un archivo") + ". ¿Deseas continuar?";
+            message = getContext().getString(R.string.question_part1) + (file.isDirectory() ? getContext().getString(R.string.aFolder) : getContext().getString(R.string.aFile)) + getContext().getString(R.string.question_continue);
         }
 
         new AlertDialog.Builder(context)
-                .setTitle("Confirmar eliminación")
+                .setTitle(getContext().getString(R.string.confirm_deleteFile))
                 .setMessage(message)
-                .setPositiveButton("Sí", (dialog, which) -> {
-                    deleteFileOrDirectory(file);
-                    files.remove(position);
-                    notifyDataSetChanged();
-                    Toast.makeText(context, file.isDirectory() ? "Carpeta eliminada" : "Arhivo eliminado" + " con éxito.", Toast.LENGTH_SHORT).show();
+                .setPositiveButton(getContext().getString(R.string.yes), (dialog, which) -> {
+                    if (deleteFileOrDirectory(file)) {
+                        files.remove(position);
+                        notifyDataSetChanged();
+                        Toast.makeText(context, file.isDirectory() ? getContext().getString(R.string.folder_deleted) :getContext().getString(R.string.file_deleted) + getContext().getString(R.string.good_exit), Toast.LENGTH_SHORT).show();
+                    }
                 })
-                .setNegativeButton("No", null)
+                .setNegativeButton(getContext().getString(R.string.no), null)
                 .show();
     }
 }

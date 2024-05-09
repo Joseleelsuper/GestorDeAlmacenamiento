@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.gestordealmacenamiento.R;
 import com.example.gestordealmacenamiento.session.LoginScreen;
 import com.example.gestordealmacenamiento.util.FileAdapter;
+import com.example.gestordealmacenamiento.util.FinalVariables;
 import com.example.gestordealmacenamiento.util.UserData;
 
 import java.io.File;
@@ -69,13 +70,13 @@ public class HomeScreen extends AppCompatActivity {
      * @param view Vista actual.
      */
     public void goHome(View view) {
-        Toast.makeText(this, "Ya estás en la pantalla de inicio", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.alreadyinhome), Toast.LENGTH_SHORT).show();
     }
 
     public void logout(View view) {
         Intent intent = new Intent(this, LoginScreen.class);
         startActivity(intent);
-        Toast.makeText(this, "Sesión cerrada correctamente.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.good_logout), Toast.LENGTH_SHORT).show();
     }
 
     public static void setRecentDirectory(File directory) {
@@ -99,7 +100,7 @@ public class HomeScreen extends AppCompatActivity {
 
     public void openFolder(File folder) {
         Intent intent = new Intent(this, FilesScreen.class);
-        intent.putExtra("directoryPath", folder.getPath());
+        intent.putExtra(FinalVariables.getDirectoryPath(), folder.getPath());
         startActivity(intent);
     }
 }

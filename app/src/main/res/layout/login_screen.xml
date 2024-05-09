@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo">
@@ -60,11 +59,10 @@
         app:layout_constraintTop_toBottomOf="@+id/GAEN_title" />
 
     <TextView
-        android:id="@+id/login_recoverPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="recoverPWD"
-        android:text="@string/nopswd"
+        android:text="@string/recoverPWD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,11 +70,10 @@
         app:layout_constraintVertical_bias="0.027" />
 
     <TextView
-        android:id="@+id/login_Register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="registerText"
-        android:text="@string/noaccount"
+        android:text="@string/noAccount"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

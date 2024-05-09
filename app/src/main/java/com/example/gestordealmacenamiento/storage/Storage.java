@@ -5,6 +5,8 @@ import android.os.Environment;
 
 import com.example.gestordealmacenamiento.R;
 import com.example.gestordealmacenamiento.presentation.PresentationScreen;
+import com.example.gestordealmacenamiento.util.FinalVariables;
+
 import java.io.File;
 
 /**
@@ -21,18 +23,17 @@ public class Storage {
      * documentos. Si la carpeta ya existe, no hace nada.
      *
      */
-    public void createAppFolder(Context context) throws RuntimeException {
+    public boolean createAppFolder(Context context) {
         String appName = context.getString(R.string.app_name);
         File documentsDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
         File appDirectory = new File(documentsDirectory, appName);
+        boolean wasDirectoryMade = false;
 
         // Crear la carpeta de la aplicación si no existe
         if (!appDirectory.exists()) {
-            boolean wasDirectoryMade = appDirectory.mkdirs();
-            if (!wasDirectoryMade) {
-                throw new RuntimeException("Error al crear la carpeta de la aplicación");
-            }
+            wasDirectoryMade = appDirectory.mkdirs();
         }
+        return wasDirectoryMade;
     }
 
     /**
@@ -41,15 +42,16 @@ public class Storage {
      *
      * @param presentation Pantalla de presentación.
      */
-    public void createUsersFolder(PresentationScreen presentation) {
+    public boolean createUsersFolder(PresentationScreen presentation) {
         File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), presentation.getString(R.string.app_name));
-        File usersDirectory = new File(appDirectory, "Users");
+        File usersDirectory = new File(appDirectory, FinalVariables.getUserDirectory());
+        boolean created = false;
 
         // Crear la carpeta de los usuarios si no existe
         if (!usersDirectory.exists()) {
-            usersDirectory.mkdirs();
+            created = usersDirectory.mkdirs();
         }
-
+        return created;
     }
 
     /**
@@ -57,13 +59,16 @@ public class Storage {
      *
      * @param presentation Pantalla de presentación.
      */
-    public void createFilesFolder(PresentationScreen presentation) {
+    public boolean createFilesFolder(PresentationScreen presentation) {
         File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), presentation.getString(R.string.app_name));
-        File filesDirectory = new File(appDirectory, "Files");
+        File filesDirectory = new File(appDirectory, FinalVariables.getFileDirectory());
+        boolean created = false;
 
         // Crear la carpeta de los archivos si no existe
         if (!filesDirectory.exists()) {
-            filesDirectory.mkdirs();
+            created =filesDirectory.mkdirs();
         }
+
+        return created;
     }
 }
