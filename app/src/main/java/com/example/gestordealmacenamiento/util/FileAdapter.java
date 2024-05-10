@@ -199,7 +199,11 @@ public class FileAdapter extends ArrayAdapter<File> {
             if (!newName.isEmpty() && !newFile.exists()) {
                 // Renombra el archivo
                 if (file.renameTo(newFile)) {
-                    Toast.makeText(context, getContext().getString(R.string.good_renamedFile), Toast.LENGTH_SHORT).show();
+                    if (!file.isDirectory()) {
+                        Toast.makeText(context, getContext().getString(R.string.good_renamedFile), Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(context, getContext().getString(R.string.good_renamedFolder), Toast.LENGTH_SHORT).show();
+                    }
                     files.remove(file);
                     files.add(newFile);
                     notifyDataSetChanged();

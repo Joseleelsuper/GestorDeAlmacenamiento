@@ -28,6 +28,7 @@
     <string name="nameFolder">Nombre de la carpeta.</string>
     <string name="good_folderCreated">Carpeta creada con éxito.</string>
     <string name="good_addedFile">Archivo añadido con éxito.</string>
+    <string name="good_renamedFolder">Carpeta renombrada con éxito.</string>
     <string name="good_deletedFile">Archivo eliminado con éxito.</string>
     <string name="good_renamedFile">Archivo renombrado con éxito.</string>
     <string name="good_deletedFolder">Carpeta eliminada con éxito.</string>

@@ -12,7 +12,9 @@
 - **IMPORTANTE**: La aplicación guarda todos los datos dentro de `/Documents/GestorDeAlmacenamiento/*`.
 - La carpeta `Files`, que es la carpeta Raíz de los ficheros a subir, es compartida por todos los usuarios que registres en la aplicación.
 - Actualmente, no puedes registrar 2 correos electrónicos con nombre igual, pero con distinto distribuidor de correo (a@gmail.com | a@hotmail.com) debido a cómo se guardan los datos de la aplicación.
-- Es posible que veas que los Toast aparecen antes del cambio de pantalla o de que se ejecute la acción. Eso es debido a la carga que el conlleva al emulador de Android Studio hacer el cambio. Tenemos comprobado que no ocurre en un móvil real.
+- Es posible que veas que los Toast aparecen antes del cambio de pantalla o de que se ejecute la acción. Eso es debido a la carga que el conlleva al emulador de Android Studio hacer el cambio. Tengo comprobado que no ocurre en un móvil real.
+- Recomiendo utilizar el modo oscuro que viene de base en el móvil porque se ve mucho mejor así.
+
 
 ## Miembros del proyecto
 
