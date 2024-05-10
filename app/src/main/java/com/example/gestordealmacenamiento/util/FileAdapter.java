@@ -122,12 +122,11 @@ public class FileAdapter extends ArrayAdapter<File> {
         // Muestra un diálogo de opciones
         new AlertDialog.Builder(context)
                 .setTitle(getContext().getString(R.string.chooseOption))
-                .setItems(new String[]{getContext().getString(R.string.open), getContext().getString(R.string.rename), getContext().getString(R.string.delete)}, (dialog, which) -> {
+                .setItems(new String[]{getContext().getString(R.string.open), getContext().getString(R.string.rename), getContext().getString(R.string.delete), getContext().getString(R.string.share)},(dialog, which) -> {
                     switch (which) {
                         case 0: // Abrir
                             if (file.isDirectory()) {
                                 // Abre la carpeta
-                                // Aquí necesitarás implementar la lógica para abrir la carpeta y mostrar su contenido
                                 openFolder(file);
                             } else {
                                 // Abre el archivo
@@ -140,9 +139,16 @@ public class FileAdapter extends ArrayAdapter<File> {
                         case 2: // Eliminar
                             showDeleteConfirmationDialog(file, position);
                             break;
+                        case 3: // Compartir
+                            shareFile();
+                            break;
                     }
                 })
                 .show();
+    }
+
+    private void shareFile() {
+        Toast.makeText(context, getContext().getString(R.string.good_share), Toast.LENGTH_SHORT).show();
     }
 
     /**

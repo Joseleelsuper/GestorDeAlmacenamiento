@@ -18,6 +18,8 @@
     <string name="open">Abrir</string>
     <string name="delete">Eliminar</string>
     <string name="rename">Renombrar</string>
+    <string name="share">Compartir</string>
+    <string name="good_share">Enlace copiado al portapapeles.</string>">
     <string name="no">No</string>
     <string name="yes">Sí</string>
 

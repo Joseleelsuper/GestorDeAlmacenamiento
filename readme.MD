@@ -14,7 +14,7 @@
 - Actualmente, no puedes registrar 2 correos electrónicos con nombre igual, pero con distinto distribuidor de correo (a@gmail.com | a@hotmail.com) debido a cómo se guardan los datos de la aplicación.
 - Es posible que veas que los Toast aparecen antes del cambio de pantalla o de que se ejecute la acción. Eso es debido a la carga que el conlleva al emulador de Android Studio hacer el cambio. Tengo comprobado que no ocurre en un móvil real.
 - Recomiendo utilizar el modo oscuro que viene de base en el móvil porque se ve mucho mejor así.
-
+- La mayor parte de la aplicación es completamente funcional. Puedes abrir archivos con programas que te dejen abrirlos, abrir las carpetas, etc... Así que te recomiendo tocar todos los botones y comprobar su funcionamiento.
 
 ## Miembros del proyecto
 
