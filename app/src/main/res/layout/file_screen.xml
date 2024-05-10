@@ -40,8 +40,8 @@
         android:layout_width="137dp"
         android:layout_height="62dp"
         android:background="@drawable/rectangle_black"
-        android:onClick="goMe"
-        android:text="@string/me"
+        android:onClick="goPermissions"
+        android:text="@string/permissions"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -115,7 +115,7 @@
         app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35000002"
+        app:layout_constraintVertical_bias="0.89"
         app:srcCompat="@drawable/icon_arrow_back" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

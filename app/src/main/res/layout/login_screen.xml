@@ -10,29 +10,33 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="105dp"
+        android:autofillHints="jgc1031@alu.ubu.es"
         android:ems="10"
+        android:fontFamily="sans-serif-black"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/GAEN_title"
-        app:layout_constraintVertical_bias="0.001"
-        android:autofillHints="jgc1031@alu.ubu.es" />
+        app:layout_constraintVertical_bias="0.001" />
 
     <EditText
         android:id="@+id/login_password"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:autofillHints="**************"
         android:ems="10"
+        android:fontFamily="sans-serif-black"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_email"
-        app:layout_constraintVertical_bias="0.037"
-        android:autofillHints="**************" />
+        app:layout_constraintVertical_bias="0.037" />
 
     <TextView
         android:id="@+id/GAEN_title"
@@ -41,6 +45,9 @@
         android:scaleX="5"
         android:scaleY="5"
         android:text="@string/app_name_Acronym"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,8 +68,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
         android:onClick="recoverPWD"
         android:text="@string/recoverPWD"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,11 +82,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
         android:onClick="registerText"
         android:text="@string/noAccount"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_buttonLogin"
-        app:layout_constraintVertical_bias="0.938" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.96" />
 </androidx.constraintlayout.widget.ConstraintLayout>

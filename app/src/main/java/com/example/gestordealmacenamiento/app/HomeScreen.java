@@ -73,6 +73,11 @@ public class HomeScreen extends AppCompatActivity {
         Toast.makeText(this, getString(R.string.alreadyinhome), Toast.LENGTH_SHORT).show();
     }
 
+    public void goPermissions(View view) {
+        Intent intent = new Intent(this, PermissionScreen.class);
+        startActivity(intent);
+    }
+
     /**
      * Método que cierra sesión.
      *

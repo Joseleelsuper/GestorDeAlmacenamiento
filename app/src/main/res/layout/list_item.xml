@@ -5,6 +5,8 @@
     android:orientation="horizontal"
     android:padding="24dp">
 
+    <!--List_item fue creado para mostrar los elementos de la lista de archivos, tanto en home como en files, con su respectiva imagen dependiendo si son carpetas o archivos, aparte de los 3 putnos.-->
+
     <ImageView
         android:id="@+id/icon"
         android:layout_width="24dp"
@@ -23,7 +25,7 @@
         android:id="@+id/icon_morevert"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/icon_morevert"
-        android:contentDescription="@string/todo" />
+        android:contentDescription="@string/todo"
+        android:src="@drawable/icon_morevert" />
 
 </LinearLayout>

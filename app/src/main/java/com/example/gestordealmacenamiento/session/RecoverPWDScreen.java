@@ -31,6 +31,11 @@ public class RecoverPWDScreen extends AppCompatActivity {
         setContentView(R.layout.recoverpwd_screen);
     }
 
+    public void goLogin(View view) {
+        Intent intent = new Intent(this, LoginScreen.class);
+        startActivity(intent);
+    }
+
     /**
      * Método que permite recuperar la contraseña de un usuario.
      *

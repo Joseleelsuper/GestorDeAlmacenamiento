@@ -87,6 +87,11 @@ public class FilesScreen extends AppCompatActivity {
         Toast.makeText(this, getString(R.string.alreadyinfilescreen), Toast.LENGTH_SHORT).show();
     }
 
+    public void goPermissions(View view) {
+        Intent intent = new Intent(this, PermissionScreen.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

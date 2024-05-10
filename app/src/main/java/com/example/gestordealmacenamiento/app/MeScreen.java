@@ -70,6 +70,11 @@ public class MeScreen extends AppCompatActivity {
         Toast.makeText(this, getString(R.string.alreadyinme), Toast.LENGTH_SHORT).show();
     }
 
+    public void goPermissions(View view) {
+        Intent intent = new Intent(this, PermissionScreen.class);
+        startActivity(intent);
+    }
+
     /**
      * Método que elimina la cuenta.
      *

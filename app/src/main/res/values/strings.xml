@@ -74,6 +74,17 @@
     <string name="confirmDeleteAccount">Confirmar eliminación de la cuenta</string>
     <string name="error_DeleteAccount">Error al eliminar la cuenta</string>
     <string name="good_accountDeleted">Cuenta eliminada correctamente</string>
+    <string name="configPermsText">Configura los permisos que tendrán las personas invitadas por defecto.</string>
+    <string name="permShareWithOthers">Compartir archivos de tu nube</string>
+    <string name="good_permUpdated">Permisos actualizados correctamente.</string>
+    <string name="error_permUpdated">Error al actualizar los permisos.</string>
+    <string name="permAddFiles">Añadir archivos a tu nube</string>
+    <string name="permDeleteFiles">Eliminar archivos de tu nube</string>
+    <string name="permRenameFiles">Renombrar archivos de tu nube</string>
+    <string name="permCreateFolders">Crear carpetas en tu nube</string>
+    <string name="permDeleteFolders">Eliminar carpetas de tu nube</string>
+    <string name="permRenameFolders">Renombrar carpetas de tu nube</string>
+    <string name="permUpdate">Actualizar permisos</string>
 
     <!-- User Agreement -->
     <string name="userTerms">Acepto los términos de uso</string>
@@ -96,9 +107,12 @@
     <string name="home">Inicio</string>
     <string name="me">Yo</string>
     <string name="files">Archivos</string>
+    <string name="permissions">Permisos</string>">
     <string name="alreadyinfilescreen">Ya estás en la pantalla de archivos.</string>
     <string name="alreadyinhome">Ya estás en la pantalla de inicio.</string>
     <string name="alreadyinme">Ya estás en la pantalla de Yo.</string>
+    <string name="alreadyinpermissionscreen">Ya estás en la pantalla de permisos.</string>
+    <string name="back">Volver atrás</string>
 
     <!-- Sorting Options -->
     <string-array name="sort_options">
