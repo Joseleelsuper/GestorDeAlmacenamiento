@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="chooseOption">Choose an option.</string>
+    <string name="unexpectedValue">Unexpected value</string>
+    <string name="open">Open</string>
+    <string name="delete">Delete</string>
+    <string name="rename">Rename</string>
+    <string name="share">Share</string>
+    <string name="good_share">Link copied to clipboard.</string>
+    <string name="yes">Yes</string>
+    <string name="uploadFile">Upload file</string>
+    <string name="newNameFile">New file name:</string>
+    <string name="createFolder">Create folder</string>
+    <string name="nameFolder">Name of the folder.</string>
+    <string name="good_folderCreated">Folder successfully created.</string>
+    <string name="good_addedFile">File successfully added.</string>
+    <string name="good_renamedFolder">Folder successfully renamed.</string>
+    <string name="good_deletedFile">File successfully deleted.</string>
+    <string name="good_renamedFile">File successfully renamed.</string>
+    <string name="good_deletedFolder">Folder successfully deleted.</string>
+    <string name="error_deletedFile">Error deleting the file.</string>
+    <string name="error_renamedFile">Error renaming the file.</string>
+    <string name="error_fileName">The file name is invalid.</string>
+    <string name="error_addedFile">Error adding the file.</string>
+    <string name="error_fileExits">The file already exists.</string>
+    <string name="error_folderCreated">Error creating the folder.</string>
+    <string name="error_noFileDirectory">File directory not found.</string>
+    <string name="error_readFile">Error reading the file.</string>
+    <string name="error_writeFile">Error writing the file.</string>
+    <string name="question_deleteFile">You are about to delete a folder with files, do you want to continue?</string>
+    <string name="question_continue">. Do you wish to continue?</string>
+    <string name="question_folder">You are about to delete a folder</string>
+    <string name="question_file">You are about to delete a file</string>
+    <string name="confirm_deleteFile">Confirm removal</string>
+    <string name="username">Username</string>
+    <string name="email">E-mail address</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="good_login">Session successfully started</string>
+    <string name="logout">Log out</string>
+    <string name="good_logout">Session closed successfully.</string>
+    <string name="register">Register</string>
+    <string name="good_register">User successfully registered.</string>
+    <string name="noAccount">Don\'t have an account? Sign up for an account.</string>
+    <string name="yesAccount">Already have an account? Please log in.</string>
+    <string name="recoverPWD">Password recovery</string>
+    <string name="good_recoverPWD">Your password has been recovered. Please open your email.</string>
+    <string name="registeredEmail">Please enter the email address\nyou registered with.</string>
+    <string name="no_email_in_db">This email is not in the database.</string>
+    <string name="invalid_email">Please enter a valid email address.</string>
+    <string name="invalid_user">The user does not exist. Please register.</string>
+    <string name="error_userAlreadyExists">The mail is already registered.</string>
+    <string name="error_register">Error when registering.</string>
+    <string name="error_emailOrPasswordIncorrect">Incorrect e-mail address or password</string>
+    <string name="deleteAccount">Delete account</string>
+    <string name="confirmDeleteAccount">Confirm account deletion</string>
+    <string name="error_DeleteAccount">Error deleting account</string>
+    <string name="good_accountDeleted">Account successfully deleted</string>
+    <string name="configPermsText">Configure the permissions that invitees will have by default.</string>
+    <string name="permShareWithOthers">Sharing files from your cloud</string>
+    <string name="good_permUpdated">Permits updated correctly.</string>
+    <string name="error_permUpdated">Error updating permissions.</string>
+    <string name="permAddFiles">Add files to your cloud</string>
+    <string name="permDeleteFiles">Delete files from your cloud</string>
+    <string name="permRenameFiles">Rename files in your cloud</string>
+    <string name="permCreateFolders">Create folders in your cloud</string>
+    <string name="permDeleteFolders">Delete folders from your cloud</string>
+    <string name="permRenameFolders">Rename folders in your cloud</string>
+    <string name="permUpdate">Update permissions</string>
+    <string name="userTerms">I accept the terms of use</string>
+    <string name="accept_term_of_use">Please accept the terms of use.</string>
+    <string name="mailReports">I agree to receive\nemail newsletters.</string>
+    <string name="accept_email_messages">Please accept mailings.</string>
+    <string name="home_version">- First version of the programme, Home, Files and Me options are added.</string>
+    <string name="updates">Latest Updates: (V1.0)</string>
+    <string name="here_is_your_personal_information">Here you can see your personal information:</string>
+    <string name="account_type">Type of account:</string>
+    <string name="expire_date">Expiry date:</string>
+    <string name="last_folders">Last folders used:</string>
+    <string name="bienvenido">Welcome,</string>
+    <string name="home">Home</string>
+    <string name="me">Me</string>
+    <string name="files">Archives</string>
+    <string name="permissions">Permits</string>
+    <string name="alreadyinfilescreen">You are already on the archive screen.</string>
+    <string name="alreadyinhome">You are already on the home screen.</string>
+    <string name="alreadyinme">You are already on the Me screen.</string>
+    <string name="alreadyinpermissionscreen">You are already on the permissions screen</string>
+    <string name="back">Go back</string>
+    <string name="icono_de_carga">Loading icon</string>
+
+    <!-- Sorting Options -->
+    <string-array name="sort_options">
+        <item>Short A-Z</item>
+        <item>Short Z-A</item>
+        <item>Short from largest to smallest</item>
+        <item>Short from smallest to largest</item>
+    </string-array>
+</resources>

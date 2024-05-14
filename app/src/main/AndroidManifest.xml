@@ -25,6 +25,7 @@
         <activity android:name=".app.MeScreen"/>
         <activity android:name=".app.HomeScreen"/>
         <activity android:name=".app.PermissionScreen"/>
+        <activity android:name=".app.SupportScreen"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"

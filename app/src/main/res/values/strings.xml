@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- App Information -->
-    <string name="app_name">GestorDeAlmacenamiento</string>
-    <string name="app_name_Acronym">GAEN</string>
+    <string name="app_name" translatable="false">GestorDeAlmacenamiento</string>
+    <string name="app_name_Acronym" translatable="false">GAEN</string>
 
     <!-- Authors -->
-    <string name="author1">José Gallardo Caballero</string>
-    <string name="author2">José María Martínez Alcalde</string>
-    <string name="author3">José Javier Velasco Whu</string>
-    <string name="author4">Mario Ruiz Puente</string>
+    <string name="author1" translatable="false">José Gallardo Caballero</string>
+    <string name="author2" translatable="false">José María Martínez Alcalde</string>
+    <string name="author3" translatable="false">José Javier Velasco Whu</string>
 
     <!-- General -->
     <string name="ok">OK</string>
@@ -20,7 +19,7 @@
     <string name="rename">Renombrar</string>
     <string name="share">Compartir</string>
     <string name="good_share">Enlace copiado al portapapeles.</string>">
-    <string name="no">No</string>
+    <string name="no" translatable="false">No</string>
     <string name="yes">Sí</string>
 
     <!-- File Management -->
@@ -38,7 +37,7 @@
     <string name="error_renamedFile">Error al renombrar el archivo.</string>
     <string name="error_fileName">El nombre del archivo no es válido.</string>
     <string name="error_addedFile">Error al añadir el archivo.</string>
-    <string name="error_fileExits">El archivo ya existe</string>
+    <string name="error_fileExits">El archivo ya existe.</string>
     <string name="error_folderCreated">Error al crear la carpeta.</string>
     <string name="error_noFileDirectory">No se encontró el directorio de archivos.</string>
     <string name="error_readFile">Error al leer el archivo.</string>
@@ -60,10 +59,8 @@
     <string name="register">Registrarse</string>
     <string name="good_register">Usario registrado correctamente.</string>
     <string name="noAccount">¿No tienes cuenta? Regístrate.</string>
-    <string name="yesAccount">¿Ya tienes cuenta? Inicia sesión.</string>
-    <string name="recoverPWD">Recuperar contraseña</string>
     <string name="good_recoverPWD">Tu contraseña ha sido recuperada. Por favor, abre tu correo.</string>
-    <string name="registeredEmail">Por favor,\nescribe el correo con el\nque te registraste.</string>
+    <string name="registeredEmail">Por favor, escribe el correo\ncon el que te registraste.</string>
     <string name="no_email_in_db">Este correo electrónico no está en la base de datos.</string>
     <string name="invalid_email">Por favor, introduce un correo electrónico válido.</string>
     <string name="invalid_user">El usuario no existe. Por favor, regístrese.</string>
@@ -73,9 +70,7 @@
     <string name="deleteAccount">Borrar cuenta</string>
     <string name="confirmDeleteAccount">Confirmar eliminación de la cuenta</string>
     <string name="error_DeleteAccount">Error al eliminar la cuenta</string>
-    <string name="good_accountDeleted">Cuenta eliminada correctamente</string>
     <string name="configPermsText">Configura los permisos que tendrán las personas invitadas por defecto.</string>
-    <string name="permShareWithOthers">Compartir archivos de tu nube</string>
     <string name="good_permUpdated">Permisos actualizados correctamente.</string>
     <string name="error_permUpdated">Error al actualizar los permisos.</string>
     <string name="permAddFiles">Añadir archivos a tu nube</string>
@@ -88,7 +83,6 @@
 
     <!-- User Agreement -->
     <string name="userTerms">Acepto los términos de uso</string>
-    <string name="accept_term_of_use">Por favor, acepta los términos de uso.</string>
     <string name="mailReports">Estoy de acuerdo con recibir\nboletines al correo electrónico.</string>
     <string name="accept_email_messages">Por favor, acepta los envíos de mensajes al correo.</string>
 
@@ -98,7 +92,6 @@
 
     <!-- User Information -->
     <string name="here_is_your_personal_information">Aquí puedes ver tu información personal:</string>
-    <string name="account_type">Tipo de cuenta:</string>
     <string name="expire_date">Fecha de vencimiento:</string>
     <string name="last_folders">Últimas carpetas utilizadas:</string>
     <string name="bienvenido">Bienvenido,</string>
@@ -112,7 +105,6 @@
     <string name="alreadyinhome">Ya estás en la pantalla de inicio.</string>
     <string name="alreadyinme">Ya estás en la pantalla de Yo.</string>
     <string name="alreadyinpermissionscreen">Ya estás en la pantalla de permisos.</string>
-    <string name="back">Volver atrás</string>
 
     <!-- Sorting Options -->
     <string-array name="sort_options">
@@ -124,6 +116,13 @@
 
     <!-- Other -->
     <string name="icono_de_carga">Icono de carga</string>
-    <string name="textview">TextView</string>
-    <string name="todo">TODO</string>
+    <string name="textview" translatable="false">TextView</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="yesAccount">¿Ya tienes cuenta? Inicia sesión.</string>
+    <string name="recoverPWD">Recuperar contraseña</string>
+    <string name="good_accountDeleted">Cuenta eliminada correctamente</string>
+    <string name="permShareWithOthers">Compartir archivos de tu nube</string>
+    <string name="accept_term_of_use">Por favor, acepta los términos de uso.</string>
+    <string name="account_type">Tipo de cuenta:</string>
+    <string name="back">Volver atrás</string>
 </resources>
