@@ -9,7 +9,8 @@
         android:theme="@style/Theme.GestorDeAlmacenamiento">
 
         <activity android:name=".presentation.PresentationScreen"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,15 +18,31 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".session.LoginScreen" />
-        <activity android:name=".session.RegisterScreen" />
-        <activity android:name=".session.RecoverPWDScreen" />
+        <activity android:name=".session.LoginScreen"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".session.RegisterScreen"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".session.RecoverPWDScreen"
+            android:screenOrientation="portrait">
+        </activity>
 
-        <activity android:name=".app.FilesScreen"/>
-        <activity android:name=".app.MeScreen"/>
-        <activity android:name=".app.HomeScreen"/>
-        <activity android:name=".app.PermissionScreen"/>
-        <activity android:name=".app.SupportScreen"/>
+        <activity android:name=".app.FilesScreen"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".app.MeScreen"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".app.HomeScreen"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".app.PermissionScreen"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".app.SupportScreen"
+            android:screenOrientation="portrait">
+        </activity>
 
         <provider
             android:name="androidx.core.content.FileProvider"
