@@ -40,7 +40,37 @@
         <activity android:name=".app.PermissionScreen"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".app.SupportScreen"
+        <activity android:name=".support.Acercade1"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".support.Acercade2"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".support.Ayuda1"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".support.Ayuda2"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".support.Consejo1"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".support.Consejo2"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".support.Pregunta1"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".support.Pregunta2"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".support.Somos1"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".support.Somos2"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".support.Support"
             android:screenOrientation="portrait">
         </activity>
 

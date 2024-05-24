@@ -21,7 +21,6 @@
         app:layout_constraintVertical_bias="0.66" />
 
     <TextView
-        android:id="@+id/presentation_author1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
@@ -35,7 +34,6 @@
         app:layout_constraintVertical_bias="0.122" />
 
     <TextView
-        android:id="@+id/presentation_author2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
@@ -49,7 +47,6 @@
         app:layout_constraintVertical_bias="0.172" />
 
     <TextView
-        android:id="@+id/presentation_author3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"

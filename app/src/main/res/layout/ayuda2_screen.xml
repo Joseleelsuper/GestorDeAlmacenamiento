@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context="com.example.gestordealmacenamiento.support.Ayuda2">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contactanos"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="35dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="290dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="207dp"
+        android:text="@string/cualquier_duda_o_problema_puede_ser_atendida_por_un_asistente_via_email_o_llamada_atrav_s_de"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="228dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="347dp"
+        android:text="@string/email_gaen_soporte_com"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="438dp"
+        android:text="@string/tlfn_699741966"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/myButton1"
+        android:layout_width="123dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="656dp"
+        android:background="@drawable/blue_square_button"
+        android:onClick="Back"
+        android:text="@string/atras"
+        android:textColor="#000000"
+        android:textSize="9sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

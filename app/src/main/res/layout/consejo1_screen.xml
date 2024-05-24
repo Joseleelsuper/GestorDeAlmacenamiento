@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context="com.example.gestordealmacenamiento.support.Consejo1">
+
+    <TextView
+        android:layout_width="161dp"
+        android:layout_height="191dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="361dp"
+        android:text="@string/posteriormente_como_se_muestra_en_la_imagen_ve_a_el_apartado_de_permisos_y_confirme_que_tiene_la_opci_nn_de_a_adir_los_archivos_a_la_nube"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/hacer_copia_de_seguridad_de_fotos_y_videos"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="369dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/hacer_copias_de_seguridad_de_tus_fotos_y_videos_es_fundamental_por_varias_razones_que_tienen_que_ver_con_la_protecci_n_la_accesibilidad_y_la_preservaci_n_a_largo_plazo_de_tus_recuerdos_e_informaci_n_importante_por_lo_que_le_explicaremos_de_una_forma_simple_como_hacerlo"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="223dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="230dp"
+        android:text="@string/a_ade_tus_archivos_a_el_gestor"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/myButton1"
+        android:layout_width="123dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="656dp"
+        android:background="@drawable/blue_square_button"
+        android:onClick="Back"
+        android:text="@string/atras"
+        android:textColor="#000000"
+        android:textSize="9sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="349dp"
+        android:layout_height="275dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="291dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/permisos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

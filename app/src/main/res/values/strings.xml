@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- App Information -->
+    <!--  App Information  -->
     <string name="app_name" translatable="false">GestorDeAlmacenamiento</string>
     <string name="app_name_Acronym" translatable="false">GAEN</string>
-
-    <!-- Authors -->
+    <!--  Authors  -->
     <string name="author1" translatable="false">José Gallardo Caballero</string>
     <string name="author2" translatable="false">José María Martínez Alcalde</string>
     <string name="author3" translatable="false">José Javier Velasco Whu</string>
-
-    <!-- General -->
-    <string name="ok">OK</string>
+    <!--  General  -->
+    <string name="ok" translatable="false">OK</string>
     <string name="cancel">Cancelar</string>
     <string name="chooseOption">Elije una opción.</string>
     <string name="unexpectedValue">Valor inesperado</string>
@@ -18,11 +15,11 @@
     <string name="delete">Eliminar</string>
     <string name="rename">Renombrar</string>
     <string name="share">Compartir</string>
-    <string name="good_share">Enlace copiado al portapapeles.</string>">
+    <string name="good_share">Enlace copiado al portapapeles.</string>
+    ">
     <string name="no" translatable="false">No</string>
     <string name="yes">Sí</string>
-
-    <!-- File Management -->
+    <!--  File Management  -->
     <string name="uploadFile">Subir archivo</string>
     <string name="newNameFile">Nuevo nombre del archivo:</string>
     <string name="createFolder">Crear carpeta</string>
@@ -33,11 +30,10 @@
     <string name="good_deletedFile">Archivo eliminado con éxito.</string>
     <string name="good_renamedFile">Archivo renombrado con éxito.</string>
     <string name="good_deletedFolder">Carpeta eliminada con éxito.</string>
-    <string name="error_deletedFile">Error al eliminar el archivo.</string>
     <string name="error_renamedFile">Error al renombrar el archivo.</string>
     <string name="error_fileName">El nombre del archivo no es válido.</string>
     <string name="error_addedFile">Error al añadir el archivo.</string>
-    <string name="error_fileExits">El archivo ya existe.</string>
+    <string name="error_fileExits">El archivo ya existe</string>
     <string name="error_folderCreated">Error al crear la carpeta.</string>
     <string name="error_noFileDirectory">No se encontró el directorio de archivos.</string>
     <string name="error_readFile">Error al leer el archivo.</string>
@@ -47,8 +43,7 @@
     <string name="question_folder">Estás a punto de eliminar una carpeta</string>
     <string name="question_file">Estás a punto de eliminar un archivo</string>
     <string name="confirm_deleteFile">Confirmar eliminación</string>
-
-    <!-- Account Management -->
+    <!--  Account Management  -->
     <string name="username">Nombre de usuario</string>
     <string name="email">Correo electrónico</string>
     <string name="password">Contraseña</string>
@@ -59,8 +54,10 @@
     <string name="register">Registrarse</string>
     <string name="good_register">Usario registrado correctamente.</string>
     <string name="noAccount">¿No tienes cuenta? Regístrate.</string>
+    <string name="yesAccount">¿Ya tienes cuenta? Inicia sesión.</string>
+    <string name="recoverPWD">Recuperar contraseña</string>
     <string name="good_recoverPWD">Tu contraseña ha sido recuperada. Por favor, abre tu correo.</string>
-    <string name="registeredEmail">Por favor, escribe el correo\ncon el que te registraste.</string>
+    <string name="registeredEmail">Por favor,\nescribe el correo con el\nque te registraste.</string>
     <string name="no_email_in_db">Este correo electrónico no está en la base de datos.</string>
     <string name="invalid_email">Por favor, introduce un correo electrónico válido.</string>
     <string name="invalid_user">El usuario no existe. Por favor, regístrese.</string>
@@ -70,59 +67,124 @@
     <string name="deleteAccount">Borrar cuenta</string>
     <string name="confirmDeleteAccount">Confirmar eliminación de la cuenta</string>
     <string name="error_DeleteAccount">Error al eliminar la cuenta</string>
+    <string name="good_accountDeleted">Cuenta eliminada correctamente</string>
     <string name="configPermsText">Configura los permisos que tendrán las personas invitadas por defecto.</string>
+    <string name="permShareWithOthers">Compartir archivos de tu nube</string>
     <string name="good_permUpdated">Permisos actualizados correctamente.</string>
-    <string name="error_permUpdated">Error al actualizar los permisos.</string>
     <string name="permAddFiles">Añadir archivos a tu nube</string>
-    <string name="permDeleteFiles">Eliminar archivos de tu nube</string>
     <string name="permRenameFiles">Renombrar archivos de tu nube</string>
     <string name="permCreateFolders">Crear carpetas en tu nube</string>
     <string name="permDeleteFolders">Eliminar carpetas de tu nube</string>
     <string name="permRenameFolders">Renombrar carpetas de tu nube</string>
     <string name="permUpdate">Actualizar permisos</string>
-
-    <!-- User Agreement -->
+    <!--  User Agreement  -->
     <string name="userTerms">Acepto los términos de uso</string>
+    <string name="accept_term_of_use">Por favor, acepta los términos de uso.</string>
     <string name="mailReports">Estoy de acuerdo con recibir\nboletines al correo electrónico.</string>
     <string name="accept_email_messages">Por favor, acepta los envíos de mensajes al correo.</string>
-
-    <!-- App Updates -->
+    <!--  App Updates  -->
     <string name="home_version">- Primera versión del programa, se añaden las opciones Inicio, Archivos y Yo.</string>
     <string name="updates">Ultimas Updates: (V1.0)</string>
-
-    <!-- User Information -->
+    <!--  User Information  -->
     <string name="here_is_your_personal_information">Aquí puedes ver tu información personal:</string>
+    <string name="account_type">Tipo de cuenta:</string>
     <string name="expire_date">Fecha de vencimiento:</string>
     <string name="last_folders">Últimas carpetas utilizadas:</string>
     <string name="bienvenido">Bienvenido,</string>
-
-    <!-- App Navigation -->
+    <!--  App Navigation  -->
     <string name="home">Inicio</string>
-    <string name="me">Yo</string>
     <string name="files">Archivos</string>
-    <string name="permissions">Permisos</string>">
+    <string name="permissions">Permisos</string>
+    ">
     <string name="alreadyinfilescreen">Ya estás en la pantalla de archivos.</string>
     <string name="alreadyinhome">Ya estás en la pantalla de inicio.</string>
     <string name="alreadyinme">Ya estás en la pantalla de Yo.</string>
     <string name="alreadyinpermissionscreen">Ya estás en la pantalla de permisos.</string>
-
-    <!-- Sorting Options -->
+    <string name="back">Volver atrás</string>
+    <!--  Sorting Options  -->
     <string-array name="sort_options">
         <item>Ordenar A-Z</item>
         <item>Ordenar Z-A</item>
         <item>Ordenar de mayor a menor tamaño</item>
         <item>Ordenar de menor a mayor tamaño</item>
     </string-array>
-
-    <!-- Other -->
+    <!--  Other  -->
     <string name="icono_de_carga">Icono de carga</string>
     <string name="textview" translatable="false">TextView</string>
     <string name="todo" translatable="false">TODO</string>
-    <string name="yesAccount">¿Ya tienes cuenta? Inicia sesión.</string>
-    <string name="recoverPWD">Recuperar contraseña</string>
-    <string name="good_accountDeleted">Cuenta eliminada correctamente</string>
-    <string name="permShareWithOthers">Compartir archivos de tu nube</string>
-    <string name="accept_term_of_use">Por favor, acepta los términos de uso.</string>
-    <string name="account_type">Tipo de cuenta:</string>
-    <string name="back">Volver atrás</string>
+    <!--  Support options  -->
+    <string name="soporte">Soporte</string>
+    <string name="preguntas_frecuentes">Preguntas frecuentes</string>
+    <string name="obten_mas_ayuda">Obtener más ayuda</string>
+    <string name="consejos_y_respuestas_tiles">Consejos y respuestas útiles</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="quienes_somos">¿Quienes somos?</string>
+    <string name="c_mo_subo_archivos_al_gestor_de_archivos_en_la_nube">¿Cómo subo archivos al gestor de archivos en la nube?</string>
+    <string name="hay_un_l_mite_de_tama_o_para_los_archivos_que_puedo_subir">¿Hay un límite de tamaño para los archivos que puedo subir?</string>
+    <string name="hacer_una_copia_de_seguridad_de_fotos_y_videos">Hacer una copia de seguridad de fotos y videos</string>
+    <string name="cambiar_la_forma_en_que_se_ordenan_los_archivos">Cambiar la forma en que se ordenan los archivos</string>
+    <string name="informar_de_un_problema">Informar de un problema</string>
+    <string name="contacta_con_nosotros">Contacta con nosotros</string>
+    <string name="declaracion_de_privacidad_de_gaen">Declaracion de privacidad de Gaen</string>
+    <string name="licencia_de_software">Licencia de Software</string>
+    <string name="que_es_gaen">¿Que es GAEN?</string>
+    <string name="sobre_nosotros">Sobre nosotros</string>
+    <string name="atras">Atras</string>
+    <string name="primer_paso">Primer paso</string>
+    <string name="en_la_pantalla_toca_el_apartado_de_archivos">En la pantalla toca el apartado de Archivos</string>
+    <string name="segundo_paso">Segundo paso</string>
+    <string name="tocar_el_boton_con_el_simbolo">Tocar el boton con el simbolo +</string>
+    <string name="tercer_paso">Tercer paso</string>
+    <string name="te_apareceran_dos_opciones_la_primera_para_a_adir_un_archivo_y_la_segunda_para_a_adir_una_carpeta_elige_la_primera_y_ya_podria_subir_su_archivo">Te apareceran dos opciones, la primera para añadir un archivo y la segunda para añadir una carpeta, elige la primera y ya podria subir su archivo</string>
+    <string name="en_gaen_entendemos_que_diferentes_usuarios_tienen_diferentes_necesidades_en_cuanto_a_almacenamiento_y_manejo_de_archivos_por_eso_ofrecemos_varias_tarifas_que_se_adaptan_a_una_amplia_gama_de_necesidades_desde_usuarios_individuales_hasta_grandes_empresas_por_eso_los_unicos_dos_limites_son">En Gaen, entendemos que diferentes usuarios tienen diferentes necesidades en cuanto a almacenamiento y manejo de archivos. Por eso, ofrecemos varias tarifas que se adaptan a una amplia gama de necesidades, desde usuarios individuales hasta grandes empresas, por eso los unicos dos limites son:</string>
+    <string name="_1_tarifa_contratada_ya_que_dispondra_de_mas_gigabatios_cuanto_mejor_sea">1.Tarifa contratada ya que dispondra de mas gigabatios cuanto mejor sea</string>
+    <string name="_2_espacio_restante_de_la_tarifa_si_ya_has_ocupado_memoria_sera_esta_la_que_no_podras_ocupar">2.Espacio restante de la tarifa, si ya has ocupado memoria sera esta la que no podras ocupar</string>
+    <string name="posteriormente_como_se_muestra_en_la_imagen_ve_a_el_apartado_de_permisos_y_confirme_que_tiene_la_opci_nn_de_a_adir_los_archivos_a_la_nube">Posteriormente como se muestra en la imagen ve a el apartado de permisos y confirme que tiene la opciónn de añadir los archivos a la nube</string>
+    <string name="hacer_copia_de_seguridad_de_fotos_y_videos">Hacer copia de seguridad de fotos y videos</string>
+    <string name="hacer_copias_de_seguridad_de_tus_fotos_y_videos_es_fundamental_por_varias_razones_que_tienen_que_ver_con_la_protecci_n_la_accesibilidad_y_la_preservaci_n_a_largo_plazo_de_tus_recuerdos_e_informaci_n_importante_por_lo_que_le_explicaremos_de_una_forma_simple_como_hacerlo">Hacer copias de seguridad de tus fotos y videos es fundamental por varias razones que tienen que ver con la protección, la accesibilidad y la preservación a largo plazo de tus recuerdos e información importante, por lo que le explicaremos de una forma simple como hacerlo:</string>
+    <string name="a_ade_tus_archivos_a_el_gestor">Añade tus archivos a el gestor</string>
+    <string name="cambiar_la_forma_en_la_que_se_ordenan_los_archivos">Cambiar la forma en la que se ordenan los archivos</string>
+    <string name="entendemos_que_para_la_gente_que_de_uso_profesional_a_nuestro_gestor_de_archivos_gestionar_varias_carpetas_y_archivos_puede_ser_tedioso_por_esa_misma_razon_esta_la_opcion_de_organizar_los_archivos_y_carpteas_segun_estandares_basicos_como_lo_son_el_tiempo_o_el_abecedario_de_esta_forma_lograr_tene_un_mejor_orden_de_los_mismos_y_siguiendo_estos_pasos_sabras_como_hacerlo">Entendemos que para la gente que de uso profesional a nuestro gestor de archivos gestionar varias carpetas y archivos puede ser tedioso, por esa misma razon esta la opcion de organizar los archivos y carpteas segun estandares basicos como lo son el tiempo o el abecedario de esta forma lograr tene un mejor orden de los mismos y siguiendo estos pasos sabras como hacerlo:</string>
+    <string name="como_primer_paso_tan_solo_deberemos_ir_a_el_apartado_de_archivos">Como primer paso tan solo deberemos ir a el apartado de archivos.</string>
+    <string name="como_segundo_paso_tan_solo_deberias_tocar_el_boton_que_pone_ordenar_de_a_z_y_se_desplegara_este_dropdown">Como segundo paso tan solo deberias tocar el boton que pone ordenar de A-Z y se desplegara este dropdown:</string>
+    <string name="informar_de_el_problema">Informar de un problema</string>
+    <string name="indique_el_problema">Indique el problema:</string>
+    <string name="enviar_problema">Enviar problema</string>
+    <string name="cualquier_duda_o_problema_puede_ser_atendida_por_un_asistente_via_email_o_llamada_atrav_s_de">Cualquier duda o problema puede ser atendida por un asistente via email o llamada através de:</string>
+    <string name="contactanos">Contacta con nosotros</string>
+    <string name="declaraci_n_de_privacidad_de_gaen">Declaración de privacidad de GAEN</string>
+    <string name="fecha_de_vigencia_23_09_2029">Fecha de vigencia: [23/09/2029]</string>
+    <string name="_1_informaci_n_que_recopilamos">1. Información que recopilamos</string>
+    <string name="datos_proporcionados_por_usted">Datos proporcionados por usted:</string>
+    <string name="cuenta_e_informaci_n_de_registro_al_crear_una_cuenta_en_gaen_recopilamos_su_nombre_direcci_n_de_correo_electr_nico_y_contrase_a">Cuenta e Información de Registro: Al crear una cuenta en Gaen, recopilamos su nombre, dirección de correo electrónico y contraseña.</string>
+    <string name="archivos_y_contenido_recopilamos_y_almacenamos_los_archivos_que_usted_carga_descarga_o_accede_a_trav_s_de_nuestro_servicio_incluyendo_fotos_videos_y_documentos">Archivos y Contenido: Recopilamos y almacenamos los archivos que usted carga, descarga o accede a través de nuestro servicio, incluyendo fotos, videos y documentos.</string>
+    <string name="_2_uso_de_la_informaci_n">2. Uso de la información</string>
+    <string name="proveer_mantener_y_mejorar_nuestros_servicios_proteger_la_seguridad_de_nuestros_servicios_y_de_nuestros_usuarios_comunicarnos_con_usted_incluyendo_enviarle_informaci_n_sobre_cambios_en_nuestros_t_rminos_o_pol_ticas">Proveer, mantener y mejorar nuestros servicios. Proteger la seguridad de nuestros servicios y de nuestros usuarios. Comunicarnos con usted, incluyendo enviarle información sobre cambios en nuestros términos o políticas.</string>
+    <string name="_3_seguridad_de_la_informaci_n">3. Seguridad de la información</string>
+    <string name="implementamos_medidas_de_seguridad_t_cnicas_y_organizativas_para_proteger_su_informaci_n_personal_contra_el_acceso_la_alteraci_n_la_p_rdida_o_la_destrucci_n_no_autorizados">Implementamos medidas de seguridad técnicas y organizativas para proteger su información personal contra el acceso, la alteración, la pérdida o la destrucción no autorizados.</string>
+    <string name="_1_concesi_n_de_licencia_gaen_otorga_al_usuario_una_licencia_no_exclusiva_no_transferible_y_limitada_para_usar_el_software_nicamente_para_uso_personal_o_interno_comercial">1. Concesión de Licencia: Gaen otorga al usuario una licencia no exclusiva, no transferible y limitada para usar el software únicamente para uso personal o interno comercial.</string>
+    <string name="_2_restricciones_el_usuario_no_debe_modificar_redistribuir_descompilar_o_crear_obras_derivadas_del_software_tambi_n_est_prohibido_sublicenciar_o_usar_el_software_para_servicios_de_alojamiento_comercial">2. Restricciones: El usuario no debe modificar, redistribuir, descompilar, o crear obras derivadas del software. También está prohibido sublicenciar o usar el software para servicios de alojamiento comercial.</string>
+    <string name="_3_propiedad_el_software_es_propiedad_exclusiva_de_gaen_y_est_protegido_por_las_leyes_de_derechos_de_autor_y_tratados_internacionales_el_usuario_no_adquiere_ning_n_derecho_de_propiedad_sobre_el_software">3. Propiedad: El software es propiedad exclusiva de Gaen y está protegido por las leyes de derechos de autor y tratados internacionales. El usuario no adquiere ningún derecho de propiedad sobre el software.</string>
+    <string name="_4_garant_a_el_software_se_ofrece_tal_cual_sin_garant_as_de_ning_n_tipo_ya_sean_expl_citas_o_impl_citas">4. Garantía: El software se ofrece tal cual, sin garantías de ningún tipo, ya sean explícitas o implícitas.</string>
+    <string name="_5_limitaci_n_de_responsabilidad_gaen_no_ser_responsable_de_da_os_indirectos_incidentales_o_consecuentes_derivados_del_uso_del_software">5. Limitación de Responsabilidad: Gaen no será responsable de daños indirectos, incidentales o consecuentes derivados del uso del software.</string>
+    <string name="_6_terminaci_n_la_licencia_ser_v_lida_hasta_que_se_termine_lo_cual_puede_ocurrir_si_el_usuario_incumple_los_t_rminos_establecidos_tras_la_terminaci_n_todas_las_copias_del_software_deben_ser_destruidas">6. Terminación: La licencia será válida hasta que se termine, lo cual puede ocurrir si el usuario incumple los términos establecidos. Tras la terminación, todas las copias del software deben ser destruidas.</string>
+    <string name="_7_acuerdo_completo_esta_licencia_representa_el_acuerdo_completo_entre_el_usuario_y_gaen_respecto_al_uso_del_software">7. Acuerdo Completo: Esta licencia representa el acuerdo completo entre el usuario y Gaen respecto al uso del software.</string>
+    <string name="ques_es_gaen">¿Ques es GAEN?</string>
+    <string name="gaen_es_un_servicio_de_gesti_n_de_archivos_en_la_nube_dise_ado_para_proporcionar_a_los_usuarios_un_almacenamiento_seguro_accesible_y_f_cil_de_usar">Gaen es un servicio de gestión de archivos en la nube diseñado para proporcionar a los usuarios un almacenamiento seguro, accesible y fácil de usar.</string>
+    <string name="caracter_sticas_principales_de_gaen">Características Principales de Gaen:</string>
+    <string name="almacenamiento_en_la_nube_los_usuarios_pueden_subir_sus_archivos_a_servidores_seguros_en_la_nube_donde_est_n_protegidos_y_accesibles_desde_cualquier_lugar">Almacenamiento en la Nube: Los usuarios pueden subir sus archivos a servidores seguros en la nube, donde están protegidos y accesibles desde cualquier lugar.</string>
+    <string name="variedad_de_permisos_los_permisos_hacen_que_segun_las_opciones_que_seleccionas_el_gestor_actuara_de_una_manera_diferente_y_totalmente_al_gusto_del_consumidor">Variedad de permisos: Los permisos hacen que segun las opciones que seleccionas el gestor actuara de una manera diferente y totalmente al gusto del consumidor.</string>
+    <string name="seguridad_y_privacidad_el_servicio_utiliza_encriptaci_n_avanzada_para_proteger_los_datos_durante_la_transmisi_n_y_en_reposo_asegurando_que_la_informaci_n_personal_y_empresarial_de_los_usuarios_se_mantenga_privada_y_segura">Seguridad y Privacidad: El servicio utiliza encriptación avanzada para proteger los datos durante la transmisión y en reposo, asegurando que la información personal y empresarial de los usuarios se mantenga privada y segura.</string>
+    <string name="beneficios_de_usar_gaen">Beneficios de Usar GAEN:</string>
+    <string name="flexibilidad_acceso_a_tus_archivos_desde_cualquier_dispositivo_en_cualquier_momento_y_lugar">Flexibilidad: Acceso a tus archivos desde cualquier dispositivo, en cualquier momento y lugar.</string>
+    <string name="escalabilidad_ofrece_diferentes_planes_de_almacenamiento_adaptados_a_las_necesidades_individuales_o_empresariales_permitiendo_aumentar_el_espacio_de_almacenamiento_seg_n_sea_necesario">Escalabilidad: Ofrece diferentes planes de almacenamiento adaptados a las necesidades individuales o empresariales, permitiendo aumentar el espacio de almacenamiento según sea necesario.</string>
+    <string name="fundada_en_2024_por_un_tr_o_de_innovadores_tecnol_gicos_jos_gallardo_jos_javier_y_jos_mar_a_gaen_surge_de_la_necesidad_de_crear_una_plataforma_segura_intuitiva_y_accesible_para_la_gesti_n_de_archivos_digitales_con_a_os_de_experiencia_en_tecnolog_a_de_la_informaci_n_y_desarrollo_de_software_nuestro_equipo_se_propuso_dise_ar_una_herramienta_que_no_solo_facilitara_la_gesti_n_de_archivos_sino_que_tambi_n_transformara_la_forma_en_que_los_equipos_colaboran_y_acceden_a_su_informaci_n">Fundada en 2024 por un trío de innovadores tecnológicos —José Gallardo, José Javier y José María— Gaen surge de la necesidad de crear una plataforma segura, intuitiva y accesible para la gestión de archivos digitales. Con años de experiencia en tecnología de la información y desarrollo de software, nuestro equipo se propuso diseñar una herramienta que no solo facilitara la gestión de archivos, sino que también transformara la forma en que los equipos colaboran y acceden a su información.</string>
+    <string name="nuestra_misi_n">Nuestra Misión:</string>
+    <string name="en_gaen_nuestra_misi_n_es_simplificar_la_vida_de_nuestros_usuarios_al_ofrecer_una_soluci_n_de_almacenamiento_en_la_nube_que_sea_segura_f_cil_de_usar_y_completamente_accesible_desde_cualquier_lugar_del_mundo_estamos_comprometidos_con_la_protecci_n_de_la_privacidad_de_nuestros_usuarios_y_garantizamos_que_todos_los_datos_almacenados_en_nuestra_plataforma_est_n_protegidos_con_los_m_s_altos_est_ndares_de_seguridad">En Gaen, nuestra misión es simplificar la vida de nuestros usuarios al ofrecer una solución de almacenamiento en la nube que sea segura, fácil de usar y completamente accesible desde cualquier lugar del mundo. Estamos comprometidos con la protección de la privacidad de nuestros usuarios y garantizamos que todos los datos almacenados en nuestra plataforma están protegidos con los más altos estándares de seguridad.</string>
+    <string name="nuestro_compromiso">Nuestro Compromiso:</string>
+    <string name="nos_dedicamos_a_la_mejora_continua_y_estamos_siempre_atentos_a_las_necesidades_de_nuestros_usuarios_para_adaptar_y_mejorar_nuestras_funciones_valoramos_los_comentarios_y_estamos_comprometidos_con_la_innovaci_n_constante_para_seguir_ofreciendo_una_de_las_mejores_experiencias_de_gesti_n_de_archivos_en_el_mercado">Nos dedicamos a la mejora continua y estamos siempre atentos a las necesidades de nuestros usuarios para adaptar y mejorar nuestras funciones. Valoramos los comentarios y estamos comprometidos con la innovación constante para seguir ofreciendo una de las mejores experiencias de gestión de archivos en el mercado.</string>
+    <string name="gracias_por_confiar_en_nosotros">¡Gracias por confiar en nosotros!</string>
+    <string name="email_gaen_soporte_com" translatable="false">Email:gaen@soporte.com</string>
+    <string name="tlfn_699741966" translatable="false">Tlfn:699741966</string>
+    <string name="soporte_gaen">Soporte GAEN</string>">
 </resources>

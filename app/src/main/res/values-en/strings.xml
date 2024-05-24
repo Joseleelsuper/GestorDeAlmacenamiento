@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="chooseOption">Choose an option.</string>
     <string name="unexpectedValue">Unexpected value</string>
@@ -20,7 +19,6 @@
     <string name="good_deletedFile">File successfully deleted.</string>
     <string name="good_renamedFile">File successfully renamed.</string>
     <string name="good_deletedFolder">Folder successfully deleted.</string>
-    <string name="error_deletedFile">Error deleting the file.</string>
     <string name="error_renamedFile">Error renaming the file.</string>
     <string name="error_fileName">The file name is invalid.</string>
     <string name="error_addedFile">Error adding the file.</string>
@@ -61,9 +59,7 @@
     <string name="configPermsText">Configure the permissions that invitees will have by default.</string>
     <string name="permShareWithOthers">Sharing files from your cloud</string>
     <string name="good_permUpdated">Permits updated correctly.</string>
-    <string name="error_permUpdated">Error updating permissions.</string>
     <string name="permAddFiles">Add files to your cloud</string>
-    <string name="permDeleteFiles">Delete files from your cloud</string>
     <string name="permRenameFiles">Rename files in your cloud</string>
     <string name="permCreateFolders">Create folders in your cloud</string>
     <string name="permDeleteFolders">Delete folders from your cloud</string>
@@ -71,7 +67,7 @@
     <string name="permUpdate">Update permissions</string>
     <string name="userTerms">I accept the terms of use</string>
     <string name="accept_term_of_use">Please accept the terms of use.</string>
-    <string name="mailReports">I agree to receive\nemail newsletters.</string>
+    <string name="mailReports">I agree to receive email newsletters.</string>
     <string name="accept_email_messages">Please accept mailings.</string>
     <string name="home_version">- First version of the programme, Home, Files and Me options are added.</string>
     <string name="updates">Latest Updates: (V1.0)</string>
@@ -81,7 +77,6 @@
     <string name="last_folders">Last folders used:</string>
     <string name="bienvenido">Welcome,</string>
     <string name="home">Home</string>
-    <string name="me">Me</string>
     <string name="files">Archives</string>
     <string name="permissions">Permits</string>
     <string name="alreadyinfilescreen">You are already on the archive screen.</string>
@@ -98,4 +93,76 @@
         <item>Short from largest to smallest</item>
         <item>Short from smallest to largest</item>
     </string-array>
+    <string name="soporte">Support</string>
+    <string name="preguntas_frecuentes">Frequently Asked Questions</string>
+    <string name="obten_mas_ayuda">Get more help</string>
+    <string name="consejos_y_respuestas_tiles">Useful tips and answers</string>
+    <string name="acerca_de">About</string>
+    <string name="quienes_somos">Who are we?</string>
+    <string name="c_mo_subo_archivos_al_gestor_de_archivos_en_la_nube">How do I upload files to the cloud file manager?</string>
+    <string name="hay_un_l_mite_de_tama_o_para_los_archivos_que_puedo_subir">Is there a size limit for the files I can upload?</string>
+    <string name="hacer_una_copia_de_seguridad_de_fotos_y_videos">Backing up photos and videos</string>
+    <string name="cambiar_la_forma_en_que_se_ordenan_los_archivos">Change the way the files are sorted</string>
+    <string name="informar_de_un_problema">Report a problem</string>
+    <string name="contacta_con_nosotros">Contact with us</string>
+    <string name="declaracion_de_privacidad_de_gaen">Gaen Privacy Statement</string>
+    <string name="licencia_de_software">Software License</string>
+    <string name="que_es_gaen">What is GAEN?</string>
+    <string name="sobre_nosotros">About us</string>
+    <string name="atras">Back</string>
+    <string name="primer_paso">First step</string>
+    <string name="en_la_pantalla_toca_el_apartado_de_archivos">On the screen tap the Files section</string>
+    <string name="segundo_paso">Second step</string>
+    <string name="tocar_el_boton_con_el_simbolo">Touch the button with the + symbol</string>
+    <string name="tercer_paso">Third step</string>
+    <string name="te_apareceran_dos_opciones_la_primera_para_a_adir_un_archivo_y_la_segunda_para_a_adir_una_carpeta_elige_la_primera_y_ya_podria_subir_su_archivo">You will see two options, the first one to add a file and the second one to add a folder, choose the first one and you will be able to upload your file.</string>
+    <string name="en_gaen_entendemos_que_diferentes_usuarios_tienen_diferentes_necesidades_en_cuanto_a_almacenamiento_y_manejo_de_archivos_por_eso_ofrecemos_varias_tarifas_que_se_adaptan_a_una_amplia_gama_de_necesidades_desde_usuarios_individuales_hasta_grandes_empresas_por_eso_los_unicos_dos_limites_son">At Gaen, we understand that different users have different needs in terms of storage and file management. Therefore, we offer various rates to suit a wide range of needs, from individual users to large companies, so the only two limits are:</string>
+    <string name="_1_tarifa_contratada_ya_que_dispondra_de_mas_gigabatios_cuanto_mejor_sea">1.Contracted tariff since you will have more gigabatios the better it is.</string>
+    <string name="_2_espacio_restante_de_la_tarifa_si_ya_has_ocupado_memoria_sera_esta_la_que_no_podras_ocupar">Remaining space of the tariff, if you have already occupied memory, you will not be able to occupy it.</string>
+    <string name="posteriormente_como_se_muestra_en_la_imagen_ve_a_el_apartado_de_permisos_y_confirme_que_tiene_la_opci_nn_de_a_adir_los_archivos_a_la_nube">Then, as shown in the image, go to the permissions section and confirm that you have the option to add the files to the cloud.</string>
+    <string name="hacer_copia_de_seguridad_de_fotos_y_videos">Backing up photos and videos</string>
+    <string name="hacer_copias_de_seguridad_de_tus_fotos_y_videos_es_fundamental_por_varias_razones_que_tienen_que_ver_con_la_protecci_n_la_accesibilidad_y_la_preservaci_n_a_largo_plazo_de_tus_recuerdos_e_informaci_n_importante_por_lo_que_le_explicaremos_de_una_forma_simple_como_hacerlo">Backing up your photos and videos is essential for several reasons that have to do with the protection, accessibility and long-term preservation of your memories and important information, so we will explain in a simple way how to do it:</string>
+    <string name="a_ade_tus_archivos_a_el_gestor">Add your files to the manager</string>
+    <string name="cambiar_la_forma_en_la_que_se_ordenan_los_archivos">Changing the way files are sorted</string>
+    <string name="entendemos_que_para_la_gente_que_de_uso_profesional_a_nuestro_gestor_de_archivos_gestionar_varias_carpetas_y_archivos_puede_ser_tedioso_por_esa_misma_razon_esta_la_opcion_de_organizar_los_archivos_y_carpteas_segun_estandares_basicos_como_lo_son_el_tiempo_o_el_abecedario_de_esta_forma_lograr_tene_un_mejor_orden_de_los_mismos_y_siguiendo_estos_pasos_sabras_como_hacerlo">We understand that for people who use our file manager professionally to manage multiple folders and files can be tedious, for that reason there is the option to organize files and folders according to basic standards such as time or the alphabet in this way to achieve a better order of the same and following these steps you will know how to do it:</string>
+    <string name="como_primer_paso_tan_solo_deberemos_ir_a_el_apartado_de_archivos">As a first step we will only have to go to the files section.</string>
+    <string name="como_segundo_paso_tan_solo_deberias_tocar_el_boton_que_pone_ordenar_de_a_z_y_se_desplegara_este_dropdown">As a second step you should just tap on the A-Z order button and this dropdown will be displayed:</string>
+    <string name="informar_de_el_problema">Report a problem</string>
+    <string name="indique_el_problema">State the problem:</string>
+    <string name="enviar_problema">Submit problem</string>
+    <string name="cualquier_duda_o_problema_puede_ser_atendida_por_un_asistente_via_email_o_llamada_atrav_s_de">Any questions or problems can be answered by an assistant via email or phone call:</string>
+    <string name="contactanos">Contact with us</string>
+    <string name="declaraci_n_de_privacidad_de_gaen">GAEN Privacy Statement</string>
+    <string name="fecha_de_vigencia_23_09_2029">Effective Date: [09/23/2029].</string>
+    <string name="_1_informaci_n_que_recopilamos">1. Information we collect</string>
+    <string name="datos_proporcionados_por_usted">Data provided by you:</string>
+    <string name="cuenta_e_informaci_n_de_registro_al_crear_una_cuenta_en_gaen_recopilamos_su_nombre_direcci_n_de_correo_electr_nico_y_contrase_a">Account and Registration Information: When you create an account with Gaen, we collect your name, email address and password.</string>
+    <string name="archivos_y_contenido_recopilamos_y_almacenamos_los_archivos_que_usted_carga_descarga_o_accede_a_trav_s_de_nuestro_servicio_incluyendo_fotos_videos_y_documentos">Files and Content: We collect and store the files you upload, download or access through our service, including photos, videos and documents.</string>
+    <string name="_2_uso_de_la_informaci_n">2. Use of information</string>
+    <string name="proveer_mantener_y_mejorar_nuestros_servicios_proteger_la_seguridad_de_nuestros_servicios_y_de_nuestros_usuarios_comunicarnos_con_usted_incluyendo_enviarle_informaci_n_sobre_cambios_en_nuestros_t_rminos_o_pol_ticas">To provide, maintain and improve our services. Protect the security of our services and our users. Communicate with you, including sending you information about changes to our terms or policies.</string>
+    <string name="_3_seguridad_de_la_informaci_n">3. Information security</string>
+    <string name="implementamos_medidas_de_seguridad_t_cnicas_y_organizativas_para_proteger_su_informaci_n_personal_contra_el_acceso_la_alteraci_n_la_p_rdida_o_la_destrucci_n_no_autorizados">We implement technical and organizational security measures to protect your personal information against unauthorized access, alteration, loss or destruction.</string>
+    <string name="_1_concesi_n_de_licencia_gaen_otorga_al_usuario_una_licencia_no_exclusiva_no_transferible_y_limitada_para_usar_el_software_nicamente_para_uso_personal_o_interno_comercial">1. Grant of License: Gaen grants the user a non-exclusive, non-transferable, limited license to use the software solely for personal or internal commercial use.</string>
+    <string name="_2_restricciones_el_usuario_no_debe_modificar_redistribuir_descompilar_o_crear_obras_derivadas_del_software_tambi_n_est_prohibido_sublicenciar_o_usar_el_software_para_servicios_de_alojamiento_comercial">2. Restrictions: The user must not modify, redistribute, decompile, or create derivative works of the software. It is also prohibited to sublicense or use the software for commercial hosting services.</string>
+    <string name="_3_propiedad_el_software_es_propiedad_exclusiva_de_gaen_y_est_protegido_por_las_leyes_de_derechos_de_autor_y_tratados_internacionales_el_usuario_no_adquiere_ning_n_derecho_de_propiedad_sobre_el_software">3. Ownership: The software is the exclusive property of Gaen and is protected by copyright laws and international treaties. The user does not acquire any ownership rights in the software.</string>
+    <string name="_4_garant_a_el_software_se_ofrece_tal_cual_sin_garant_as_de_ning_n_tipo_ya_sean_expl_citas_o_impl_citas">Warranty: The software is provided \"as is\" without warranty of any kind, either expressed or implied.</string>
+    <string name="_5_limitaci_n_de_responsabilidad_gaen_no_ser_responsable_de_da_os_indirectos_incidentales_o_consecuentes_derivados_del_uso_del_software">5. Limitation of Liability: Gaen shall not be liable for indirect, incidental or consequential damages arising out of the use of the software.</string>
+    <string name="_6_terminaci_n_la_licencia_ser_v_lida_hasta_que_se_termine_lo_cual_puede_ocurrir_si_el_usuario_incumple_los_t_rminos_establecidos_tras_la_terminaci_n_todas_las_copias_del_software_deben_ser_destruidas">6. Termination: The license shall be valid until terminated, which may occur if the user breaches the stated terms. Upon termination, all copies of the software must be destroyed.</string>
+    <string name="_7_acuerdo_completo_esta_licencia_representa_el_acuerdo_completo_entre_el_usuario_y_gaen_respecto_al_uso_del_software">7. Entire Agreement: This license represents the entire agreement between the user and Gaen regarding the use of the software.</string>
+    <string name="ques_es_gaen">What is GAEN?</string>
+    <string name="gaen_es_un_servicio_de_gesti_n_de_archivos_en_la_nube_dise_ado_para_proporcionar_a_los_usuarios_un_almacenamiento_seguro_accesible_y_f_cil_de_usar">Gaen is a cloud file management service designed to provide users with secure, accessible and easy-to-use storage.</string>
+    <string name="caracter_sticas_principales_de_gaen">Gaen Main Features:</string>
+    <string name="almacenamiento_en_la_nube_los_usuarios_pueden_subir_sus_archivos_a_servidores_seguros_en_la_nube_donde_est_n_protegidos_y_accesibles_desde_cualquier_lugar">Cloud Storage: Users can upload their files to secure servers in the cloud, where they are protected and accessible from anywhere.</string>
+    <string name="variedad_de_permisos_los_permisos_hacen_que_segun_las_opciones_que_seleccionas_el_gestor_actuara_de_una_manera_diferente_y_totalmente_al_gusto_del_consumidor">Variety of permissions: The permissions make that according to the options that you select the manager will act in a different way and totally to the taste of the consumer.</string>
+    <string name="seguridad_y_privacidad_el_servicio_utiliza_encriptaci_n_avanzada_para_proteger_los_datos_durante_la_transmisi_n_y_en_reposo_asegurando_que_la_informaci_n_personal_y_empresarial_de_los_usuarios_se_mantenga_privada_y_segura">Security and Privacy: The service uses advanced encryption to protect data during transmission and at rest, ensuring that users\' personal and business information is kept private and secure.</string>
+    <string name="beneficios_de_usar_gaen">Benefits of Using GAEN:</string>
+    <string name="flexibilidad_acceso_a_tus_archivos_desde_cualquier_dispositivo_en_cualquier_momento_y_lugar">Flexibility: Access your files from any device, anytime, anywhere.</string>
+    <string name="escalabilidad_ofrece_diferentes_planes_de_almacenamiento_adaptados_a_las_necesidades_individuales_o_empresariales_permitiendo_aumentar_el_espacio_de_almacenamiento_seg_n_sea_necesario">Scalability: Offers different storage plans tailored to individual or business needs, allowing you to increase storage space as needed.</string>
+    <string name="fundada_en_2024_por_un_tr_o_de_innovadores_tecnol_gicos_jos_gallardo_jos_javier_y_jos_mar_a_gaen_surge_de_la_necesidad_de_crear_una_plataforma_segura_intuitiva_y_accesible_para_la_gesti_n_de_archivos_digitales_con_a_os_de_experiencia_en_tecnolog_a_de_la_informaci_n_y_desarrollo_de_software_nuestro_equipo_se_propuso_dise_ar_una_herramienta_que_no_solo_facilitara_la_gesti_n_de_archivos_sino_que_tambi_n_transformara_la_forma_en_que_los_equipos_colaboran_y_acceden_a_su_informaci_n">Founded in 2024 by a trio of technology innovators - José Gallardo, José Javier and José María - Gaen was born out of the need to create a secure, intuitive and accessible platform for digital records management. With years of experience in information technology and software development, our team set out to design a tool that would not only facilitate records management, but also transform the way teams collaborate and access their information.</string>
+    <string name="nuestra_misi_n">Our Mission:</string>
+    <string name="en_gaen_nuestra_misi_n_es_simplificar_la_vida_de_nuestros_usuarios_al_ofrecer_una_soluci_n_de_almacenamiento_en_la_nube_que_sea_segura_f_cil_de_usar_y_completamente_accesible_desde_cualquier_lugar_del_mundo_estamos_comprometidos_con_la_protecci_n_de_la_privacidad_de_nuestros_usuarios_y_garantizamos_que_todos_los_datos_almacenados_en_nuestra_plataforma_est_n_protegidos_con_los_m_s_altos_est_ndares_de_seguridad">At Gaen, our mission is to simplify the lives of our users by offering a cloud storage solution that is secure, easy to use and fully accessible from anywhere in the world. We are committed to protecting the privacy of our users and guarantee that all data stored on our platform is protected with the highest security standards.</string>
+    <string name="nuestro_compromiso">Our Commitment:</string>
+    <string name="nos_dedicamos_a_la_mejora_continua_y_estamos_siempre_atentos_a_las_necesidades_de_nuestros_usuarios_para_adaptar_y_mejorar_nuestras_funciones_valoramos_los_comentarios_y_estamos_comprometidos_con_la_innovaci_n_constante_para_seguir_ofreciendo_una_de_las_mejores_experiencias_de_gesti_n_de_archivos_en_el_mercado">We are dedicated to continuous improvement and are always listening to the needs of our users to adapt and improve our features. We value feedback and are committed to constant innovation to continue to offer one of the best file management experiences on the market.</string>
+    <string name="gracias_por_confiar_en_nosotros">Thanks for trusting us!</string>
+    <string name="soporte_gaen">GAEN Support</string>">
 </resources>

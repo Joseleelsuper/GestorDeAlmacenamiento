@@ -15,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gestordealmacenamiento.R;
 import com.example.gestordealmacenamiento.session.LoginScreen;
+
+import com.example.gestordealmacenamiento.support.Support;
 import com.example.gestordealmacenamiento.util.FinalVariables;
 import com.example.gestordealmacenamiento.util.UserData;
 
@@ -70,9 +72,24 @@ public class MeScreen extends AppCompatActivity {
         Toast.makeText(this, getString(R.string.alreadyinme), Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * Método que cambia a la pantalla de permisos.
+     *
+     * @param view Vista actual.
+     */
     public void goPermissions(View view) {
         Intent intent = new Intent(this, PermissionScreen.class);
         startActivity(intent);
+    }
+
+    /**
+     * Método que cambia a la pantalla de soporte.
+     *
+     * @param view Vista actual.
+     */
+    public void goSupport(View view) {
+        Intent sup = new Intent(this, Support.class);
+        startActivity(sup);
     }
 
     /**

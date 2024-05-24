@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context="com.example.gestordealmacenamiento.support.Acercade2">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/licencia_de_software"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="363dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="83dp"
+        android:text="@string/_1_concesi_n_de_licencia_gaen_otorga_al_usuario_una_licencia_no_exclusiva_no_transferible_y_limitada_para_usar_el_software_nicamente_para_uso_personal_o_interno_comercial"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="363dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="169dp"
+        android:text="@string/_2_restricciones_el_usuario_no_debe_modificar_redistribuir_descompilar_o_crear_obras_derivadas_del_software_tambi_n_est_prohibido_sublicenciar_o_usar_el_software_para_servicios_de_alojamiento_comercial"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="363dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="255dp"
+        android:text="@string/_3_propiedad_el_software_es_propiedad_exclusiva_de_gaen_y_est_protegido_por_las_leyes_de_derechos_de_autor_y_tratados_internacionales_el_usuario_no_adquiere_ning_n_derecho_de_propiedad_sobre_el_software"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="362dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="345dp"
+        android:text="@string/_4_garant_a_el_software_se_ofrece_tal_cual_sin_garant_as_de_ning_n_tipo_ya_sean_expl_citas_o_impl_citas"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="361dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="400dp"
+        android:text="@string/_5_limitaci_n_de_responsabilidad_gaen_no_ser_responsable_de_da_os_indirectos_incidentales_o_consecuentes_derivados_del_uso_del_software"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="356dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="463dp"
+        android:text="@string/_6_terminaci_n_la_licencia_ser_v_lida_hasta_que_se_termine_lo_cual_puede_ocurrir_si_el_usuario_incumple_los_t_rminos_establecidos_tras_la_terminaci_n_todas_las_copias_del_software_deben_ser_destruidas"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="354dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="556dp"
+        android:onClick="Back"
+        android:text="@string/_7_acuerdo_completo_esta_licencia_representa_el_acuerdo_completo_entre_el_usuario_y_gaen_respecto_al_uso_del_software"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/myButton1"
+        android:layout_width="123dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="656dp"
+        android:background="@drawable/blue_square_button"
+        android:onClick="Back"
+        android:text="@string/atras"
+        android:textColor="#000000"
+        android:textSize="9sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

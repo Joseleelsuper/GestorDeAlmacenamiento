@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context="com.example.gestordealmacenamiento.support.Pregunta2">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="38dp"
+        android:text="@string/hay_un_l_mite_de_tama_o_para_los_archivos_que_puedo_subir"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="360dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="92dp"
+        android:text="@string/en_gaen_entendemos_que_diferentes_usuarios_tienen_diferentes_necesidades_en_cuanto_a_almacenamiento_y_manejo_de_archivos_por_eso_ofrecemos_varias_tarifas_que_se_adaptan_a_una_amplia_gama_de_necesidades_desde_usuarios_individuales_hasta_grandes_empresas_por_eso_los_unicos_dos_limites_son"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="351dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="283dp"
+        android:text="@string/_1_tarifa_contratada_ya_que_dispondra_de_mas_gigabatios_cuanto_mejor_sea"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="351dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="367dp"
+        android:text="@string/_2_espacio_restante_de_la_tarifa_si_ya_has_ocupado_memoria_sera_esta_la_que_no_podras_ocupar"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/myButton1"
+        android:layout_width="123dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="656dp"
+        android:layout_marginEnd="259dp"
+        android:layout_marginBottom="39dp"
+        android:background="@drawable/blue_square_button"
+        android:onClick="Back"
+        android:text="@string/atras"
+        android:textColor="#000000"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
