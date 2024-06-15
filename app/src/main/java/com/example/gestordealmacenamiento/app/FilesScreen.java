@@ -95,7 +95,7 @@ public class FilesScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.file_screen);
+        setContentView(R.layout.files_screen);
 
         // Inicializa el directorio actual al directorio "Files" de la aplicación
         File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), getString(R.string.app_name));

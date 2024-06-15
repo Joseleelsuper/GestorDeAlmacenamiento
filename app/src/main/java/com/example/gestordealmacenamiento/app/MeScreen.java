@@ -2,11 +2,14 @@ package com.example.gestordealmacenamiento.app;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.InputType;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +24,7 @@ import com.example.gestordealmacenamiento.util.FinalVariables;
 import com.example.gestordealmacenamiento.util.UserData;
 
 import java.io.File;
+import java.util.Locale;
 
 /**
  * Clase que representa la pantalla de Me.
@@ -41,6 +45,28 @@ public class MeScreen extends AppCompatActivity {
 
         TextView emailTextView = findViewById(R.id.me_text_expireDate);
         emailTextView.setText(UserData.currentInstance.getExpirationDate());
+
+        // Comprueba el idioma del dispositivo la primera vez que se abre la aplicación
+        SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+        if (!sharedPreferences.contains("language")) {
+            String deviceLanguage = Locale.getDefault().getLanguage();
+            SharedPreferences.Editor myEdit = sharedPreferences.edit();
+            if (deviceLanguage.equals("es") || deviceLanguage.equals("en")) {
+                myEdit.putString("language", deviceLanguage);
+            } else {
+                myEdit.putString("language", "en"); // Por defecto, establece el idioma en inglés
+            }
+            myEdit.apply();
+        }
+
+        // Establece el icono de la imagen en función del idioma guardado
+        ImageView imageView = findViewById(R.id.languaje_icon);
+        String language = sharedPreferences.getString("language", "en");
+        if (language.equals("es")) {
+            imageView.setImageResource(R.drawable.spain);
+        } else {
+            imageView.setImageResource(R.drawable.uk);
+        }
     }
 
     /**
@@ -149,6 +175,41 @@ public class MeScreen extends AppCompatActivity {
         });
         builder.setNegativeButton(getString(R.string.cancel), (dialog, which) -> dialog.cancel());
 
+        builder.show();
+    }
+
+    public void changeLanguaje(View view) {
+        // Crea un diálogo con las opciones de idioma
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(getString(R.string.choose_language));
+        String[] languages = { "Español (España)", "English (UK)" };
+        builder.setItems(languages, (dialog, which) -> {
+            // Cambia el idioma y el icono de la imagen en función de la opción seleccionada
+            ImageView imageView = findViewById(R.id.languaje_icon);
+            SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+            SharedPreferences.Editor myEdit = sharedPreferences.edit();
+            String language;
+            if (which == 0) {
+                language = "es";
+                imageView.setImageResource(R.drawable.spain);
+            } else {
+                language = "en";
+                imageView.setImageResource(R.drawable.uk);
+            }
+            myEdit.putString("language", language);
+            myEdit.apply();
+
+            // Cambia la configuración de localización de la aplicación
+            Locale locale = new Locale(language);
+            Locale.setDefault(locale);
+            Configuration config = new Configuration();
+            config.locale = locale;
+            getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+
+            // Reinicia la actividad para aplicar el cambio de idioma
+            finish();
+            startActivity(getIntent());
+        });
         builder.show();
     }
 }

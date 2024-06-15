@@ -16,6 +16,8 @@
         android:layout_marginTop="16dp"
         android:text="@string/soporte"
         android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,6 +29,8 @@
         android:layout_marginTop="48dp"
         android:text="@string/preguntas_frecuentes"
         android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,10 +38,12 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="176dp"
         android:text="@string/consejos_y_respuestas_tiles"
         android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,20 +51,24 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="291dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="292dp"
         android:text="@string/obten_mas_ayuda"
         android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="410dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="412dp"
         android:text="@string/acerca_de"
         android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -69,6 +79,8 @@
         android:layout_marginTop="531dp"
         android:text="@string/quienes_somos"
         android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -83,7 +95,7 @@
         android:onClick="PREGUNTA1"
         android:text="@string/c_mo_subo_archivos_al_gestor_de_archivos_en_la_nube"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -97,7 +109,7 @@
         android:onClick="PREGUNTA2"
         android:text="@string/hay_un_l_mite_de_tama_o_para_los_archivos_que_puedo_subir"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -111,7 +123,7 @@
         android:onClick="CONSEJO1"
         android:text="@string/hacer_una_copia_de_seguridad_de_fotos_y_videos"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -125,7 +137,7 @@
         android:onClick="CONSEJO2"
         android:text="@string/cambiar_la_forma_en_que_se_ordenan_los_archivos"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -139,7 +151,7 @@
         android:onClick="AYUDA1"
         android:text="@string/informar_de_un_problema"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -153,7 +165,7 @@
         android:onClick="AYUDA2"
         android:text="@string/contacta_con_nosotros"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -167,7 +179,7 @@
         android:onClick="ACERCADE1"
         android:text="@string/declaracion_de_privacidad_de_gaen"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -181,7 +193,7 @@
         android:onClick="ACERCADE2"
         android:text="@string/licencia_de_software"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -195,7 +207,7 @@
         android:onClick="SOMOS1"
         android:text="@string/que_es_gaen"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -210,7 +222,7 @@
         android:onClick="SOMOS2"
         android:text="@string/sobre_nosotros"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -224,8 +236,9 @@
         android:background="@drawable/blue_square_button"
         android:onClick="BackMore"
         android:text="@string/atras"
+        android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="DuplicateIds" />

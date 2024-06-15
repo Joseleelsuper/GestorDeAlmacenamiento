@@ -56,7 +56,7 @@
     <string name="confirmDeleteAccount">Confirm account deletion</string>
     <string name="error_DeleteAccount">Error deleting account</string>
     <string name="good_accountDeleted">Account successfully deleted</string>
-    <string name="configPermsText">Configure the permissions that invitees will have by default.</string>
+    <string name="configPermsText">Configure the permissions that invites will have by default.</string>
     <string name="permShareWithOthers">Sharing files from your cloud</string>
     <string name="good_permUpdated">Permits updated correctly.</string>
     <string name="permAddFiles">Add files to your cloud</string>
@@ -164,5 +164,6 @@
     <string name="nuestro_compromiso">Our Commitment:</string>
     <string name="nos_dedicamos_a_la_mejora_continua_y_estamos_siempre_atentos_a_las_necesidades_de_nuestros_usuarios_para_adaptar_y_mejorar_nuestras_funciones_valoramos_los_comentarios_y_estamos_comprometidos_con_la_innovaci_n_constante_para_seguir_ofreciendo_una_de_las_mejores_experiencias_de_gesti_n_de_archivos_en_el_mercado">We are dedicated to continuous improvement and are always listening to the needs of our users to adapt and improve our features. We value feedback and are committed to constant innovation to continue to offer one of the best file management experiences on the market.</string>
     <string name="gracias_por_confiar_en_nosotros">Thanks for trusting us!</string>
-    <string name="soporte_gaen">GAEN Support</string>">
+    <string name="soporte_gaen">GAEN Support</string>
+    <string name="choose_language">Choose language</string>">
 </resources>

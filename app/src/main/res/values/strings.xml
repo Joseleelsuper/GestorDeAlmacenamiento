@@ -52,7 +52,7 @@
     <string name="logout">Cerrar sesión</string>
     <string name="good_logout">Sesión cerrada correctamente.</string>
     <string name="register">Registrarse</string>
-    <string name="good_register">Usario registrado correctamente.</string>
+    <string name="good_register">Usuario registrado correctamente.</string>
     <string name="noAccount">¿No tienes cuenta? Regístrate.</string>
     <string name="yesAccount">¿Ya tienes cuenta? Inicia sesión.</string>
     <string name="recoverPWD">Recuperar contraseña</string>
@@ -84,7 +84,7 @@
     <string name="accept_email_messages">Por favor, acepta los envíos de mensajes al correo.</string>
     <!--  App Updates  -->
     <string name="home_version">- Primera versión del programa, se añaden las opciones Inicio, Archivos y Yo.</string>
-    <string name="updates">Ultimas Updates: (V1.0)</string>
+    <string name="updates">Últimas Updates: (V1.0)</string>
     <!--  User Information  -->
     <string name="here_is_your_personal_information">Aquí puedes ver tu información personal:</string>
     <string name="account_type">Tipo de cuenta:</string>
@@ -186,5 +186,6 @@
     <string name="gracias_por_confiar_en_nosotros">¡Gracias por confiar en nosotros!</string>
     <string name="email_gaen_soporte_com" translatable="false">Email:gaen@soporte.com</string>
     <string name="tlfn_699741966" translatable="false">Tlfn:699741966</string>
-    <string name="soporte_gaen">Soporte GAEN</string>">
+    <string name="soporte_gaen">Soporte GAEN</string>
+    <string name="choose_language">Elegir idioma</string>">
 </resources>
