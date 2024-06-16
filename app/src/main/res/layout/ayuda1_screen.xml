@@ -10,13 +10,17 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="47dp"
+        android:layout_marginEnd="100dp"
         android:text="@string/informar_de_el_problema"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,11 +28,13 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="119dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="252dp"
+        android:layout_marginEnd="100dp"
         android:text="@string/indique_el_problema"
         android:textColor="#000000"
         android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,19 +49,21 @@
         android:onClick="Back"
         android:text="@string/atras"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="280dp"
+        android:layout_marginEnd="30dp"
         android:ems="10"
         android:gravity="start|top"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
@@ -64,11 +72,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="389dp"
+        android:layout_marginTop="456dp"
         android:layout_marginEnd="130dp"
         android:onClick="submitProblem"
         android:text="@string/enviar_problema"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

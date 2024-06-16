@@ -9,13 +9,18 @@
     tools:context="com.example.gestordealmacenamiento.support.Acercade1">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="55dp"
         android:text="@string/declaraci_n_de_privacidad_de_gaen"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,7 +28,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="92dp"
         android:text="@string/fecha_de_vigencia_23_09_2029"
         android:textColor="#000000"
@@ -32,13 +37,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="129dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/_1_informaci_n_que_recopilamos"
         android:textColor="#000000"
         android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,7 +55,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="159dp"
         android:text="@string/datos_proporcionados_por_usted"
         android:textColor="#000000"
@@ -56,25 +65,30 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="355dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="27dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="188dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/cuenta_e_informaci_n_de_registro_al_crear_una_cuenta_en_gaen_recopilamos_su_nombre_direcci_n_de_correo_electr_nico_y_contrase_a"
         android:textColor="#000000"
         android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
-        android:layout_width="356dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="26dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="256dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/archivos_y_contenido_recopilamos_y_almacenamos_los_archivos_que_usted_carga_descarga_o_accede_a_trav_s_de_nuestro_servicio_incluyendo_fotos_videos_y_documentos"
         android:textColor="#000000"
         android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,45 +96,53 @@
         android:id="@+id/textView7"
         android:layout_width="168dp"
         android:layout_height="21dp"
-        android:layout_marginStart="26dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="340dp"
         android:text="@string/_2_uso_de_la_informaci_n"
         android:textColor="#000000"
         android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="341dp"
+        android:layout_width="350dp"
         android:layout_height="94dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="369dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="368dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/proveer_mantener_y_mejorar_nuestros_servicios_proteger_la_seguridad_de_nuestros_servicios_y_de_nuestros_usuarios_comunicarnos_con_usted_incluyendo_enviarle_informaci_n_sobre_cambios_en_nuestros_t_rminos_o_pol_ticas"
         android:textColor="#000000"
         android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="214dp"
         android:layout_height="24dp"
-        android:layout_marginStart="26dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="473dp"
         android:text="@string/_3_seguridad_de_la_informaci_n"
         android:textColor="#000000"
         android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="336dp"
+        android:layout_width="350dp"
         android:layout_height="88dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="507dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="504dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/implementamos_medidas_de_seguridad_t_cnicas_y_organizativas_para_proteger_su_informaci_n_personal_contra_el_acceso_la_alteraci_n_la_p_rdida_o_la_destrucci_n_no_autorizados"
         android:textColor="#000000"
         android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -134,7 +156,7 @@
         android:onClick="Back"
         android:text="@string/atras"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

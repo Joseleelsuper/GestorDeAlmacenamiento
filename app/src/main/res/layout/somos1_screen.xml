@@ -17,6 +17,7 @@
         android:text="@string/ques_es_gaen"
         android:textColor="#000000"
         android:textSize="19sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,23 +25,30 @@
         android:id="@+id/textView2"
         android:layout_width="364dp"
         android:layout_height="58dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="66dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="35dp"
         android:text="@string/gaen_es_un_servicio_de_gesti_n_de_archivos_en_la_nube_dise_ado_para_proporcionar_a_los_usuarios_un_almacenamiento_seguro_accesible_y_f_cil_de_usar"
         android:textColor="#000000"
         android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="248dp"
+        android:layout_width="300dp"
         android:layout_height="26dp"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="140dp"
+        android:layout_marginEnd="133dp"
         android:text="@string/caracter_sticas_principales_de_gaen"
         android:textColor="#000000"
         android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,11 +56,13 @@
         android:id="@+id/textView4"
         android:layout_width="337dp"
         android:layout_height="72dp"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="169dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/almacenamiento_en_la_nube_los_usuarios_pueden_subir_sus_archivos_a_servidores_seguros_en_la_nube_donde_est_n_protegidos_y_accesibles_desde_cualquier_lugar"
         android:textColor="#000000"
         android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -60,11 +70,13 @@
         android:id="@+id/textView5"
         android:layout_width="337dp"
         android:layout_height="72dp"
-        android:layout_marginStart="37dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="250dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/variedad_de_permisos_los_permisos_hacen_que_segun_las_opciones_que_seleccionas_el_gestor_actuara_de_una_manera_diferente_y_totalmente_al_gusto_del_consumidor"
         android:textColor="#000000"
         android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -72,23 +84,26 @@
         android:id="@+id/textView6"
         android:layout_width="339dp"
         android:layout_height="90dp"
-        android:layout_marginStart="37dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="329dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/seguridad_y_privacidad_el_servicio_utiliza_encriptaci_n_avanzada_para_proteger_los_datos_durante_la_transmisi_n_y_en_reposo_asegurando_que_la_informaci_n_personal_y_empresarial_de_los_usuarios_se_mantenga_privada_y_segura"
         android:textColor="#000000"
         android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="171dp"
+        android:layout_width="300dp"
         android:layout_height="23dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="436dp"
         android:text="@string/beneficios_de_usar_gaen"
         android:textColor="#000000"
         android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -96,11 +111,13 @@
         android:id="@+id/textView8"
         android:layout_width="340dp"
         android:layout_height="38dp"
-        android:layout_marginStart="38dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="462dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/flexibilidad_acceso_a_tus_archivos_desde_cualquier_dispositivo_en_cualquier_momento_y_lugar"
         android:textColor="#000000"
         android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -108,13 +125,19 @@
         android:id="@+id/textView9"
         android:layout_width="334dp"
         android:layout_height="86dp"
-        android:layout_marginStart="38dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="508dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="62dp"
         android:text="@string/escalabilidad_ofrece_diferentes_planes_de_almacenamiento_adaptados_a_las_necesidades_individuales_o_empresariales_permitiendo_aumentar_el_espacio_de_almacenamiento_seg_n_sea_necesario"
         android:textColor="#000000"
         android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/myButton1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.411"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/myButton1"
@@ -127,7 +150,7 @@
         android:onClick="Back"
         android:text="@string/atras"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

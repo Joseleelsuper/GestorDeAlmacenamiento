@@ -10,13 +10,16 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="36dp"
         android:text="@string/c_mo_subo_archivos_al_gestor_de_archivos_en_la_nube"
+        android:textAlignment="center"
+        android:textAllCaps="false"
         android:textColor="#000000"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,13 +27,21 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
+        android:layout_marginStart="165dp"
         android:layout_marginTop="78dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginBottom="5dp"
         android:text="@string/primer_paso"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView3"
@@ -52,13 +63,14 @@
         android:layout_marginStart="155dp"
         android:layout_marginTop="209dp"
         android:layout_marginEnd="155dp"
-        android:layout_marginBottom="14dp"
+        android:layout_marginBottom="5dp"
         android:text="@string/segundo_paso"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,7 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="94dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="94dp"
         android:layout_marginBottom="16dp"
         android:text="@string/tocar_el_boton_con_el_simbolo"
@@ -75,6 +87,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -82,11 +95,17 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="163dp"
+        android:layout_marginStart="165dp"
         android:layout_marginTop="363dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginBottom="5dp"
         android:text="@string/tercer_paso"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -115,7 +134,7 @@
         android:onClick="Back"
         android:text="@string/atras"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

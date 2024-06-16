@@ -10,48 +10,60 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="100dp"
         android:text="@string/contactanos"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="19sp"
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="35dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="290dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="60dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="207dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/cualquier_duda_o_problema_puede_ser_atendida_por_un_asistente_via_email_o_llamada_atrav_s_de"
         android:textColor="#000000"
         android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="228dp"
+        android:layout_width="240dp"
         android:layout_height="37dp"
-        android:layout_marginStart="91dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="347dp"
+        android:layout_marginEnd="100dp"
         android:text="@string/email_gaen_soporte_com"
         android:textColor="#000000"
         android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="150dp"
+        android:layout_width="200dp"
         android:layout_height="35dp"
-        android:layout_marginStart="130dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="438dp"
+        android:layout_marginEnd="100dp"
         android:text="@string/tlfn_699741966"
         android:textColor="#000000"
         android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,7 +78,7 @@
         android:onClick="Back"
         android:text="@string/atras"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

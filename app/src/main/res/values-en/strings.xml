@@ -69,8 +69,8 @@
     <string name="accept_term_of_use">Please accept the terms of use.</string>
     <string name="mailReports">I agree to receive email newsletters.</string>
     <string name="accept_email_messages">Please accept mailings.</string>
-    <string name="home_version">- First version of the programme, Home, Files and Me options are added.</string>
-    <string name="updates">Latest Updates: (V1.0)</string>
+    <string name="home_version">- Created support functionality, and improved everything for the delivery of 2nd conv. \n- First version of the program, Home, Files and Me options are added.</string>
+    <string name="updates">Latest Updates: (V2.0)</string>
     <string name="here_is_your_personal_information">Here you can see your personal information:</string>
     <string name="account_type">Type of account:</string>
     <string name="expire_date">Expiry date:</string>
@@ -118,7 +118,7 @@
     <string name="te_apareceran_dos_opciones_la_primera_para_a_adir_un_archivo_y_la_segunda_para_a_adir_una_carpeta_elige_la_primera_y_ya_podria_subir_su_archivo">You will see two options, the first one to add a file and the second one to add a folder, choose the first one and you will be able to upload your file.</string>
     <string name="en_gaen_entendemos_que_diferentes_usuarios_tienen_diferentes_necesidades_en_cuanto_a_almacenamiento_y_manejo_de_archivos_por_eso_ofrecemos_varias_tarifas_que_se_adaptan_a_una_amplia_gama_de_necesidades_desde_usuarios_individuales_hasta_grandes_empresas_por_eso_los_unicos_dos_limites_son">At Gaen, we understand that different users have different needs in terms of storage and file management. Therefore, we offer various rates to suit a wide range of needs, from individual users to large companies, so the only two limits are:</string>
     <string name="_1_tarifa_contratada_ya_que_dispondra_de_mas_gigabatios_cuanto_mejor_sea">1.Contracted tariff since you will have more gigabatios the better it is.</string>
-    <string name="_2_espacio_restante_de_la_tarifa_si_ya_has_ocupado_memoria_sera_esta_la_que_no_podras_ocupar">Remaining space of the tariff, if you have already occupied memory, you will not be able to occupy it.</string>
+    <string name="_2_espacio_restante_de_la_tarifa_si_ya_has_ocupado_memoria_sera_esta_la_que_no_podras_ocupar">2. Remaining space of the tariff, if you have already occupied memory, you will not be able to occupy it.</string>
     <string name="posteriormente_como_se_muestra_en_la_imagen_ve_a_el_apartado_de_permisos_y_confirme_que_tiene_la_opci_nn_de_a_adir_los_archivos_a_la_nube">Then, as shown in the image, go to the permissions section and confirm that you have the option to add the files to the cloud.</string>
     <string name="hacer_copia_de_seguridad_de_fotos_y_videos">Backing up photos and videos</string>
     <string name="hacer_copias_de_seguridad_de_tus_fotos_y_videos_es_fundamental_por_varias_razones_que_tienen_que_ver_con_la_protecci_n_la_accesibilidad_y_la_preservaci_n_a_largo_plazo_de_tus_recuerdos_e_informaci_n_importante_por_lo_que_le_explicaremos_de_una_forma_simple_como_hacerlo">Backing up your photos and videos is essential for several reasons that have to do with the protection, accessibility and long-term preservation of your memories and important information, so we will explain in a simple way how to do it:</string>
@@ -145,13 +145,13 @@
     <string name="_1_concesi_n_de_licencia_gaen_otorga_al_usuario_una_licencia_no_exclusiva_no_transferible_y_limitada_para_usar_el_software_nicamente_para_uso_personal_o_interno_comercial">1. Grant of License: Gaen grants the user a non-exclusive, non-transferable, limited license to use the software solely for personal or internal commercial use.</string>
     <string name="_2_restricciones_el_usuario_no_debe_modificar_redistribuir_descompilar_o_crear_obras_derivadas_del_software_tambi_n_est_prohibido_sublicenciar_o_usar_el_software_para_servicios_de_alojamiento_comercial">2. Restrictions: The user must not modify, redistribute, decompile, or create derivative works of the software. It is also prohibited to sublicense or use the software for commercial hosting services.</string>
     <string name="_3_propiedad_el_software_es_propiedad_exclusiva_de_gaen_y_est_protegido_por_las_leyes_de_derechos_de_autor_y_tratados_internacionales_el_usuario_no_adquiere_ning_n_derecho_de_propiedad_sobre_el_software">3. Ownership: The software is the exclusive property of Gaen and is protected by copyright laws and international treaties. The user does not acquire any ownership rights in the software.</string>
-    <string name="_4_garant_a_el_software_se_ofrece_tal_cual_sin_garant_as_de_ning_n_tipo_ya_sean_expl_citas_o_impl_citas">Warranty: The software is provided \"as is\" without warranty of any kind, either expressed or implied.</string>
+    <string name="_4_garant_a_el_software_se_ofrece_tal_cual_sin_garant_as_de_ning_n_tipo_ya_sean_expl_citas_o_impl_citas">4. Warranty: The software is provided \"as is\" without warranty of any kind, either expressed or implied.</string>
     <string name="_5_limitaci_n_de_responsabilidad_gaen_no_ser_responsable_de_da_os_indirectos_incidentales_o_consecuentes_derivados_del_uso_del_software">5. Limitation of Liability: Gaen shall not be liable for indirect, incidental or consequential damages arising out of the use of the software.</string>
     <string name="_6_terminaci_n_la_licencia_ser_v_lida_hasta_que_se_termine_lo_cual_puede_ocurrir_si_el_usuario_incumple_los_t_rminos_establecidos_tras_la_terminaci_n_todas_las_copias_del_software_deben_ser_destruidas">6. Termination: The license shall be valid until terminated, which may occur if the user breaches the stated terms. Upon termination, all copies of the software must be destroyed.</string>
     <string name="_7_acuerdo_completo_esta_licencia_representa_el_acuerdo_completo_entre_el_usuario_y_gaen_respecto_al_uso_del_software">7. Entire Agreement: This license represents the entire agreement between the user and Gaen regarding the use of the software.</string>
     <string name="ques_es_gaen">What is GAEN?</string>
     <string name="gaen_es_un_servicio_de_gesti_n_de_archivos_en_la_nube_dise_ado_para_proporcionar_a_los_usuarios_un_almacenamiento_seguro_accesible_y_f_cil_de_usar">Gaen is a cloud file management service designed to provide users with secure, accessible and easy-to-use storage.</string>
-    <string name="caracter_sticas_principales_de_gaen">Gaen Main Features:</string>
+    <string name="caracter_sticas_principales_de_gaen">GAEN Main Features:</string>
     <string name="almacenamiento_en_la_nube_los_usuarios_pueden_subir_sus_archivos_a_servidores_seguros_en_la_nube_donde_est_n_protegidos_y_accesibles_desde_cualquier_lugar">Cloud Storage: Users can upload their files to secure servers in the cloud, where they are protected and accessible from anywhere.</string>
     <string name="variedad_de_permisos_los_permisos_hacen_que_segun_las_opciones_que_seleccionas_el_gestor_actuara_de_una_manera_diferente_y_totalmente_al_gusto_del_consumidor">Variety of permissions: The permissions make that according to the options that you select the manager will act in a different way and totally to the taste of the consumer.</string>
     <string name="seguridad_y_privacidad_el_servicio_utiliza_encriptaci_n_avanzada_para_proteger_los_datos_durante_la_transmisi_n_y_en_reposo_asegurando_que_la_informaci_n_personal_y_empresarial_de_los_usuarios_se_mantenga_privada_y_segura">Security and Privacy: The service uses advanced encryption to protect data during transmission and at rest, ensuring that users\' personal and business information is kept private and secure.</string>
@@ -164,6 +164,8 @@
     <string name="nuestro_compromiso">Our Commitment:</string>
     <string name="nos_dedicamos_a_la_mejora_continua_y_estamos_siempre_atentos_a_las_necesidades_de_nuestros_usuarios_para_adaptar_y_mejorar_nuestras_funciones_valoramos_los_comentarios_y_estamos_comprometidos_con_la_innovaci_n_constante_para_seguir_ofreciendo_una_de_las_mejores_experiencias_de_gesti_n_de_archivos_en_el_mercado">We are dedicated to continuous improvement and are always listening to the needs of our users to adapt and improve our features. We value feedback and are committed to constant innovation to continue to offer one of the best file management experiences on the market.</string>
     <string name="gracias_por_confiar_en_nosotros">Thanks for trusting us!</string>
+    <string name="email_gaen_soporte_com">Email: support@gaen.com</string>
     <string name="soporte_gaen">GAEN Support</string>
-    <string name="choose_language">Choose language</string>">
+    <string name="choose_language">Choose language</string>
+    <string name="tlfn_699741966">Tlfn: +44 699741966</string>">
 </resources>

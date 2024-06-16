@@ -17,6 +17,7 @@
         android:text="@string/sobre_nosotros"
         android:textColor="#000000"
         android:textSize="19sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,11 +25,13 @@
         android:id="@+id/textView2"
         android:layout_width="357dp"
         android:layout_height="152dp"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="60dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/fundada_en_2024_por_un_tr_o_de_innovadores_tecnol_gicos_jos_gallardo_jos_javier_y_jos_mar_a_gaen_surge_de_la_necesidad_de_crear_una_plataforma_segura_intuitiva_y_accesible_para_la_gesti_n_de_archivos_digitales_con_a_os_de_experiencia_en_tecnolog_a_de_la_informaci_n_y_desarrollo_de_software_nuestro_equipo_se_propuso_dise_ar_una_herramienta_que_no_solo_facilitara_la_gesti_n_de_archivos_sino_que_tambi_n_transformara_la_forma_en_que_los_equipos_colaboran_y_acceden_a_su_informaci_n"
         android:textColor="#000000"
         android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,11 +39,12 @@
         android:id="@+id/textView3"
         android:layout_width="113dp"
         android:layout_height="24dp"
-        android:layout_marginStart="29dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="225dp"
         android:text="@string/nuestra_misi_n"
         android:textColor="#000000"
         android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,11 +52,13 @@
         android:id="@+id/textView4"
         android:layout_width="355dp"
         android:layout_height="149dp"
-        android:layout_marginStart="29dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="261dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/en_gaen_nuestra_misi_n_es_simplificar_la_vida_de_nuestros_usuarios_al_ofrecer_una_soluci_n_de_almacenamiento_en_la_nube_que_sea_segura_f_cil_de_usar_y_completamente_accesible_desde_cualquier_lugar_del_mundo_estamos_comprometidos_con_la_protecci_n_de_la_privacidad_de_nuestros_usuarios_y_garantizamos_que_todos_los_datos_almacenados_en_nuestra_plataforma_est_n_protegidos_con_los_m_s_altos_est_ndares_de_seguridad"
         android:textColor="#000000"
         android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -60,11 +66,14 @@
         android:id="@+id/textView5"
         android:layout_width="147dp"
         android:layout_height="21dp"
-        android:layout_marginStart="29dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="417dp"
+        android:layout_marginEnd="235dp"
         android:text="@string/nuestro_compromiso"
         android:textColor="#000000"
         android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -72,11 +81,13 @@
         android:id="@+id/textView6"
         android:layout_width="357dp"
         android:layout_height="121dp"
-        android:layout_marginStart="29dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="448dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/nos_dedicamos_a_la_mejora_continua_y_estamos_siempre_atentos_a_las_necesidades_de_nuestros_usuarios_para_adaptar_y_mejorar_nuestras_funciones_valoramos_los_comentarios_y_estamos_comprometidos_con_la_innovaci_n_constante_para_seguir_ofreciendo_una_de_las_mejores_experiencias_de_gesti_n_de_archivos_en_el_mercado"
         android:textColor="#000000"
         android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -89,6 +100,7 @@
         android:text="@string/gracias_por_confiar_en_nosotros"
         android:textColor="#000000"
         android:textSize="15sp"
+        android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -102,7 +114,7 @@
         android:onClick="Back"
         android:text="@string/atras"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

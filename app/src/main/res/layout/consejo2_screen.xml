@@ -10,48 +10,58 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="24dp"
         android:text="@string/cambiar_la_forma_en_la_que_se_ordenan_los_archivos"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="396dp"
-        android:layout_height="197dp"
-        android:layout_marginStart="7dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="71dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/entendemos_que_para_la_gente_que_de_uso_profesional_a_nuestro_gestor_de_archivos_gestionar_varias_carpetas_y_archivos_puede_ser_tedioso_por_esa_misma_razon_esta_la_opcion_de_organizar_los_archivos_y_carpteas_segun_estandares_basicos_como_lo_son_el_tiempo_o_el_abecedario_de_esta_forma_lograr_tene_un_mejor_orden_de_los_mismos_y_siguiendo_estos_pasos_sabras_como_hacerlo"
         android:textColor="#000000"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="390dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="10dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="293dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/como_primer_paso_tan_solo_deberemos_ir_a_el_apartado_de_archivos"
         android:textColor="#000000"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="390dp"
+        android:layout_width="350dp"
         android:layout_height="66dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="378dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="344dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/como_segundo_paso_tan_solo_deberias_tocar_el_boton_que_pone_ordenar_de_a_z_y_se_desplegara_este_dropdown"
         android:textColor="#000000"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,7 +76,7 @@
         android:onClick="Back"
         android:text="@string/atras"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

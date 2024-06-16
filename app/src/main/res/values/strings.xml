@@ -83,8 +83,8 @@
     <string name="mailReports">Estoy de acuerdo con recibir\nboletines al correo electrónico.</string>
     <string name="accept_email_messages">Por favor, acepta los envíos de mensajes al correo.</string>
     <!--  App Updates  -->
-    <string name="home_version">- Primera versión del programa, se añaden las opciones Inicio, Archivos y Yo.</string>
-    <string name="updates">Últimas Updates: (V1.0)</string>
+    <string name="home_version">- Creada funcionalidad de soporte, y mejorado todo para la entrega de 2º conv.\n- Primera versión del programa, se añaden las opciones Inicio, Archivos y Yo.</string>
+    <string name="updates">Últimas Updates: (V2.0)</string>
     <!--  User Information  -->
     <string name="here_is_your_personal_information">Aquí puedes ver tu información personal:</string>
     <string name="account_type">Tipo de cuenta:</string>
@@ -120,7 +120,7 @@
     <string name="acerca_de">Acerca de</string>
     <string name="quienes_somos">¿Quienes somos?</string>
     <string name="c_mo_subo_archivos_al_gestor_de_archivos_en_la_nube">¿Cómo subo archivos al gestor de archivos en la nube?</string>
-    <string name="hay_un_l_mite_de_tama_o_para_los_archivos_que_puedo_subir">¿Hay un límite de tamaño para los archivos que puedo subir?</string>
+    <string name="hay_un_l_mite_de_tama_o_para_los_archivos_que_puedo_subir">¿Hay un límite de tamaño para los archivos de subida?</string>
     <string name="hacer_una_copia_de_seguridad_de_fotos_y_videos">Hacer una copia de seguridad de fotos y videos</string>
     <string name="cambiar_la_forma_en_que_se_ordenan_los_archivos">Cambiar la forma en que se ordenan los archivos</string>
     <string name="informar_de_un_problema">Informar de un problema</string>
@@ -171,7 +171,7 @@
     <string name="_7_acuerdo_completo_esta_licencia_representa_el_acuerdo_completo_entre_el_usuario_y_gaen_respecto_al_uso_del_software">7. Acuerdo Completo: Esta licencia representa el acuerdo completo entre el usuario y Gaen respecto al uso del software.</string>
     <string name="ques_es_gaen">¿Ques es GAEN?</string>
     <string name="gaen_es_un_servicio_de_gesti_n_de_archivos_en_la_nube_dise_ado_para_proporcionar_a_los_usuarios_un_almacenamiento_seguro_accesible_y_f_cil_de_usar">Gaen es un servicio de gestión de archivos en la nube diseñado para proporcionar a los usuarios un almacenamiento seguro, accesible y fácil de usar.</string>
-    <string name="caracter_sticas_principales_de_gaen">Características Principales de Gaen:</string>
+    <string name="caracter_sticas_principales_de_gaen">Características Principales de GAEN:</string>
     <string name="almacenamiento_en_la_nube_los_usuarios_pueden_subir_sus_archivos_a_servidores_seguros_en_la_nube_donde_est_n_protegidos_y_accesibles_desde_cualquier_lugar">Almacenamiento en la Nube: Los usuarios pueden subir sus archivos a servidores seguros en la nube, donde están protegidos y accesibles desde cualquier lugar.</string>
     <string name="variedad_de_permisos_los_permisos_hacen_que_segun_las_opciones_que_seleccionas_el_gestor_actuara_de_una_manera_diferente_y_totalmente_al_gusto_del_consumidor">Variedad de permisos: Los permisos hacen que segun las opciones que seleccionas el gestor actuara de una manera diferente y totalmente al gusto del consumidor.</string>
     <string name="seguridad_y_privacidad_el_servicio_utiliza_encriptaci_n_avanzada_para_proteger_los_datos_durante_la_transmisi_n_y_en_reposo_asegurando_que_la_informaci_n_personal_y_empresarial_de_los_usuarios_se_mantenga_privada_y_segura">Seguridad y Privacidad: El servicio utiliza encriptación avanzada para proteger los datos durante la transmisión y en reposo, asegurando que la información personal y empresarial de los usuarios se mantenga privada y segura.</string>
@@ -184,8 +184,8 @@
     <string name="nuestro_compromiso">Nuestro Compromiso:</string>
     <string name="nos_dedicamos_a_la_mejora_continua_y_estamos_siempre_atentos_a_las_necesidades_de_nuestros_usuarios_para_adaptar_y_mejorar_nuestras_funciones_valoramos_los_comentarios_y_estamos_comprometidos_con_la_innovaci_n_constante_para_seguir_ofreciendo_una_de_las_mejores_experiencias_de_gesti_n_de_archivos_en_el_mercado">Nos dedicamos a la mejora continua y estamos siempre atentos a las necesidades de nuestros usuarios para adaptar y mejorar nuestras funciones. Valoramos los comentarios y estamos comprometidos con la innovación constante para seguir ofreciendo una de las mejores experiencias de gestión de archivos en el mercado.</string>
     <string name="gracias_por_confiar_en_nosotros">¡Gracias por confiar en nosotros!</string>
-    <string name="email_gaen_soporte_com" translatable="false">Email:gaen@soporte.com</string>
-    <string name="tlfn_699741966" translatable="false">Tlfn:699741966</string>
+    <string name="email_gaen_soporte_com">Email: soporte@gaen.com</string>
+    <string name="tlfn_699741966">Tlfn: +34 699741966</string>
     <string name="soporte_gaen">Soporte GAEN</string>
     <string name="choose_language">Elegir idioma</string>">
 </resources>
